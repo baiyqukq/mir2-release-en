@@ -1,0 +1,196 @@
+;무기
+%100
++5
++6
+
+;대화, '*' : 대화 태그
+
+[@main]
+;아무도 찾지않는 바람부는 언덕에..어 손님이 오셨군..\
+Hey! Jude, don't make it bad ... Well, customer get here.. \
+;내노래가 어떻소? 더 들어 보실라우?....\
+How do feel about my song ? Do you want to listen more...? \
+;아, 그리고 <$OWNERGUILD>의 <$LORD> 성주님 명령이라해도\
+Uhm, although it's the order of Lord <$LORD>, the owner of <$OWNERGUILD> \
+;현재 가격에서 깎는다는건 내 자존심이 허락치 않소!!\ \
+It's impossible to discount current price because it hurts my pride !! \ \ 
+
+ ;<무기제련을 맡긴다/@upgrade>\
+<Order smelting/@upgrade>\
+ ;<제련 맡긴 무기를 찾는다/@getbackupgnow>\
+<Get back smelted weapon/@getbackupgnow>\
+ ;<노래를 더 듣는다/@heardsing>\
+<Hear song more/@heardsing>\
+ ;<그만둔다/@exit> 
+<Cancel/@exit>\
+<>
+
+[@upgrade]
+;자네가 들고 있는 무기를 제련하고 싶은 게로군.\
+You seem to want smelting the arms at your hand.\
+;어디 보세... 음, 비용은 <$UPGRADEWEAPONFEE>전 정도 들겠고,\
+Let me see... Uhm, It takes <$UPGRADEWEAPONFEE>gold to smelt it, \
+;무기제련에 필요한 재료는 <흑철/@Biron>, <장신구/@Etc>, <착용무기/@Weapon>,\
+Raw materials for smelting are <BlackIron/@Biron>, <Accesory/@Etc>, <Weapon at hand/@Weapon>,\
+;<돈/@Gold> 이 반드시 필요하다네. 물론 가져 왔겠지?\
+<Gold/@Gold>. Smelting wants those absolutely. of coures I am sure you bring it?\
+;나머지 재료는 자네 가방에 있는 것을 사용하면 되겠구먼.\
+The rest of raw materials for smelting will be enough with something in your bag . \ 
+;제련을 맡겨 볼텐가?\ \
+Would you try? \ \
+ ;<제련을 맡긴다./@confirmupgrade>\
+<Order smelting/@upgrade>\
+ ;<그만둔다./@main>\
+<Cancel/@exit>\
+
+[@Biron]
+;흑철은 일반 광석처럼 광산에서 캘 수 있네.\
+BlackIron Ore is from a mine like general Ore. \
+;자네의 무기를 제련하는데 좋은 결과를 바란다면\
+If you wish to get a good result \
+;나에게 순도가 높은 흑철을 가져다 주는게 좋을게야\
+you should bring me high purity BlackIron \
+;참, 제련하다가 흑철이 모자라면 아무리 순도가\
+one more, if BlackIron is short with smelting \
+;좋은 흑철이라도 결과가 좋지 않으니 명심하게.\ \
+in spite of high purity the result will be not good. keep in mind .\ \ 
+ ;<뒤로/@upgrade>
+<Back/@upgrade>
+
+[@Etc]
+;장신구란 반지, 팔찌, 목걸이를 말하네.\
+Accesory means ring, bracelet, necklace.\
+;자네가 넣는 장신구들을 녹여 그 속에 있는\
+Accesories put in by you is melted and \
+;능력들을 자네 무기에 붙이게 되지...\
+The abilities of melted accesories will be moved to your weapen... \
+;자네가 주는 재료가 훌륭하고 많으면 나야\
+The Better and more raw material you bring \
+;좀더 좋은 결과를 자네에게 줄 수가 있지..\
+The Better result I can give you.. \
+;형편없는 장신구로 맡기려 한다면 아주 운이\
+If you put bad accesories in \
+;좋지 않는이상 실패하고 말거야...\ \
+You can nto make it without big fortune... \ \ 
+ ;<뒤로/@upgrade>
+<Back/@upgrade>
+
+[@Weapon]
+;나는 무기제련을 맡을때 의뢰자가 들을 수\
+When I take a order, I smelt just weapon  \
+;있는 무기만 제련을 해준다네...능력도 안되는\
+that the client can lift.....I don't want to  \
+;자에게 나의 훌륭한 작품을 건네줄 순 없지...\
+give my good work to the person who is unable \
+;암~그렇고 말고...제련을 하고 싶다면 꼭 무기를\
+Then if you wish to ask me smelting... \
+;들고 오게나...\ \
+You should bring me a weapon definitely
+ ;<뒤로/@upgrade>
+<Back/@upgrade>
+
+[@Gold]
+;현재 무기제련에 필요한 돈은 너무 적은 액수야..\
+This money is not enough to smelt weapon..\
+;내 기술의 가치가 그것밖에 안된다고 생각하나?\
+Do you think that my technic is not good ?\ 
+;지금은 처음이니 내 이것밖에 안 받고 해준다지만..\
+I accept your request with this Gold because this is beginning..\
+;두고보게...내 기술을 찾는 사람이 많아진다면..\
+Let's see...if the number of client increase..\
+;내 기술에 걸맞는 가격을 받아낼걸세...\ \
+I will get proper Gold matching my skill quality...\\
+ ;<뒤로/@upgrade>
+<Back/@upgrade>
+
+[@confirmupgrade]
+;자네의 <$USERWEAPON>을 제련하기 위해 가져온\
+Let me see raw materials that you bring me to smelt your <$USERWEAPON>\
+;재료들을 보여 주게. 내가 눈이 어두워서 구분이\
+I can't distinguish those well because my eye ability is poor\
+;잘 안된다네. 자네가방에 장신구나 흑철들은 모두\
+Therefore I'll take all accesory and Black Iron Ore at your bag\
+;가져갈테니 혹시라도 가방에 귀한게 들어 있다면\
+Just in case if rare or important item is in bag\
+;정리해서 여관에 맡겨놓고 다시 오게나.\ \
+first arrange and leave it with Inn and come again later.\ \
+ ;<무기제련을 부탁한다./@upgradenow>\
+<Ask smelting/@upgradenow>\
+ ;<가방을 정리하고 다시 온다./@exit>\
+<Arrange items in bag and come again/@exit>\
+
+[@heardsing]
+;음..어디 3만전을 더내면 내가 한 번 생각해보지...\ \
+Uhm..if you pay 30,000 gold more, I'll think about it again
+ ;<3만전을 더 낸다/@paythree>\
+<Pay 30,000 gold more/@paythree>\
+ ;<안듣고 만다/@main>\
+<Refuse/@main>\
+
+[@paythree]
+;이름모를 잡초야~ 콜록콜록...아 오늘은 목이...\ \
+Hey,Jude! don't make it bad~ collok collok(cough)... today throat is not good...\ \
+ ;<닫기/@exit> 
+<Close/@exit>\
+
+[~@upgradenow_ok]
+;내가 새 것처럼 만들어 줄테니. 1시간 정도 후에 다시 오게나.\ \
+After smelting, it will look like new one. come again 1hour after.\ \
+ ;<처음/@main>\
+<The start/@main>
+
+[~@upgradenow_ing]
+;한 사람 물건은 한 개씩만 맡는다는게 우리 가게의\
+It is a rule for one person to take just one item \
+;규칙이라네,  다음에 이용하게나...\ \
+See you later...\ \
+ ;<처음/@main>\
+<The start/@main>
+
+[~@upgradenow_fail]
+;재료가 부족하군. 흑철, 무기, 장신구 전부\
+Raw materials is not enough.  come again later \
+;준비가 된 다음에 다시 오게나.\
+With Black Iron Ore, weapon, accesory all \
+;물론 수공비는 기본이지...\ \
+Of course, the pay for smelting is basic concept...\ \
+ ;<처음/@main>\
+<The start/@main>
+
+[~@getbackupgnow_ok]
+;여기 있네, 내 열심히 제련해 보긴 했네만, <성공여부/@Success>는\
+Here it is, I did my best to smelt it , but <Success or Fail/@Success> \
+;한번 써봐야 알 것 같네, 나가서 시험해 보게나.\ \
+depends on the result of test. why don't you try to test.\ \
+ ;<닫기/@exit> 
+<Close/@exit>\
+
+[@Success]
+;제련한 무기의 성공 여부는 한 번 써봐야 하네.\
+The success or fail of smelting depends on the result of smashing \
+;NPC나 사람 또는 몬스터를 한 대 때려보게...\
+Try smashing a NPC or an user or a monster with it for a test... \
+;결정은 그때 날 것이야...\ \
+The success or fail of smelting will be showed then...\ \ 
+ ;<닫기/@exit> 
+<Close/@exit>\
+
+[~@getbackupgnow_ing]
+;아직 작업이 끝나지 않았네, 좀 더 기다려야 겠네...\ \
+The smelting is not finished yet, wait a little more...\ \
+ ;<처음/@main>\
+<The start/@main>
+
+[~@getbackupgnow_fail]
+;자네가 맡긴 물건이 있었던가?\
+Did you leave something with me?\
+;혹시 너무 오래 전에 맡긴 물건을 찾으러 왔다면\
+Just in case if you came here to get back something left here long time ago \
+;돌아가게나, 너무 오래 지난 일이라서 기억할 수 없다네..\ \
+Go back, It is so old that I can't remember it..\ \
+ ;<처음/@main>\
+<The start/@main>
+
+;[상품]  
+[Goods]
+;젠되는 상품    물량       hour

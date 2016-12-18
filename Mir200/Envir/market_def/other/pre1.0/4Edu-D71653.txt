@@ -1,0 +1,35 @@
+;武器
+%200
++30
++3
++31
+
+
+;STreagent
+[@main]
+Welcome. How can I help you?\ \
+ <Buy/@buy>  item\
+ <Sell/@sell>  Item\
+ <Exit/@exit>
+<>
+
+[@buy]
+What items do you need?\
+ <Back/@main>
+
+[@sell]
+What items do you want to sell?\
+ <Back/@main>
+
+
+
+[goods]
+;菜单项(can be Zen)     数量       小时
+Candle              1000        1
+Torch               1000        1
+RandomTeleport      1000        1
+DungeonEscape       1000        1
+EscapeBundle        1000        1
+RandomBundle        1000        1
+
+

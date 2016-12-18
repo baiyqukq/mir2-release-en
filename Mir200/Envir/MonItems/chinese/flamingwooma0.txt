@@ -1,0 +1,54 @@
+1/1    gold 10000
+
+1/8    钩剑
+1/8    短弯刀
+1/8    三叉戟
+1/8    钢剑
+1/8    BlueRing
+1/8    NagaNecklace
+1/8    AmberNeck
+1/8    PhoenixBead
+1/8    HardGlove
+1/8    MagicBracelet
+1/8    LanternNeck
+
+1/5    IronSword
+1/5    ShortSword
+1/5    BronzeHelmet
+1/5    轻型装甲(男)
+1/5    轻型装甲(女)
+1/5    BronzeAxe
+1/5    EbonyNecklace
+1/5    YellowNecklace
+1/5    BlackNecklace
+1/5    MagicHelmet
+
+1/2    SunPotion
+1/2    SunPotion
+1/2    SunPotion
+1/2    SunPotion
+1/2    大金创药
+1/2    大金创药
+1/2    大金创药
+1/2    大金创药
+1/2    大魔法药
+1/2    大魔法药
+1/2    大魔法药
+1/2    大魔法药
+
+1/50   HeavyArmour(M)
+1/50   HeavyArmour(F)
+1/50   MagicRobe(M)
+1/50   MagicRobe(F)
+1/50   SoulArmour(M)
+1/50   SoulArmour(F)
+1/300  DeathGauntlet
+1/100  BlueJadeneck
+1/100  GoldBracelet
+1/100  MoralRing
+1/100  CharmRing
+1/300  ConvexLens
+1/200  BambooPipe
+1/200  ShamanHelmet
+1/200  精致长剑
+1/200  CoralRing

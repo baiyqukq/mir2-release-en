@@ -1,0 +1,48 @@
+;Weapon
+%100
++26
+
+;dialogue, '*' : dialogue tag
+[@main]
+Welcome, how may I help you ?\ \
+<Buy/@buy> bracelet\
+<Sell/@sell> bracelet\
+<Repair/@repair> bracelet\
+<Cancel/@exit>
+<>
+
+[@buy]
+Which bracelet would you like ?\ \ \
+ <Back/@main>
+
+[@sell]
+Show me the bracelet you wish to sell.\ \ \
+ <Back/@main>
+
+[@repair]
+Give me the bracelet you want to repair.\ \ \
+ <Back/@main>
+
+[~@repair]
+Your bracelet seems repaired fine.\ \
+ <Back/@main>
+
+[goods]
+;商品          数量       时间
+IronBracelet	200	1
+ThinBracelet	200	1
+SilverBracelet  200	1
+LargeBracelet   200	1
+SteelBracelet   200	1
+MagicBracelet   200	1
+MonkBraclet	200	1
+EbonyBracelet	200	1
+GoldBracelet	200	1
+StrainBracelet	200	1
+LeatherGlove	200	1
+HardGlove	200	1
+DeathGauntlet	200	1
+
+
+
+

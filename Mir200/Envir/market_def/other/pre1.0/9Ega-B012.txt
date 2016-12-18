@@ -1,0 +1,25 @@
+[@main]
+#IF
+#SAY
+Hello <$USERNAME>, Welcome to the Casino\
+In the Casino there are 40 rooms, all different.\
+Only the Bravest of Heros Survive the Casino and Win...\
+Are you that brave?\\
+<Well I think so./@next>
+#ACT
+BreakTimeRecall 
+
+[@next]
+#IF
+#SAY
+Oh you do, do you? We will see\
+Off you go then, Have fun.
+<Enter/@next3> \
+<Leave/@exit>
+
+[@next3]
+#IF
+#ACT
+SET [799] 0
+SET [798] 0
+map B101

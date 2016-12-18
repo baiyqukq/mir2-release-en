@@ -1,0 +1,29 @@
+[Greypoison(S)]
+CannibalLeaf    4
+SpiderTooth  2
+CannibalFruit  1
+
+[Greypoison(M)]
+CannibalLeaf    8
+SpiderTooth  4
+CannibalFruit  2
+
+[Greypoison(L)]
+CannibalLeaf    12
+SpiderTooth  6
+CannibalFruit  3
+
+[Yellowpoisn(S)]
+CannibalLeaf    4
+ScorpionTail    1
+MaggotPill      1
+
+[Yellowpoisn(M)]
+CannibalLeaf    8
+ScorpionTail    2
+MaggotPill      2
+
+[Yellowpoisn(L)]
+CannibalLeaf    12
+ScorpionTail    3
+MaggotPill      3

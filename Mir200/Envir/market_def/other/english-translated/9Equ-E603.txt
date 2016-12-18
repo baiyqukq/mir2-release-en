@@ -1,0 +1,287 @@
+;물가
+%200
+
+;대화, '*' : 대화 태그
+
+;;------------------------------------------------------------------------------
+;; [310] 노인을 찾아라 퀘스트를 받은 케릭
+;; [311] 사슴의 피과 녹용을 찾아라
+;; [312] 사슴의파와 녹용을 찾은 사람
+;;------------------------------------------------------------------------------
+
+[@main]
+#IF 
+random 2
+#ACT
+goto @QUEST
+#ELSEACT
+goto @normal
+
+[@QUEST]
+#IF 
+check [312] 1
+#ACT
+goto @Q312
+break
+
+#IF
+check [311] 1
+#ACT
+goto @Q311
+break
+
+#IF
+check [351] 1
+#ACT
+goto @Q351
+break
+
+#IF
+check [310] 1
+random 5
+#ACT 
+goto @Q310
+#ELSEACT
+goto @normal
+
+[@normal]
+;흠.. 이 위험한 곳 까지 자네는 왠일인가??? \
+What brought you in this dangerous place??? \
+;자네는 여기서 쉽게 나갈수 있을지 모르겠네..\ \
+I wonder if you can get out of here easily...\ \
+
+  ;<대화를한다./@talkwith_1>\
+<Talk with/@talkwith_1>\
+  ;<그만둔다./@exit> 
+<Cancel./@exit>\
+
+[@Q310]
+#IF
+#SAY
+;자네는 무슨 일인가?? 특수 기름을 제작해 달라 이건가?? \
+What can I do for you?? Do you want for me to make a special Oil?? \  
+;그 기름을 제작을 하는데는 어려운 재료가 들어 가는데.. \
+I need rare raw material to make the special Oil.. \
+;이 재료를 구해 주게 그럼 제작해 주겠네.. \ 
+If you got me this raw material, I'll make it for you... \
+;그 재료는 사슴의 뿔(녹용)과 사슴의 피(녹혈)가 필요 하네.. \
+This raw materials are the Blood of Deer and the Horn of Deer... \
+;그 재료는 딴데서는 구할수 없으면 내가 알고 있는 \ \
+You can get this raw material only \ \
+;<다음/@Q310_1>
+<Next/@Q310_1>
+
+[@Q310_1]
+#IF
+#ACT
+SET [311] 1
+#SAY
+;녹용은 미지의 던전에서만 구할수 있다고 들었다네.. \
+in the unknown dungeon. I have heard that.. \
+;이 던전에 가는 방법은 자네 아나?? 모른다면 어쩔수 없지\
+Do you know how to get there? If you didn't know, \  
+;또한 사슴의 피는 나도 어디서 구할수 있는지 잘은 모른다네 \ 
+I don't know what to do\
+;그럼 행운을 비네.. \ \
+Good luck then.. \ \
+ ;<닫기/@exit> <Close/@exit>
+
+[@Q311]
+#IF
+check [311] 1
+;checkitem 녹용 1
+checkitem DeerBlood 1
+;checkitem 녹혈 1
+checkitem DeerHorn 1
+#ACT
+goto @Q311_1
+#ELSEACT
+goto @Q311_2
+
+[@Q311_1]
+#IF
+#ACT
+SET [312] 1
+;take 녹혈 1
+take the DeerBlood 1
+;take 녹용 1
+take the DeerHorn 1
+#SAY
+;자네 정말 대단하네 그려. 이 어려운 아이템을 벌써 구해주다니 \
+You are so great to bring me these rare items \
+;내 이 기름을 제작해서 비천 정육점 김씨에게 전해 주겠네 \
+I'll make this oil... I'll give it to Kim, the Butcher in Bichon Wall\
+;어서 가보게 \ \
+Good bye \ \
+;가서 <기다려본다/@exit>
+<Close/@exit>
+
+[@Q311_2]
+#IF
+#SAY
+;아직 구해오지 않았구만... 빨리 구해오게.. \
+You failed to get it... Hurry up... \
+;나도 성격이 좋지 않아서 오래는 기다리지 못한다네 \ \
+Since I am not so generous, it's hard for me to wait long time\ \
+;<닫기/@exit> 
+<Close/@exit>
+
+[@Q312]
+#IF
+#SAY
+;김씨에게 빨리 가보게. \ \
+Go to Kim urgently. \ \
+;<닫기/@exit> 
+<Close/@exit>
+
+[@talkwith_1]
+#IF
+dayofweek Sunday
+hour 20 20
+#ACT
+goto @talkwith_2
+break
+
+#IF
+dayofweek Saturday
+hour 20 20
+#ACT
+goto @talkwith_2
+#ELSEACT
+goto @untalkwith
+   
+[@talkwith_2]
+;자네 여기까지 와서 나에게 말을 걸어 주었으니 \
+As you came here and talked to me \
+;좋은 정보를 알려 주겠네... 이 근처에 아무도 \
+I'll give you good information... There is a cave that nobody knows around here.\
+;알수 없는 동굴이 있다네. 이동굴은 미르의 세계와 \
+This cave is different from the others.... \
+;다르게 돌아가는 세상이네.. 나도 한번 말로만 들었지 \
+I just have heard about it only one time \
+;한번도 못가보았다네. 하지만 그곳을 들어 갈려면 증표가 \
+I never been there, but you need a certificate to go there \
+;필요 하다네. 증표가 있다면 도전해 보시게. \ \
+If you got a certificate, you can try. \ \ 
+
+;<도전해본다/@talkwith_3>\
+<Try/@talkwith_3>\
+;<포기한다/@exit>
+<Cancel/@exit>
+[@talkwith_3]
+#IF
+;checkitem 미지표 1
+checkitem MysteryTicket 1
+#SAY
+;자네.. 내가 들여 보내주기는 하지만 그 던전에서 3시간이 \
+Hey you... I'll let you get into dungeon \
+;지나면 다시 이자리로 돌아 온다네..  그럼 조심하게 \ \
+You will be right here after 3 hours.. Take care of yourself \ \ 
+;<들어가본다/@talkwith_4>
+<Get in/@talkwith_4>
+#ACT
+;take 미지표 1
+take MysteryTicket 1
+#ELSESAY 
+;미안하네.. 미지표가 있어야 들어 갈수가 있다네. \
+Sorry..but you should get MysteryTicket to get in this dungeon. \
+;그럼 미지표를 구해 오시게.. \ \
+Come again with MysteryTicket.. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+   
+[@talkwith_4]
+#IF
+checkhum M001 200
+#SAY
+;헉헉.. 자네를 안내해 주고 싶지만, 내 기력이 다해서 \
+I want to show you the way, but I'm exhausted \
+;이동을 시켜 줄수가 없구만... 좀 기다려 보시게.. \ \
+I can't help you ...   Just wait a little while.. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ELSEACT
+TimeRecall 180
+map M001
+
+
+[@Q351]
+#IF
+   random 5
+#ACT
+goto @Q351_1
+#ELSEACT
+goto @normal
+
+[@Q351_1]
+#IF
+#SAY
+;자네가 그 성격이 더럽다고 소문이 난 그 사람인가?? \
+Are you the one who is known to be an hot tempered? \
+;자네 나와 성격이 비슷해서 정말 좋네... 하하하.. \
+I like you because you are similar to me... hahaha... \
+;자네 한번 큰돈 한번 벌어 보겠나?? \ \
+Do you want to earn big money?? \ \
+;<벌어본다/@Q351_1_1> \
+<Why not! Tell me more/@Q351_1_1> \
+;<벌지않는다/@Q351_1_2>
+<Never mind.../@Q351_1_2>
+
+[@Q351_1_1]
+;오호 그런가 한번 벌어 보겠다 이건가?? \
+Are you sure you want to try?? \
+;그런가??  그렇다면 자네 육합도를 차고 \
+Are you really sure?? Then, wearing a MartialSword,\
+;한번 악덕상인 최씨에게 가보게 그럼 \
+go and see Mr. Nicholas \
+;그 사람이 대답을 해줄걸써... \ \
+He'll say you more... \ \
+;<찾아간다/@Q351_1_1_1>
+<No problem!/@Q351_1_1_1>
+
+[@Q351_1_2]
+;자네 성격이 않좋다구 하던게 꼭 그렇지만도 않구만.. \
+I heard that you were hot-tempered, but I don't think so...\
+;자네 같은 사람을 보기도 그렇네.... \
+I don't want to deal with you...\
+;좀더 수양을 쌓게 .. \ \
+Cultivate your mind more... \ \
+;<닫기/@exit> 
+<Close/@exit>
+
+[@Q351_1_1_1]
+#IF
+#ACT
+  SET [352] 1
+#SAY 
+;그럼 행운을 비네...\ \
+Good luck, then...\ \
+;<닫기/@exit> 
+<Close/@exit>
+
+[@untalkwith]
+#IF 
+random 10
+#SAY 
+;자네 미지의 던전에 대하여 들어 보았나?? \
+Have you ever heard about the unknown dungeon?? \
+;나도 자네에게 자세히는 설명 해 줄수는 없지만.. \
+I can't explain you more... \
+;이 미지의 던전을 들어 갈수 있는 시간은 \
+but the time to get into dungeon is at weekend evening \
+;주말의 저녁쯤이라네 이 시간에 다시 나에게 오면 \
+If you came to me again at this time \
+;내가 자네를 위해 그 쪽으로 대려다 줄수 있네 \
+I can bring you there \  
+;그럼 그 시간에 보세나... \ \
+see you that time then... \ \
+;<뒤로/@main> 
+<Back/@main>
+#ELSESAY
+;자네와 무슨 대화를 한단 말인가... \
+I haven't nothing to tell you... \
+;여기서 어서 없어져 주게 \ \
+Get out of here please \ \
+;<뒤로/@main> 
+<Back/@main>
+

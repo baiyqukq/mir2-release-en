@@ -1,0 +1,236 @@
+%100
+;반지
++22
++23
+;; 군도 퀘스트 제1분기점
+;###################################
+;;장씨아저씨를 삐지게한 경우 [210]
+;;은실이를 삐지게한 경우[211]
+[@main]
+#IF
+check [210] 1
+check [211] 1
+#ACT
+goto @notalk
+break
+;;은실이와 얘기도중 금광석을 다시 구해온 경우 [212]
+#IF
+check [210] 1
+check [212] 1
+#ACT
+goto @heard
+break
+;;장씨아저씨를 삐지게한 경우 [210]
+#IF
+check [210] 1
+#ACT
+goto @talk_1
+break
+;;장씨아저시에게 외상으로 준 경우 [215]
+#IF
+check [215] 1
+#ACT
+goto @bollow
+break
+;;퀘스트 분기가 시작되지 않았을경우
+#ELSEACT
+goto @main_1
+
+;###################################
+
+;대화, '*' : 대화 태그
+
+[@main_1]
+;어서오세요.  무슨 일로 오셨나요?\ \
+Welcome. What can I do for you?\ \
+ ;반지를 <산다/@buy>\
+<Buy/@buy> ring\
+ ;반지를 <판다/@sell>\
+<Sell/@sell> ring\
+ ;반지를 <고친다/@repair>\
+<Repair/@repair> ring\
+ ;<그만둔다/@exit>
+<Cancel/@exit>
+<>
+
+[@buy]
+;반지를 사시게요?\ \ \
+Which ring would you like to buy?\ \ \
+ ;<뒤로/@main_1>
+<Back/@main_1>
+
+[@sell]
+;반지를 파실래요?\ \ \
+What kind of ring would you like to sell?\ \ \
+ ;<뒤로/@main_1>
+<Back/@main_1>
+
+[@repair]
+;반지를 수리하시게요?\ \ \
+Would you like to repair a ring?\ \ \
+ ;<뒤로/@main_1>
+<Back/@main_1>
+
+[~@repair]
+;그런대로 잘 수리되네요.\ \
+It seems in good condition now.\ \
+ ;<뒤로/@main_1>
+<Back/@main_1>
+
+;[상품]
+[goods]
+;젠되는 상품    물량       hour
+;구리반지        3          3
+CopperRing 
+;육각반지        3          3
+HexagonalRing 
+;유리반지        3          3
+GlassRing
+
+;대장장이를 삐지게한 사람의 경우
+
+[@talk_1]
+;어머, 장씨아저씨를 삐지게 하셨다면서요?\
+Well, did you make Vincent angry?\
+;그아저씨가 그렇게 거친일을 하시면서도\
+He is not generous despite his manful work,\
+;의외로 속은 되게 좁거든요...그 아저씨가\
+;삐진걸 풀어주는 저만의 비법이 있는데...\
+but I know how to settle things for you...\
+;어때요, 한 번 들어보실래요?\ \
+Do you want to know about it?\ \
+ ;<듣는다/@heard>\
+<Listen/@heard>\
+ ;<거절한다/@noheard>
+<Never mind/@noheard>
+
+[@heard]
+;그 아저씨가 삐진걸 풀어주는 방법은요\
+Well, make him thrust you again is simple...\
+;간단해요...혹시 그아저씨가 또 광석을\
+I guess that he requested you to give him ore on credit but you refused, right ?\
+;외상으로 달라고 하셨는데 안주신거지요?\
+;제가 그 아저씨를 달래드리지요.\
+I'll make his feeling good.\
+;저에게 금광석 5개만 주시겠어요?\ \
+Would you give me 5 pieces of GoldOres?\ \
+ ;<금광석을 준다/@heard_1>\
+<Give ores/@heard_1>\
+ ;<거절한다/@noheard>
+<Refuse/@noheard>
+
+
+[@heard_1]
+#IF
+;checkitem 금광석 5
+checkitem GoldOre 5
+#ACT
+;take 금광석 5
+take GoldOre 5
+#SAY
+;잠시만 기다리세요 금방 다녀올께요.\ \
+Wait a minute, I'll be back soon.\ \
+ ;<잠시 후/@appease>
+<After a while.../@appease>
+#ELSESAY
+;이런 금광석이 없으시네요. 어서 구해오세요.\ \
+Oh! You don't have enough GoldOre. Come on, bring me more.\ \
+ ;<닫기/@exit>
+<Close/@exit>
+#ELSEACT
+set [212] 1
+
+[@noheard]
+#IF
+#ACT
+set [211] 1
+#SAY
+;그 대장장이 아저씨가 삐진 이유가 있었군요.\
+The blacksmith had his good reason to be angry with you.\
+;친절하게 대하는 사람에게 당신처럼 행동하는\
+I have never seen man like you who treat others so badly.\
+;사람 처음보네요. 흥~! 저도 당신하고는 더이상\
+Hum,  I don't want to talk with you any more either! \
+;이야기하기 싫으네요. 안녕히가세요.\ \
+Bye.\ \
+ ;<닫기/@exit>
+<Close/@exit>
+
+[@notalk]
+#IF
+RANDOM 5
+#ACT
+set [211] 0
+#SAY
+;정 그렇게 계속 말씀하시니 제가 기분을 풀도록\
+Since you feel sorry, I will forgive you\
+;하지요. 하지만 장씨아저씨에게도 그러시면 안되요.\
+but don't treat Vincent so.\
+;그 아저씨는 저와는 달라서 속이 아주 좁거든요.\ \
+He is not same as me...\ \
+ ;<네../@heard>
+<Ok, you're right/@heard>
+
+#ELSESAY
+;당신같은 사람하고 더이상 이야기하기 싫다니까요?\
+I don't want to talk with person like you!\
+;당장 나가란 말이에요!!\ \
+Get out of here, please, right now!!\ \
+ ;<닫기/@exit>
+<Close/@exit>
+
+[@appease]
+#IF
+#ACT
+set [210] 0
+set [213] 1
+#SAY
+;이제 됐어요, 어서 장씨아저씨께 가보세요.\ \
+Everything is OK now, go to Vincent.\ \
+ ;<닫기/@exit>
+<Close/@exit>
+
+[@bollow]
+#IF
+check [216] 0
+#SAY
+;아, 장씨아저씨에게 도움을 주신 분이시군요.\
+Ah, you helped Vincent, right?\
+;네, 얘기는 들었어요...지금 비천 노점에 계시는\
+Well, I have heard about your story...\
+;강씨아저씨 아시죠? 지금은 저리 초라해보여도 옛날에는\
+Do you know Bill who repair weapon in Bichon?\
+무지 잘 나가던 대장장이 셨거든요...비록 지금은 술에\
+Althouh he is humble now, he was a good blacksmith before. \
+;찌들어 저렇게 됐지만요...제가 강씨아저씨에게 말씀을\
+Alchoholic as he is... right now\
+;해드릴테니 한 번 찾아가 보세요.\ \
+I'll recommend you to him, so go meet him. \\
+ ;<다음/@next>
+<Next/@next>
+#ELSESAY
+;어서 강씨아저씨에게 가보세요.\ \
+Go and see him please.\ \
+ ;<닫기/@exit>
+<Close/@exit>
+#ELSEACT
+set [215] 0
+
+[@next]
+#IF
+#ACT
+reset [210] 10
+set [214] 1
+set [215] 1
+set [216] 1
+;give 돈 5000
+give Gold 5000
+#SAY
+;참, 장씨아저씨가 외상으로 받으신 금광석 값을\
+Well Vincent gave me the money for GoldOre that he got on credit\
+;저에게 전해주셨어요, 자 여기 5000전이에요\
+Here is 5000 gold for you\
+;아저씨가 이것이상은 더 못드리겠다고 하시던데요?\ \
+He refused to give me more money than this.\ \
+ ;<닫기/@exit>
+<Close/@exit>

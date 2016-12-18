@@ -1,0 +1,6 @@
+Server started..
+H-QyChr=0 H-NwChr=0 H-DlChr=0 Dubl-Sl=0 H-Er-P1=0 H-Er-P2=0 H-Er-P3=0 H-Er-P4=0
+Server closed...
+Server started..
+H-QyChr=0 H-NwChr=0 H-DlChr=0 Dubl-Sl=0 H-Er-P1=0 H-Er-P2=0 H-Er-P3=0 H-Er-P4=0
+Server closed...

@@ -1,0 +1,198 @@
+[@main]
+#IF
+equal p9 0
+#ACT
+goto @main-1
+BreakTimeRecall 
+break
+
+#IF
+equal p9 1
+#ACT
+goto @race
+BreakTimeRecall 
+break
+
+#IF
+equal p9 2
+#ACT
+goto @cube
+BreakTimeRecall 
+break
+
+#IF
+equal p9 9
+#ACT
+goto @quit
+BreakTimeRecall 
+break
+
+[@Quit]
+#IF
+#ACT
+map B011
+
+[@main-1]
+#IF
+checkmonmap T138 1
+#SAY
+;이 안의 쥐들로 부터 저를 보호해 주세요.. \
+Please save me from rats here .. \
+;혹시 당신의 백골도 저를 위협 할수가 있으니 \
+Just in case, even your BoneFamiliar could threaten me \
+;백골도 없애 주세요..\ \
+Kill your BoneFamiliar either, please!.. \ \
+;<닫  기/@exit>
+<Close/@exit>
+
+#ACT
+mov p9 0
+#ELSESAY
+;쥐 때들로 부터 저를 구해 주셔서 감사 합니다. \ \
+Thank you for saving me from the flock of rats. \
+;<다  음/@race>
+<Next/@race>
+
+[@race]
+#IF
+#ACT
+mov p9 1
+#SAY
+;자 다음 주사위를 굴릴수 있는 기회를 드리겠습니다. \
+Let me give you a opportunity to throw next dice. \
+;그럼 행운을 빕니다. \ \
+Good luck. \ \
+;<다  음/@pre_Cube>
+<Next/@pre_Cube>
+
+[@pre_cube]
+#IF
+;checkitem 투패 1  
+checkitem GambleChip 1
+#ACT
+;take 투패 1  
+take GambleChip 1
+mov p9 2
+movr d0 6
+inc d0 1
+playdice 1 @cube
+#SAY
+;주사위를 굴리고 있습니다. \ \  
+Dice is thrown . \ \ 
+;<다  음/@cube>  
+<Next/@cube>
+#ELSESAY
+;<$USERNAME>님, 투패가 한개도 없으시네요. \  
+<$USERNAME>, You don't have GambleChip at all. \
+;이 게임을 하기 위해서는 투패가 필요 하거든요 \ 
+You need GambleChip to play this game \
+;이 투패가 없으면 더이상 진행을 할수가 없네요.. \ 
+Process could not go on without GambleChip .. \
+;투패가 준비가 되거든 다시 오세요.. \ \ 
+Come again later with GambleChip.. \ \ 
+;<닫  기/@Quit> 
+<Close/@Quit>
+#ELSEACT
+mov p9 9
+
+[@cube]
+;주사위의 값은 <$STR(D0)>  입니다. \ 
+Dice shows <$STR(D0)>. \
+;당신을 <$STR(D0)> 만큼 앞으로 이동을 시켜 드리겠습니다. \ \  
+You will be moved forward as long as <$STR(D0)> . \ \
+;<이  동/@next_cube>  
+<Move/@next_cube>
+
+[@next_cube]
+#IF
+equal d0 1 
+#ACT
+goto @posi1
+break
+
+#IF
+equal d0 2 
+#ACT
+goto @posi2
+break
+
+#IF
+equal d0 3 
+#ACT
+goto @posi3
+break
+
+#IF
+equal d0 4 
+#ACT
+goto @posi4
+break
+
+#IF
+equal d0 5
+#ACT
+goto @posi5
+break
+
+#IF
+equal d0 6 
+#ACT
+goto @posi6
+break
+
+[@Posi1]
+#IF
+#ACT
+batchDelay 1
+addbatch B139
+batchmove
+
+[@Posi2]
+#IF
+#ACT
+batchDelay 1
+addbatch B139
+addbatch B140
+batchmove
+
+[@Posi3]
+#IF
+#ACT
+batchDelay 1
+addbatch B139
+addbatch B140
+addbatch B101
+batchmove
+
+[@Posi4]
+#IF
+#ACT
+batchDelay 1
+addbatch B139
+addbatch B140
+addbatch B101
+addbatch B102
+batchmove
+
+[@Posi5]
+#IF
+#ACT
+batchDelay 1
+addbatch B139
+addbatch B140
+addbatch B101
+addbatch B102
+addbatch B103
+batchmove
+
+[@Posi6]
+#IF
+#ACT
+batchDelay 1
+addbatch B139
+addbatch B140
+addbatch B101
+addbatch B102
+addbatch B103
+addbatch B104
+batchmove

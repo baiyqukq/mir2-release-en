@@ -1,0 +1,4 @@
+;';' means Comment
+; Followings have to be arrayed by server no.
+;server no.   connect-addr  port  connect-addr  port.
+1       127.0.0.1 7200

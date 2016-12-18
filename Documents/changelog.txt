@@ -1,0 +1,120 @@
+v1.04
+----------------------------
+Edited some more npc's to remove lvl 20+ items.
+Completely renewed drop lists. (old and unused included)
+Map D612/D618 Names Translated
+New dialouges for Woomyon Wall npcs and new names :)
+New map names for new spider patch maps.
+Fixed an error in the GuardList.txt
+Added spidercave massdrop mobs to spawn lists :)
+Added some new bundles :)
+Added 3 new mobs: Raider1/2/3
+
+Gold Quest Fixed and translated.
+95% translated bloodsword quest.
+EvilApe1 -> RedEvilApe
+EvilApe2 -> GreyEvilApe
+DragonHeart -> EvilApeHeart
+GreenPot -> EvilApeOil
+WhiteCrystal -> JadeCrystal
+
+v1.03
+----------------------------
+Fixed the new necklaces to be able to be worn as necklace and not as ring.
+Fixed some bugs in the gamble house.
+Fixed an error with gloves in the MonItems.
+FlameRing & RecoveryRing fixed. Sound files are in the client.zip
+Translated the Shop teleport NPCs.
+Removed SuperGinseng and eggsinhat from dropfiles.
+Added PigMan to d717.
+Changed SteelGlove Weight to 7.
+Removed all lvl 20+ items from shops except armours.
+Added IronRing to shops
+Added BlackIronGlove lvl 38 AC0-6 Weight.10 (With an Unused GFX) (ZT and WT drop it).
+Added SilverShell (You can see it if you have the latest Client Update).
+Added MediumArmor(M)/(F), and added it to Mud Wall Clothes Shop.
+
+Changed Some things in the Item.DB:
+DeerBlood -> RedPot1
+redpot1 -> RedPot2
+redpot2 -> RedPot3
+redpot3 -> DeerBlood
+Scroll2 -> HealerLetter
+Scroll3 -> Scroll2
+Scroll4 -> Scroll3
+Scroll5 -> MysteryTicket
+
+v1.02
+----------------------------
+More Merchant bugs fixed :)
+Added 50+ unused maps to the Mapinfo.txt, also added them to the client.zip
+BloodSword Quest fixed, untranslated tho :) Walkthrough included.
+EvilApe1 -> EvilApe0
+Ape1 -> EvilApe1
+Ape2 -> EvilApe2
+Fixed 2 bugs in some dropfiles.
+Cannibalplant dropfile now good
+and all dropfiles containing Drugoldarge change to Druglarge (lol)
+Added 3 more maps in server and client: F010,F011,F012
+Added some shit to client.zip for u to see Amubundles, the logs and the shurikens O.o
+And for the minimaps of other thins :P
+lvl 1/3 newbie quest fixed. Walkthrough included.
+New almost translated server exe file included.
+Group recall fixed, commands are in the commands.txt
+
+New unused items from the item files added (without stats):
+NewDrug1 to 3
+NewOil1 to 4
+NewHelmet1 to 4
+NewRing1 to 9
+NewBracelet1 to 6
+NewNecklace1 to 9
+NewScroll1 to 2
+NewScrollBun1 to 2
+NewOre1 to 2
+OldScroll1 to 5
+Unknown1 to 2
+NewWeapon1 to 3 (These dont show fighting animations although the animations are there)
+
+v1.01
+----------------------------
+Fixed bugs in some merchants.
+Redid the teleport man, every tele costs 10k now. And u cannot use him if ur red :)
+Droplists made to drop gold again ;)
+Map teleporter in R001 made for GM use only.
+reminder, to make npcs take gold, or mobs drop gold use GOLD and not GL :P
+test level reset to 7. Start gold 10k.
+New DBserver exe file (more translated)
+Fixed error in merchant.txt
+Added an extra spell to the DB ¿ìËÙ»ðÇòÊõ I got no clue what it does but it was in the chinese DB aswell.
+Bloodswordchip added to RME drop :)
+Teacher and Students translated.
+OldSorcerer Renamed to OldTaoist :)
+Old Taoist partially translated :p
+New maps have their names changed :)
+Added mobspawnlist for beta2
+removed nodrug and noreconnect from war maps
+New more translated server exe.
+JObs for @changejob changed to Warr, Wizard & Taos ( If you experience any bugs due to this then tell us please)
+2 Trainers added:
+0137	21  11     Trainer	  0	 1        10
+0144     6  16     Trainer	  0	 1	  10 
+New mongen files:
+Mongen.txt = no mobs/archers spawned
+MongenOriginal.txt = Original Mongen file
+MongenLowlevel.txt = Mongen for newbie players
+MongenHighlevel.txt = Mongen for high level players
+New client.zip included in the zipfile, give this to players if they want to play on Rang3r's server.
+Guilds not saving Error Fixed
+
+
+v1.0
+----------------------------
+New full server version.
+Version nr restart.
+new client exe.
+To much has changed to document.
+delete your old versions except the char and login dbs ;)
+And adminlist, guildlist, etc :P
+Needs some configging :)
+wemade is the word in !abuse :P

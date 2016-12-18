@@ -1,0 +1,39 @@
+;Weapon
+%100
++15
+
+;Dialogue, '*' : dialogue tag
+[@main]
+I think a Big Strong Person Like <$Username> Would look \
+Fantastic in one of My cheap Strong Helmets! \
+Members of <$OWNERGUILD> will By order of <$LORD> recieve \
+A Discount on My prices, because they Own this Town.\
+How Can I belp? \\
+ <Buy/@buy>\
+ <Sell/@sell>\
+ <Repair/@repair>\
+ <Exit/@exit>
+<>
+
+[@buy]
+What helmet do you want to buy ?\ \ \
+ <Back/@main>
+
+[@sell]
+Show me your helmet to be sold. I'll give you an appraisement.\
+So if you like my store please sell them to me.\ \
+ <Back/@main>
+
+[@repair]
+You can repair helmets here.\ \ \
+ <Back/@main>
+
+[~@repair]
+It seems repaired fine.\ \ \
+ <Back/@main>
+
+[goods]
+;itmes(can be Zen)   pieces       hour
+BronzeHelmet		100	1
+MagicHelmet		100	1
+ShamanHelmet		100	1

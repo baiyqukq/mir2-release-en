@@ -1,0 +1,77 @@
+[@main]
+#IF
+equal p9 0
+#ACT
+goto @main-1
+BreakTimeRecall 
+break
+
+#IF
+equal p9 1
+#ACT
+goto @race
+BreakTimeRecall 
+break
+
+#IF
+equal p9 9
+#ACT
+goto @quit
+BreakTimeRecall 
+break
+
+[@main-1]
+#IF
+#ACT
+mov p9 0
+#SAY
+欢迎<$USERNAME>光临.\
+这里是赌场里的最后一间房. \
+不管发生什么事情,你都要坚持下去. \
+这间房主要考验你的意志 \
+但这间房只能存活一个人,为了最后胜利,你一定要成为最后的生存者！\
+现在把你送入天堂房. \ \
+<下一步/@next>
+
+[@next]
+#IF
+checkitem 筹码 1
+#ACT
+take 筹码 1
+mov p9 1
+TimeRecall 5
+map T140
+#ELSESAY
+<$USERNAME>没有筹码了. \
+你无法继续赌博. \ 
+想继续进行,那准备好筹码后再来\ \
+<退出/@Quit>
+#ELSEACT
+mov p9 9
+
+[@race]
+#IF
+checkhum T140 1
+#SAY
+天堂房里已经另有其主了 . \
+真可惜,你没完成最后一项任务. \
+能到这里来,说明你也经历了各种磨难..辛苦你了! \
+再次挑战的话,可能会实现你的愿望哦 ^_^  \ \
+<关闭/@Quit>
+#ACT
+mov p9 9
+#ELSESAY
+衷心祝福你, 你已经成为了这里的最终胜利者！ \ 
+现在发给你奖品. \
+祝你拥有快乐的一天 \ \
+<关闭/@race-1>
+
+#ELSEACT
+give 祝福油 1
+mov p9 9
+
+[@Quit]
+#IF
+#ACT
+map B011
+

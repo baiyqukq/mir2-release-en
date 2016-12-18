@@ -1,0 +1,94 @@
+[@main]
+#IF
+check [757] 1
+#ACT
+goto @Q707
+break 
+
+#IF
+check [756] 1
+#ACT
+goto @Q706
+#ELSEACT
+goto @normal
+
+[@Q707]
+;자네 벌써 책을 받지 않았나?? 책을 받았으면 화염장 \
+You received books already, didn't you ??   as you got books \
+;이라는 책을 더블클릭을 해보게(마우스 왼쪽키 두번클릭) \
+Click a book called by Fireball twice (click twice the left button of mouse) \
+;그럼 책이 없어지면서 무공을 배운걸세 이 무공은 F11 \
+Then as the book disappears you master the skill \
+;를 누르면 무공을 확인할수 있네 무공을 세팅 하는 방법은 \
+Hitting F11 button, you can check your martial art skill \
+;무공 그림을 누른뒤 키를 지정해 주고 그 키를 누르면 나간다네 \
+How to set up your martial art skill is that after hitting martial art picture , select key button \  
+;이제 비천현에 있는 서점에 한번 가보시게나 그 서점 주인이 \
+Now go and visit Bookstore at Bichon Province \
+;자네가 더욱 발전 할수 있는 가르쳐 줄것세 \ 
+The owner of Bookstore will advise you how to develop yourself \ \ 
+;비천 서점의 좌표는 323,247 이곳이네 한번 가보게 \
+The coordinates of Bookstore is 323,247 , Try to go there \
+;<닫  기/@exit>
+<Close/@exit>
+
+[@normal]
+;나는 화천선생이라고 하네 자네 이름은 무엇인가? \
+I am GreatWizard, What's your name? \
+;가르쳐 주지 않는다고? 흠.. 그런가 알았네 \
+You don't ansmer me    Hum.. Ok, I see what you mean \
+;그럼 자네 할일 하시게 \ \
+Then I don't care whatever you do \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q706]
+#IF
+checklevel 7
+#SAY
+;자네의 능력을 테스트 해보겠네, 양과 사슴과 닭이라는 몬스터가 \
+Let me test your ability, there are a lot of monsters called by Sheep, Deer and Hen here  \
+;많이 있다네, 이 것들은 5분내에 잡고 나서, 나와 대화를 하세 \ \
+First, kill them all within 5 minute. let me talk to you after finishing it \ \
+;<닫 기/@Q706_1>
+<Close/@Q706_1>
+#ELSESAY
+;나의 이름은 화천이라고 하네 방갑구만...\
+I am GreatWizard, What's your name? \
+;자네 술사라는 직업에 대하여서는 도우미님에게 들어서 \
+I think that helper advised you enough about the occupation , Wizard \
+;많은 것을 알고 있을걸세. 술사의 첫 무공은 화염장이라고 \
+Fireball is a first step for Wizard, To study Fireball \
+;하지 그 무공을 익히기 위해서는 자신의 레벨이 7이상 되어야 \
+Your level should be 7 or more \
+;하네. 먼저 자네의 능력을 키워서 다시 나한테 오시겠나? \ \
+Come again later with enough level? \ \
+;<닫 기/@exit>
+<Close/@exit>
+
+
+[@Q706_1]
+#IF
+checkhum 01152 1
+#SAY
+;지금 나에게 테스트를 받는 사람이 있네 그 사람의 테스트가 \
+At this moment there is someone under test \
+;끝이 날때 까지 기다려 주게나 대단히 미안할네. \ \
+Please wait until the person's test is finished. \ \
+;<닫  기/@exit>
+<Close/@exit>
+#ELSEACT
+Monclear 01152
+Param1 01152
+Param2 19
+Param3 19
+;MonGen 사슴 10 10
+MonGen Deer 10 10
+;MonGen 닭 20 10
+MonGen Hen 20 10
+;MonGen 양 10 10
+MonGen Sheep 10 10
+TimeRecall 5
+map 01152
+
+

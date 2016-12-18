@@ -1,0 +1,244 @@
+[@main]
+#IF
+random 2
+#ACT
+goto @QUEST
+#ELSEACT
+goto @normal
+
+[@normal]
+#IF
+#SAY
+;이 오마동굴에는 해골투사라는 무서운 몬스터가 살고 있지 \
+A strong monster called BoneElite lives in Oma Cave \
+;그 몬스터를 잡을려면 꽤나 많은 힘이 들어 간다네.. \
+It is not difficult to kill the monster .. \
+;그 몬스터를 보면 도망치게.. 내가 해줄말은 이것뿐이 없네 \ \
+If you face the monster.. run away ! it's all what I tell you \ \ 
+;<닫  기/@exit> \
+<Close/@exit> \
+
+[@QUEST]
+;#IF
+;check [316] 1
+;#ACT
+;goto @Q316
+;break
+
+#IF
+check [315] 1
+check [204] 1
+
+#ACT
+goto @Q315
+
+#ELSEACT
+goto @normal
+
+[@Q315] 
+#IF
+daytime sunraise
+#SAY
+;내 이름을 묻는가? 내 이름은 알려주기는 힘들고, 유노인이라 하네\
+Do you ask my name ?  I don't like to tell you, but my name is Jonathan \
+;잘지네 보세 그래 자네, 내가 알고 있는 동굴이 있는데, 이 동굴에 \
+Let me get along well with you, there is a cave that I know well \
+;대하여 한번 알아 보고 싶은가? 그렇다면 나에게 정보를 듣는 대신 \
+Do you want to hear about it ? then you should pay me 5000 gold \
+;5000전을 주게 그렇다면, 자네에게 그 정보를 알려 주겠네... \ \
+if you pay me , I'll let you know about it... \ \ 
+;정보를 <듣는다/@Q315_1> \
+<Listen to/@Q315_1>the information \
+;정보를 듣지 <않는다./@Q315_2>
+<Refuse/@Q315_2> 
+#ELSESAY
+;오마동굴에는 악덕상인으로 유명한 사람이 몃명 있지 \
+There are several people famous as a wicked merchant in Oma Cave \
+;그 사람들도 처음부터 악덕한 사람으로 유명 한 사람들은 아니었지 \
+The people were not famous as a wicked merchant form the first time \
+;그 사람들도 나름대로의 어려움을 가지고 있어서 그렇게 변했다네 \
+The people had a some reason to \
+;이 사람들도 참 불쌍한 사람이지..(쯧쯧....) \ \
+What a poor people they are.. \ \ 
+;<닫  기/@exit>
+<Close/@exit> \
+
+[@Q315_2]
+#IF
+#SAY
+;자네 정보를 듣지 않겠다구 잘생각 했네.. \
+You don't want to listen to me, it's ok..\
+;나도 자네에게 이러한 정보를 알려 준다고 해서 자네가 해결 \
+If I gave you this information, I am not sure that you can \
+;할수 있을지는 모르니까 말일세... 그럼 잘 가시게 \ \
+pass the quest... Good-bye \ \ 
+;<닫  기/@exit>
+<Close/@exit> \
+
+[@Q315_1]
+#IF
+checkgold 5000
+#ACT
+;take 돈 5000
+take Gold 5000
+#SAY
+;그래 정보를 한번 들어 보겠다 이건가? \ 
+Do you want to hear about the information ? \
+;별 이야기는 아니지만 한번 잘 들어 보시게.. \
+It's nothing special but listen carefully.. \
+;내가 알고 있는 곳을 들어가보니 미르 세계와 같은 \
+When I got in a place I know, there was a monster like the one of mir world \
+;몬스터가 등장 하더군 이 몬스터들은 죽지가 않더구만 \
+These monsters were never killed. \
+;나두 한때 미르세계에는 이름을 날리던 사람 이었거든.. \ \
+I was a famous person at mir world in the past .. \ \ 
+;<다  음/@Q315_1_1> \
+<Next/@Q315_1_1> \
+;<닫  기/@exit>
+<Clsoe/@exit>
+#ELSESAY
+;자네 돈이 없구만.. 그런데 무슨 정보를 듣겠다고 하나 \
+You don't have enough Gold.. Why do you ask me the information without enough Gold? \
+;돈을 가져 오게 그래야만 나도 자네에게 정보를 알려 주겠네 \ \
+Pay me Gold, then I'll give you information \ \ 
+;<닫기/@exit> 
+<Close/@exit>
+
+[@Q315_1_1]
+#IF
+#SAY
+;이런한 몬스터에게 쫏겨다니면서, 계속적으로 여행을 해보았네\
+Being pursued by these monsters, I kept exploring \
+;그런데 놀랍게도 이안에 이상한 노인이 서 계셨다네, 그 노인에게 \
+Then I found a strange old man there,  when I greeted him \
+;한마디 말을 걸어 보니, 그 노인은 실성을 했는지 8괘진에 대한 \
+The old man told me 8 Koai-Jin ( gate group consist of 8 gates holding a test ) \
+;이야기만 계속 하더군.. 난 너무 궁굼해서 계속 물어 보았더니 \
+When I asked him more information \
+;그 노인왈 그 곳에 한번 가보겠나? 하고 묻더라구.. \ \
+Would you try going there ? he answered me .. \ \ 
+;<다  음/@Q315_1_2> \
+<Next/@Q315_1_2> \
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q315_1_2]
+#IF
+#SAY
+;나는 물론 젊은 객기로 한번 가보겠다고 했지.. \ 
+Of course, I received his suggest with youthful ardor..\
+;그곳은 무척이나 햇갈리던 곳이 었어, 아무리 가보아도 \
+I confused a lot there because I felt going on walking the way of rotation \
+;같은 길을 도는 것 같고.. 정말 못찾겠더군... \
+I didn't find out the path toward outside.. \
+;하지만 돌아다니다 보지 이곳의 규칙이 그 노인이 이야기 하는 \
+But I recognized that the 8 Koai-Jin the old man said is \
+;8괘진의 원리에 맞쳐서 돌아 가더라 이말이야.. \
+the principle controlling this cave during exploring cave \
+;그 원리만 잘 알고 있다면 어렵겠지만 나같은 행동은 하지 않을걸세 \ \
+8 Koai-Jin is difficult but if you understand it, you will be not same as me \ \ 
+;<다  음/@Q315_1_3> \
+<Next/@Q315_1_3> \
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q315_1_3]
+#IF
+#SAY
+;그 진에 있는 몬스터를 보았네 그 몬스터의 생김새는 우면귀장을 \
+I saw a monster staying at the Tactical Maze. it resembles a WoomaGuardian \
+;닮았더구만, 그 몬스터와 한번 싸워 보았지만 내가 상처만 입었지 \
+in appearance, I tried fighting against the monster but just I was injured \
+;죽을 생각을 안하더군 얼마나 겁이 나는지. 그 놈들을 피해 도망을 \
+the monster never died . then I was so scared as to escape from the monsters \
+;가다 보니 어떠한 어여쁜 여자가 있더구만, 그것참 신기하지 않은가? \
+Escaping from the monsters, I found a pretty girl , what a coincidence! \
+;그 여자는 어떻게 그 험한 곳을 뚫고 그곳에 왔는지.. 그 여자는 \
+How was she there..  I guess she could get a high level martial art skill \
+;무공에 고수 일까라는 생각을 아직도 가끔 해본다네.. \ \
+somethims .. \ \ 
+;<다  음/@Q315_1_4> \
+<Next/@Q315_1_4> \
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q315_1_4]
+#IF
+#SAY
+;말이 이상한 곳을 빠졌구만.. 하여튼 이 여자에게 말을 걸어 보니 \
+A hoarse fell into a strange place.. anyhow I greeted her \
+;신기한 물건을 팔더란 말이야, 신기한 물건이라서 그런지 그 이름과 \
+She dealt in strange items , Those were so strange that I could not \
+;필요 한것들이 정확하게 기억이 나네.. \
+remember the names and what I wanted exactly.. \
+;자네 거기를 가는 입구는 까지는 내가 기억이 남아 있어서 \
+But I can show you the way to the entrance as far as I remember \
+;데려다 줄수 있네 어렵지만 한번 가보겠나? \ \
+Would you go there ? \ \ 
+;파는 물건의 종류와 가격에 대해서 <알아본다/@price> \
+<Check/@price>kinds and price of items to be sold \
+;한번 찾아가 <본다/@Q315_1_4_1> \
+<Go there/@Q315_1_4_1>just no preparation \
+;준비를 해서 찾아가 <본다/@exit>
+<Go there/@exit>with preparation \
+
+
+
+[@price]
+#IF
+#SAY
+;그 여인이 파는 물건은 삼적대부,사모검,청마장 이라네. \
+She deals in GreatAx, SerpentSword, Mage Staff . \
+;삼적대부 : 금괴 1 + 순도 13이상 금광석 5개 \
+GreatAx : GoldBar 1 + Purity 13 or more GoldOre 5 piece \
+;사모검 : 금괴 1 + 순도 13이상 금광석 4개 \
+SerpentSword : GoldBar 1 + Purity 13 or more GoldOre 4 piece \
+;청마장 : 금괴 1 + 순도 13이상 금광석 3개 \
+Mage Staff : GoldBar 1 + Purity 13 or more GoldOre 3 piece \
+;축복의기름 : 금전 50만전 + 선화수(중) 5개 \
+Benediction Oil : Gold 500000 gold + Sunpotion(Medium) 5 piece \
+;이렇게 준비를 해서 가시게 그렇지 않으면 결국 그 여인을 \
+Go and see her with preparation like this \
+;만나더라도 제작을 부탁 할수가 없네. \ \
+If you don't, although you see her you can not ask her production. \ \ 
+;<다  음/@price1>
+<Next/@price1>
+
+
+[@price1]
+#IF
+#SAY
+;삼적대부와 사모검과 청마장은 1번 뿐이 만들어 주지 않으며 \
+The production of GreatAxe and MageStaff is available just one time \
+;축복의 기름은 5번을 만들어 준다네.. \ 
+in case of Benediction, five times available.. \
+;이 점은 꼭 기억을 하시게... \ 
+Don't forget it  .. \
+;그렇다면 자네는 그곳으로 한번 가보시겠나?? \ \
+then would you try going there ?? \ \
+;한번 찾아가 <본다/@Q315_1_4_1> \
+<Go there/@Q315_1_4_1>just no preparation \
+;준비를 해서 찾아가 <본다/@exit>
+<Go there/@exit>with preparation \
+
+
+[@Q315_1_4_1]
+#IF
+#ACT
+SET [316] 1
+mapmove Q011 13 10
+
+;[@Q316]
+;#IF
+;#SAY
+;자네 벌써 이 곳으로 인도해 주지 않았나? \
+I already showed you the way \
+;나는 같은 일을 2번하는 것을 싫어 한다네.. \
+I don't like doing same job twice.. \
+;자네가 몃번을 찾아 와도 나는 다시는 자네를 \
+Although you repeat aking me \
+;그 곳으로 이동 시켜 주지 않을 걸세.. \ \
+I'll never move you there.. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+

@@ -1,0 +1,28 @@
+[@main]
+#IF
+equal p9 0
+#ACT
+goto @main-1
+BreakTimeRecall 
+break
+
+[@main-1]
+#IF
+#ACT
+mov p9 0
+#SAY
+你好? 你到了活动室. \
+;Hi! This is a Rascal's room. \
+您在5名当中选择了我. \
+;You selected me among 5 people. \
+我将给你3个强效金创药. \ \
+;I'll give you (HP)Druglarge 3 bottles . \ \ 
+<下一步/@next>
+;<Next/@next>
+
+[@next]
+#IF
+#ACT
+;give (HP)Druglarge 3
+give 强效金创药 3
+mapmove B105 10 10

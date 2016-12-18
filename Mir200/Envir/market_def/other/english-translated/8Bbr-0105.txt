@@ -1,0 +1,56 @@
+;무기
+%100
+;팔찌
++24
++26
+
+;대화, '*' : 대화 태그
+[@main]
+;어서오세요.  무슨 일로 오셨나요?\ \
+Welcome.  What can I do for you?\ \
+ ;팔찌를 <산다/@buy>\
+<Buy/@buy> bracelet \
+ ;팔찌를 <판다/@sell>\
+<Sell/@sell> bracelet\
+ ;팔찌를 <고친다/@repair>\
+<Repair/@repair> bracelet\
+ ;<그만둔다/@exit>
+<Cancel/@exit>
+<>
+
+[@buy]
+;사실 목록을 고르세요.\ \ \
+Please select list you'd like to buy.\ \ \
+ ;<뒤로/@main>
+<back/@main>
+
+[@sell]
+;팔찌를 파실래요?\
+Which bracelet would you like to sell?\
+;장갑도 취급합니다.\ \
+We also treat gloves.\ \
+ ;<뒤로/@main>
+<back/@main>
+
+[@repair]
+;팔찌, 장갑, 갑박 종류를 수리할 수 있습니다.\ \ \
+You can repair various kinds of bracelets, gloves and plates. \ \ \
+ ;<뒤로/@main>
+<back/@main>
+
+
+[~@repair]
+;그런대로 잘 수리되네요.\ \
+It seems repaired well.\ \
+ ;<뒤로/@main>
+<back/@main>
+
+;[상품]
+[goods]
+;젠되는 상품    물량       hour
+;금장팔찌        3          3
+ThinBracelet 
+;은통팔찌        3          3
+SilverBracelet
+;철팔찌          3          3 
+IronBracer

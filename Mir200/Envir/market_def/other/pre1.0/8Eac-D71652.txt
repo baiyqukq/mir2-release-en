@@ -1,0 +1,33 @@
+%200
+;œÓ¡¥,Ω‰÷∏,Ω‰÷∏
++19
++20
++21
++22
++23
++24
++26
+
+[@main]
+
+Are you here to find out something new ?\
+I guess you may know that it is dangerous here\
+The only thing I can do for you is repairing your accessory \\
+repairing your accessory \\
+<repair/@repair> accessory \
+<cancel/@exit>
+<>
+
+[@repair]
+Do you want to repair your accessory?\ \ 
+ ;<µ⁄∑Œ/@main>
+<back/@main>
+
+[~@repair]
+It seems to be well done.\ \
+ ;<µ⁄∑Œ/@main>
+<back/@main>
+
+;[goods]
+[Goods]
+;¡®µ«¥¬ ªÛ«∞    π∞∑Æ       hour

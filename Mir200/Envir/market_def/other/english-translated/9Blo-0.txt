@@ -1,0 +1,51 @@
+;품목  복권
+%100
++3
+
+;대화, '*' : 대화 태그
+[@main]
+;어서오시오. 어디 당신의 운을 한 번 시험해 보시겠소?\ 
+Welcome. Would you try your luck?\
+;당첨이 되지 않는다해도 나는 책임지지 않소.\ 
+If you lost, don't blame me then!\
+;그래도 좋소? 그렇다면 어디 골라보시구려.\
+Do you still want to try it? Then pick it up.\
+;돈을 가질 수 있는 한계에 다달으면 돈이 바닥에 떨어지니\ 
+If the amount of money will be over the limit,\
+;주의하시오!!\ \ 
+the money over the limit will be dropped down so be careful!!\ \
+ ;복권을 <산다/@buy>\ 
+ <Buy/@buy> Lottery ticket\
+ 당첨금에 대하여 <알아본다/@Bingo>\ 
+ <Check/@Bingo> the winning money\
+ ;<그만둔다/@exit> 
+ <Cancel/@exit>
+<>
+
+[@buy]
+;사고 싶은 물품을 고르시오.\ \ \ 
+Please pick up what you want to buy.\ \ \
+ ;<뒤로/@main> 
+ <Back/@main>
+
+[@Bingo]
+  ;1등    1,000,000전\  
+  1st prize    1,000,000 gold\
+  ;2등      200,000전\  
+  2nd prize      200,000 gold\
+  ;3등      100,000전\  
+  3rd prize      100,000 gold\
+  ;4등       10,000전\  
+  4th prize       10,000 gold\
+  ;5등        1,000전\ 
+  5th prize       1,000  gold\
+  ;6등          500전\ \   
+  6th prize         500  gold\ \
+;<뒤로/@main> 
+<Back/@main>
+
+;[상품]  
+[Goods]
+;  품이름   번에나  는물량  나  는시간(hour)
+;복권    10000           1 
+LotteryTicket

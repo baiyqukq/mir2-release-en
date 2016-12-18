@@ -1,0 +1,18 @@
+;武器
+%150
++10
++11
+
+
+
+;对话, '*' : 对话tag
+
+[@main]
+Hello <$USERNAME>,\
+I can special repair your clothes.\
+But it will cost some more.\ \
+<Special repair/@s_repair> Clothes\
+<Cancel/@exit>
+
+[goods]
+;商品 数量  时间(hour)

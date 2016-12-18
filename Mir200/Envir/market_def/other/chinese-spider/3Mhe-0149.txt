@@ -1,0 +1,106 @@
+;Weapon
+%100
++15
+
+;Dialogue'*' : Dialogue tag
+[@main]
+#IF
+checkpkpoint 2
+#SAY
+我不想和你这样的人打交道.. \ \
+<取消/@exit>
+
+#ELSEACT
+goto @main-1
+
+
+[@main-1]
+欢迎！我能为你做点什么？\ \
+ <买/@buy>  头盔\
+ <卖/@sell>  头盔\
+ <修理/@repair>头盔\
+ <取消/@exit>
+<>
+
+
+[@Tmove]
+#IF
+random 8
+#ACT
+mapmove 3 320 303
+break
+
+#IF
+random 8
+#ACT
+mapmove 3 320 304
+break
+
+#IF
+random 8
+#ACT
+mapmove 3 321 304
+break
+
+#IF
+random 8
+#ACT
+mapmove 3 321 303
+break
+
+#IF
+random 8
+#ACT
+mapmove 3 310 293
+break
+
+#IF
+random 8
+#ACT
+mapmove 3 310 294
+break
+
+#IF
+random 8
+#ACT
+mapmove 3 311 294
+break
+
+#IF
+random 8
+#ACT
+mapmove 3 311 293
+break
+
+#ELSEACT
+goto @Tmove
+
+[@buy]
+你想买什么样的头盔？\ \ \
+ <返回/@main>
+
+
+[@sell]
+把你要卖的头盔给我看看，\
+我会给你估价。\
+ <返回/@main>
+
+[@repair]
+这里你可以修补头盔.\ \ \
+ <返回/@main>
+
+[~@repair]
+这个看上去已经补好了。\ \ \
+ <返回/@main>
+
+[goods]
+;itmes(can be Zen)   pieces       hour
+青铜头盔          1000         1
+
+
+魔法头盔	1000	1
+骷髅头盔		1000	1
+道士头盔	1000	1
+记忆头盔		1000	1
+祈祷头盔	1000	1
+黑铁头盔	1000	1

@@ -1,0 +1,14 @@
+;물가
+
+[@main]
+#IF
+#ACT
+reset [200] 30
+set [204] 1
+#SAY
+;이제 해결되었네...다시 열심히 게임하게나\
+Finally everything is solved... Enjoy playing a game again \
+;그럼 즐거운 하루 되길 바라네...\ \
+Have a nice day... \ \
+ ;<닫기/@exit> 
+<Close/@exit>

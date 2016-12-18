@@ -1,0 +1,74 @@
+;1/4  µ·  450
+;1/5  Ã¼·ÂÈ¸º¹¾à(´ë)
+;1/10  ¸¶·ÂÈ¸º¹¾à(´ë)
+;1/20  ¼±È­¼ö
+;1/20  ¼±È­¼ö
+;1/20  ¼±È­¼ö
+
+;1/1000   È­°æ
+;1/500   Á×Àû
+;1/1000   »þ¸¸ÀÇÅõ±¸
+;1/500   º®»ç°Ë
+;1/1000   »êÈ£¼®¹ÝÁö
+;1/500   Åð¸¶¹ÝÁö
+
+;1/700   ÇØ°ñÅõ±¸
+;1/700   »ç½ÅÀÇÀå°©
+;1/700   ¿¬ÀÚºÎ
+
+;1/250   ¹Ì°©ÁÖ(³²)
+;1/250   ¹Ì°©ÁÖ(¿©)
+;1/250   µµ½ÅÀÇ(¿©)
+;1/250   µµ½ÅÀÇ(³²)
+;1/250   È­¿°¸¶ÀÇ(³²)
+;1/250   È­¿°¸¶ÀÇ(¿©)
+;1/250   È²±Ý¹ÝÁö
+;1/250   Ã»¿Á¼®¸ñ°ÉÀÌ
+;1/250   È²±ÝÆMeatî
+;1/250   ¼ö¾çÀÇ¹ÝÁö
+;1/250   ÁÖ¼úÀÇ¹ÝÁö
+
+;1/10000  Àû³­ÀÇ¹ÝÁö
+;1/10000  Àû³­ÀÇÆMeatî
+;1/10000  ¹ÐÈ­°æ
+;1/10000  ¹ÐÈ­·û
+
+1/4  gold  450
+1/5  (HP)DrugLarge
+1/10 (MP)DrugLarge
+1/20  SunPotion
+1/20  SunPotion
+1/20  SunPotion
+
+1/1000   ConvexLens
+1/500   BambooPipe
+1/1000   ShamanHelmet
+1/500   PurifierSword
+1/1000   CoralRing
+1/500   ExpelRing
+
+
+1/700   SkeletonHelmet
+1/700   DeathGauntlet
+1/700   PowerAxe
+
+1/250   HeavyArmour(M)
+1/250   HeavyArmour(F)
+1/250   SoulArmour(F)
+1/250   SoulArmour(M)
+1/250   MagicRobe(M)
+1/250   MagicRobe(F)
+1/250   GoldRing
+1/250   BlueJadeneck
+1/250   GoldBracelet
+1/250   MoralRing
+1/250   CharmRing
+
+1/10000  OrchidRing
+1/10000  OrchidBracelet
+1/10000  PheonyNecklace
+1/10000  PheonyBrace
+
+
+
+

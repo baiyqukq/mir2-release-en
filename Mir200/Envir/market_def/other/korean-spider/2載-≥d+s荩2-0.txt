@@ -1,0 +1,52 @@
+;무기
+%100
++5
++6
++43
+
+#SETHOME  @main_1
+#include  standard.def
+#include  skel_dungeon.def
+
+[@main]
+#CALL  [001.txt] @meet_blacksmith_kang
+
+
+[@main_1]
+어서오시오.  찾아줘서 고맙소.\ \
+ 무기를 <산다/@buy>\
+ 무기를 <판다/@sell>\
+ 무기를 <고친다/@repair>\
+ <말을 건다./@talktalk>\
+ <그만둔다/@exit>
+
+
+[@talktalk]
+#call  [001.txt] @sayhello_ebbuni
+
+
+[@buy]
+무엇을 살지 고르시게나.\ \ \
+ <뒤로/@main_1>
+
+[@sell]
+팔 무기를 올려놓아 보시오.\ \ \
+ <뒤로/@main_1>
+
+[@repair]
+무기를 고치시게? 어떤걸 고칠건지 올려보시오.\ \
+ <뒤로/@main_1>
+
+[~@repair]
+잘 고쳐졌네, 다음에 또 들르게.\ \
+ <뒤로/@main_1>
+
+
+[상품]
+;젠되는 상품    물량       hour
+목검            50         1
+청동검          50         1
+철검            50         1
+유월도          50         1
+단검            50         1
+

@@ -1,0 +1,12 @@
+;;군도 퀘스트 마지막 분기점
+[@main]
+#IF
+checkmonmap 01141 1
+#SAY
+;어허, 마귀들이 난리를 치는군 어서 저것들을 다 퇴치해주게.\ \
+Ah, there are a lot of raging evil spirits. Please, expel all of them.\ \
+ ;<닫기/@exit> 
+<Close/@exit>
+#ELSEACT
+map 0114
+set [220] 1

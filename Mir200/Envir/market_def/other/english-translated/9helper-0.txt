@@ -1,0 +1,559 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; [750] - [770] 까지는 초렙용 퀘스트 완결 플레그
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[@Main]
+;안녕하세요? 게임을 처음 하시나요?\
+Hi? Are you a beginner in this game?\
+;간단한 도움쯤은 제가 드릴 수 있습니다.\ \
+I can guide you with a brief explanation.\
+;<도우미와 자신이 할수 있는 일을 대해서 대화한다/@QUEST>\
+<Talk about What I can do/@QUEST>\
+;<도우미에게 미르의 전설2 사용법에 대하여 배워본다/@next>
+<Learn the usage of Mir2/@next>
+
+[@next]
+;먼저 NPC와 대화를 할수 있는 방법을 알려 드릴게요. \
+First, Let me tell you how to talk with NPC. \
+;NPC와 대화를 하는 방법은 노란줄이 보이시죠. 그 노란줄을 \
+Do you see a yellow line ? Click the yellow line \
+;클릭을 하시면 그에 해당하는 대화 혹은 메뉴등을 보실수 \
+And you can see the concerned dialogue or category table \
+;있습니다. 처음에는 어려우시겠지만, 좀 더 하시다보면 \
+It could be difficult because it is first time \ 
+;익숙해 지실 겁니다. \ \
+You will be used to playing soon. \ \ 
+;<다  음/@next1>
+<Next/@next1>
+
+[@next1]
+;아래의 메뉴중에서 하나를 택하여 보세요. \
+Select one among category below .\ 
+;<아이템  착용법/@Wear>\
+<How to wear items/@Wear>\
+;<이  동  관  련/@Move>\
+<How to move/@Move>\
+;<전  투  관  련/@Fight>\
+<How to fight/@Fight>\
+;<명령어  관  련/@Talk>\
+<Command terms/@Talk>\
+;<무  공  관  련/@Skill>\
+<Martial Art/@Skill>\
+;<단축키  관  련/@Hotkey>\
+<Function Key/@Hotkey>\
+;<도우미와 자신이 할수 있는 일을 대해서 대화한다/@QUEST>\
+<Talk about What I can do/@QUEST>\
+;<닫  기/@exit>
+<Close/@exit>
+
+[@QUEST]
+#IF
+check [756] 1
+#ACT
+goto @Q706
+break
+
+#IF
+check [755] 1
+#ACT
+goto @Q705
+break
+
+#IF
+check [753] 1
+#ACT
+goto @Q703
+break
+
+#IF
+check [752] 1
+#ACT
+goto @Q702
+break
+
+#IF
+check [750] 1
+#ACT
+goto @Q700
+#ELSEACT
+goto @QUEST1
+
+[@Q706]
+;말씀 드린곳으로 빨리 한번 가보세요 그분이 기다리고 계세요 \ \
+Go to the place I said, The person waits for you there \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+
+[@Q705]
+#IF
+checklevel 5
+#ACT
+SET [756] 1
+goto @Q705_1
+#ELSESAY
+;<$USERNAME>님 무기점 아저씨가 맡기신 일을 다 하셨어요? \
+<$USERNAME>, Do you finish the job that the man of ArmStroe asked you ? \
+;같은 방법으로 갈고리괭이나 허수아비 갈퀴괭이를 잡으셔서 \
+Would you come again after reaching level 5  \
+;레벨 5까지 만들어서 다시 오시겠어요? 그럼 다음 할일을 가르쳐 \
+with killing HookingCat or Scarecrow or RakingCat ? \
+;드리겠습니다. 그럼 행운을 빌어요^^; \ \
+then I'll give you a next job to do. Goo luck! \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q705_1]
+#IF
+checkjob warrior
+#ACT
+goto @Q705_1_1
+break
+
+#IF
+checkjob wizard
+#ACT
+goto @Q705_1_2
+break
+
+#IF
+checkjob taoist
+#ACT
+goto @Q705_1_3
+break
+
+[@Q705_1_3]
+;<$USERNAME>님 무기점 아저씨가 맡기신 일을 다 하셨어요? \
+<$USERNAME>, Do you finish the job that the man of ArmStroe asked you ? \
+;또한 <$USERNAME>님의 레벨이 5이상 이시군요. 흠 당신의 직업은 \
+Also <$USERNAME>, your level is 5 or more. Do you know  \
+;무엇인지 아세요? 당신의 직업은 도사랍니다. 이 도사는 도인들에 \
+what your occupation is ? You are a Taoist. Taoists are students of Taoism made by \
+;의해 창시된 도교의 수련자들로 천문,지리,의술등 다방면의 학문에 \
+acient taoists and this people are good at kinds of knowledges \
+;뛰어난 능력을 가지고 있으며, 전사에는 미치지 못하지만 검술에도 \
+such as astronomy, geography,medical science. and although it's not same as warrior \
+;상당한 조예가 있습니다. 양생에 대한 연구로 인해 기와 의술에 대한 \
+They are good at sword skill also. for they have studyed health \
+<다  음/@Q705_1_3_1>
+
+[@Q705_1_3_1]
+;조예가 대단히 깊어 다양한 회복술을 사용하며,한편으로는 치명적인 \
+They know well about medical skill and Ki(the vital power of body as Asian concept) \
+;독을 제조하기도 합니다. 도사의 특징은 다양한 보조 도구를 사용하는 \
+Therefore they use various kinds of healing, also they make serious poison \
+;공격이 많다는 것인데, 특히 후반에는 대부분의 도술이 부적을 통해 \
+Taoist has a lot of attack skills using various kinds of aid-instrument \
+;이뤄지기 때문에 가지고 다녀야할 물건이 많습니다. 또한 공수의 균형 \
+Especially at the end of game, most taoist magic skill will be performed with amulet \
+;이 가장 적절하며 원거리와 근거리 공격을 모두 갖추고 있으며, 또한 \
+So you should carry many items, and the balance of attack and deffence is best and \
+;다양하고 강력한 보조계 도술도 구사하여 어떠한 상황에 닥쳐도 \
+Attack at short distance and long distance both are available.  \
+;<다  음/@Q705_1_3_2>
+<Next/@Q705_1_3_2>
+
+[@Q705_1_3_2]
+;대처할 수 있는 전천후 능력을 갖추고 있습니다. \
+also using various and strong magics helping other chacacter. They can cover every situation .\
+;이제 <$USERNAME>님은 도사 고수집에 가셔서 자신의 능력을 키워나갈 \
+Now <$USERNAME>, you should go to the house of High level taoist and build elementry ground to increase your ability. \
+;밑바탕을 쌓으세요. 그렇기 위해서는 대비선승님과 말씀을 나누십시요 \
+To do so, you should talk to HolyTaoist \
+;자 도사 고수의집은 544,560 입니다. 가는 길이 쉽지는 않겠지만 \
+Now the coordinates of high level taoist's house is 544,560. It is not easy to go there But \
+;꼭 그분과 말씀을 나누어 보세요 \ \
+Talk with him absolutely \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+
+[@Q705_1_2]
+;<$USERNAME>님 무기점 아저씨가 맡기신 일을 다 하셨어요? \
+<$USERNAME>, Do you finish the job that the man of ArmStroe asked you ? \
+;또한 <$USERNAME>님의 레벨이 5이상 이시군요. 흠 당신의 직업은 \
+Also <$USERNAME>, your level is 5 or more. Do you know  \
+;무엇인지 아세요? 당신의 직업은 술사랍니다. 이 술사는 특징은 \
+what your occupation is ? You are a Wizard. Wizards is a interseting and attractive \
+;다양하고 화려한 마법을 구사하는 재미있고 매력적인 캐릭터 입니다. \
+character performing various and brilliant magic skill. \
+;술사는 원거리 공격마법을 가지고 있어 지형에 상관 없이 상대방을 \
+They can carry out excellent ability of long distance magical attack \
+;공격할 수 있는 뛰어난 능력을 가지고 있습니다. \ \
+Irrespective of distance or location. \ \ 
+;<다  음/@Q705_1_2_1>
+<Next/@Q705_1_2_1>
+
+[@Q705_1_2_1]
+;그렇기 때문에 아직 강한 마법을 익히지 못한 <$USERNAME>님은 \
+<$USERNAME>, you who didn't master strong magic skill yet could be vulnerable in close fighting \
+;약한 체력과 생명력 때문에 많은 곤란을 겪을 겁니다. 또한 레벨이 \
+due to weaker physical strength than other characters. Also as level goes up \
+;높아 지면서 강력한 마법을 익히면서 강력한 케릭으로 성장하실 \
+from their learning of magical spell they will grow to fairly strong characters \
+;겁니다. 이러한 술사 케릭을 선택 하신것을 환영 합니다. \
+It is a matter for congratulation that you select this wizard character. \
+;<$USERNAME>님은 이제 술사 고수집에 가셔서 자신의 능력을 \
+<$USERNAME>, go to the house of high level wizard and check your own ability \
+;확인해 보십시요. 술사 고수집의 좌표는 314,474입니다. \
+The coordinates of high level wizard's house is 314, 474 . \
+;가는 길은 쉽지는 않겠지만 화천선생님과 말씀 나누어보세요 \
+It is not easy to go there But Talk with GreatWizard \  
+;<닫  기/@exit>
+<Close/@exit>
+
+
+[@Q705_1_1]
+;<$USERNAME>님 무기점 아저씨가 맡기신 일을 다 하셨어요? \
+<$USERNAME>, Do you finish the job that the man of ArmStroe asked you ? \
+;또한 <$USERNAME>님의 레벨이 5이상 이시군요. 흠 당신의 직업은 \
+Also <$USERNAME>, your level is 5 or more. Do you know  \
+;무엇인지 아세요? 당신의 직업은 전사랍니다. 이 전사는 특징은 \
+what your occupation is ? You are a Warrior. Warriors are simple \
+;단조롭기는 하지만은 강한 체력과 강한 힘을 가지고 있어 사냥이나 \
+but good at hunting or bitter fighting at close quarters  \
+;육박전에 능합니다. 또한 고렙으로 갈수록 특수한 검술을 사용 하면서 \
+on the basis of strong physical strength. Also as level goes up \
+;더욱 파괴력을 강해지는 전사로 바뀌어 갑니다. \ \
+from their learning of special sword skill they will grow to fairly strong warriors \ \
+;<다  음/@Q705_1_1_1>
+<Next/@Q705_1_1_1>
+
+[@Q705_1_1_1]
+;하지만 육박전에 있어서는 최강의 전투력을 자랑하지만, 그 밖의 분야 \
+Although warriors are proud of bitter fighting at close quarters \
+;에는 전혀 능력이 없기 때문에 원거리나 마법 공격에 취약 합니다. \
+they don't have other ability at all. so they are vulnerable in attack at long distance or magical attack \
+;하지만 수 많은 다양한 방어구와 보조 도구들이 이 취약점을 커버해 \
+But a lot of various pretectors and aid instruments will cover the weak point of warriors \
+;줄수 있는 직업 입니다. 이 직업을 택하신것을 환영 합니다. \
+It is a matter for congratulation that you select this warrior character. \
+;<$USERNAME>님은 이제 전사고수집에 가셔서 다음 하실일을 확인해 보세요 \
+<$USERNAME>, go to the house of  and check your next job to do \
+;전사고수집의 좌표는 107,316에 있습니다. 가는 길이 쉽지는 않겠지만 \
+The coordinates of High-level warrior's house is 107, 316 . \
+;한번 가셔서 용혈선생님과 말씀을 나누어 보세요. \ 
+Go there and talk with Yado. \
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q703]
+#IF
+#SAY
+;대장장이 아저씨가 <$USERNAME>님을 찾고 계세요 빨리 가보세요. \ \
+BlackSmith is looking for <$USERNAME>, you . Hurry up to go and see him. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q702]
+#IF
+checklevel 3
+#ACT
+SET [753] 1
+#SAY
+;<$USERNAME>님 고기집 아저씨가 맡기신 일을 다 하셨어요? \
+<$USERNAME>, Do you finish the job that the man of ArmStroe asked you ? \
+;또한 <$USERNAME>님의 레벨이 3이상 이시군요. 그렇다면 다음 \
+Also <$USERNAME>, your level is 3 or more. then let me tell \
+;하시는 일을 알려 드리겠습니다. 이 일을 하시기 위해서는 \
+you next job to do. To do this job, you should go and see \
+;대장장이([297,612],[649,602])에게 가보세요. 이 숫자의  \
+a balcksmith([297,612],[649,602]). You could know what these numbers mean \
+;의미는 이제 아시겠죠. 그렇다면 그 곳으로 가셔서 할수 있는 \ 
+Then go there and \
+;해보시도록 하세요 \ \
+try doing the job \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+
+#ELSESAY
+;<$USERNAME>님 고기집 아저씨가 맡기신 일을 다 하셨어요? \
+<$USERNAME>, Do you finish the job that the man of ArmStroe asked you ? \
+;똑같은 방법으로 닭과 사슴을 잡아 닭고기와 고기덩어리를 \
+Kill Hens and Deers and get the meat of those \
+;획득 하셔서 파시다 보면 돈을 모으실수가 있습니다. \
+Selling the meats will give you Gold. \
+;이러한 방법으로 레벨 3까지만 만들어서 오시겠어요. \
+Would come again after reaching level 3 ? \
+;그럼 다음 하실일을 알려 드리겠습니다.행운을 빌어요^^ \ \
+Now let me tell you next job to do. Good luck \ \
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q700]
+#IF
+#SAY
+;<$USERNAME>님 빨리 고기집 아저씨에게 가보세요. \ \
+<$USERNAME> Hurry up to go and see a butcher. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@QUEST1]
+#IF
+checklevel 1
+#ACT
+reset [750] 20
+goto @QUEST1_1
+#ELSESAY
+;<$USERNAME>님은 레벨이 너무 낮아서 제가 주는 일을 \
+<$USERNAME>, you can not do the job I'll ask you \
+;하실수가 없습니다. 제가 원하는 레벨은 1-3 레벨만이 \
+Because your level is too low. This job is only for level 1-3 \
+;이 일을 할수가 있습니다. 그럼 자네가 맞는 일을 찾아 \
+then look for other job that is proper for you \
+;보게나 그럼 행운을 빌어요. \ \
+Good luck
+
+;<닫  기/@exit>
+<Close/@exit>
+
+[@QUEST1_1]
+#IF
+checklevel 4
+#SAY
+;<$USERNAME>님은 레벨이 너무 높아서 내가 주는 일을 \
+<$USERNAME>, you don't need to do this job I'll ask you \
+;할 필요가 없습니다. 제가 원하는 레벨은 1-3 레벨만이 \
+Because your level is high enough. This job is only for level 1-3 \
+;이 일을 할수가 있습니다. 그럼 자네가 맞는 일을 찾아 \
+then look for other job that is proper for you \
+;보세요. 그럼 행운을 빌어요. \ \
+Good luck
+;<닫  기/@exit>
+<Close/@exit>
+#ELSESAY
+;<$USERNAME>님, 제가 할수 있는 일을 가르쳐 드릴께요 \
+<$USERNAME>, let me tell you job to do \
+;한번 해보시겠어요? 미르를 하시면서 많은 도움이 되실겁니다. \
+Would you try ? It will be good for playing Mir . \
+;꼭 해보았으면 좋겠습니다. \ \
+You had better try . \ \ 
+;도우미가 주는 일을 <해보겠습니다/@QUEST1_1_1> \
+<Try/@QUEST1_1_1>a job assistant told \
+;도우미가 주는 일을 하지 <않겠습니다/@QUEST1_1_2>
+<Refuse/@QUEST1_1_2>a job assistant told
+[@QUEST1_1_1]
+#IF
+#ACT
+SET [750] 1
+#SAY
+;네 그럼 하시고 싶어하는 일을 알고 싶으시죠? \
+Do you want to know next job to do? \
+;그렇다면, 고기집 아저씨에게([293,603],[649,592]) 가보세요. \
+Then, go and see a butcher([293,603],[649,592]) \
+;저위의 숫자를 모르십니까? 왼쪽 아래 보시면 숫자가 쓰여져 있지요 \
+Don't you know the number above ? the number is written on left and downside \
+;이 숫자가 일치하는 곳으로 가보시면 있어요. 저희 미르 세계에서는 \
+The number means where the NPC is. In Mir world this number is called \
+;이 숫자를 좌표라고 합니다. 그옆에 이름은 세계의 이름입니다. \
+coordinates . the name that is next to it is region. \
+;지금 세계의 이름은 비천현이죠.. 그럼 그분 에게 빨리 가보세요. \ \
+This region is Bichon province.. then hurry up to go and see him. \ \
+;<닫  기/@exit>
+<Close/@exit>
+
+[@QUEST1_1_2]
+#IF
+#SAY
+;<$USERNAME>님은 제가 부탁한 일을 들어 주시지 않는다디 \
+<$USERNAME>, you refused my asking... I got it \
+;어쩔수가 없군요... 그럼 미르 세계에서는 고난과 역경의 \
+Mir world is a series of hardship and trouble \
+;연속 입니다. 항상 몸 조심 하시고, 좋은 일만 일어 나기를 \
+Take care of yourself always and I wish you get a good news \
+;바라겠습니다. 항상 행복하십시요.. \ \
+Be happy always..\ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Wear]
+;먼저 F9(가방창)과 F10(상태창)을 누르면 창들이 나타납니다.\
+If you press F9 (bag window) and F10 (status window) you will see the right window.\
+;가방창에 있는 아이템들 한번 클릭해서 상태창의 착용위치에\
+To wear an item, you have to drag item from bag window and drop it to\
+;다시 클릭하시면 아이템이 착용됩니다.\
+wearing position in status window.\
+;착용위치 : 옷 - 몸, 무기류 - 오른손, 목걸이류 - 우측최상단\
+Wearing position : garments - body  Weapons - right hand, necklaces - righ top corner\
+           ;초 - 목걸이착용자리 하단, 팔찌 - 초착용자리 하단\
+           candle - bottom of necklace place,  bracelet - bottom of candle position\
+           ;반지류 - 팔찌착용자리 하단\ \
+           ring - bottom of bracelet place\ \
+;<뒤로/@Main>
+<Back/@Main>
+
+[@Move]
+;* 마우스 조작\ \
+*Mouse moving\ \
+;왼  쪽  기본적인 행동을 수행한다. 걷기, 공격하기,\
+Left button: doing basic action. walking, attacking,\
+        ;물건 옮기기\
+        and move items\
+;오른쪽  가까이에 클릭했을 때에는 방향전환, 먼곳에 누르고\
+Right button: if you click around or near you, you can face different direction,\
+        ;있으면 달리기를 한다.\
+        if click (and hold) away you will run.
+;Shift + 왼 쪽  강제 공격을 하게 한다.\ \
+Shift + left: you can force attack.\ \
+;<뒤로/@Main>,  <계속/@Move2>
+<Back/@Main>,  <Continue/@Move2>
+
+[@Move2]
+;Ctrl + 왼  쪽  달리기를 할수 있다. \
+Ctrl + left: Run \
+;Ctrl + 오른쪽  상대편의 정보를 볼수가 있다. F10을 누른것과\
+Ctrl + right: You can show other players equipment\
+               ;같은 상태가 보여진다\
+It is same as hittig F10
+;Alt  + 왼  쪽  아이템을 <채집/@Getitem>할 때 쓴다.\
+Alt  + left: You can harvest dead bodies to <get items/@Getitem>.\
+;더블클릭  땅에 떨어진아이템위에서 사용하면 아이템을 주울\
+Double click   if you double click on item on he ground\
+          ;수 있다. 가방안의 아이템에 사용하면 아이템을\
+          you can get it. If do that on items in the bag\
+          ;사용하게 된다.\ \
+          you will use that item.\ \
+;<뒤로/@Move>
+<Back/@Move>
+
+[@Getitem]
+;죽은 사슴, 닭, 양, 늑대에 대고 사용하면 고기덩어리를\
+You can do this on dead body of deer, hen, sheep and wolf to get\
+;구할 수가 있고, 식인초는 식인초잎, 식인초열매를\
+lump of meat, on cannibal plant to get CannibalLeaf or cannibalFruit\
+;동굴구더기에서는 구룡환, 침거미에서는 침거미이빨을\
+on BugbatMaggot to get a MaggotPill and on SpittingSpider \
+;채집할 수 있다.\ \
+to get a SpiderTeeth.\ \
+;<뒤로/@Main>
+<Back/@Move>
+
+[@Fight]
+;기본적인 마우스 왼쪽버튼 클릭만으로 전투를 할 수 있다.\ \
+Basically you can attack by simply clicking left button.\ \
+;단, 그냥 클릭만으로 공격이 되지 않는 경우에는\ \
+But, if this doesn't work \ \
+;Shift + 왼쪽클릭으로 공격할 수 있다.\ \
+you can force attack by pressing Shift + left.\ \
+;<뒤로/@Main>
+<back/@Main>
+
+[@Talk]
+;who     현재 게임에 접속해 있는 인원을 알수가 있다.\
+who              You can learn how many player are in game on current server.\
+;캐릭명  다른 사람에게 귓말을 할수가 있다. 거리제한이 없다.\
+characer name    You can whisper to other players. No distance limit.\
+        ;채팅창에서 마우스로 클릭하면 자동으로 ID가 뜬다.\
+        If you leftclick on character name in chatting window\
+        whisper function will be activated automatically.
+;!내용   외치기로 내용을 이야기 할 수 있다.(노란색 글씨로\
+         표현됨, 10초 제한)\
+!message        You can shout.(letter expressed in yellow color, 10 seconds limit)\
+;!!내용  그룹 내에서만 들리도록 이야기 할 수가 있다.\
+!!message       The message will be listened only within group.\
+;!~내용  접속해 있는 문원들에게만 들리는 문파 전음, 녹색\ \
+!~message       he message will be listened only by Guild member,message color is green\ \
+;<뒤로/@Main>,  <계속/@Talk2>
+<Back/@Main>,  <Continue/@Talk2>
+
+[@Talk2]
+;@귀엣말거부  오는 모든 귀엣말을 거부하게 된다. 재접 하거나\
+@rejectwhisper        It will reject all incoming whisper. if you reconnect or \
+             ;다시 한번 사용하면 해제 됨\
+ use it once more then you will allow again whispering\
+;@차단 캐릭명 특정 캐릭에게서 오는 귀엣말을 거부, 위와 같음\
+@ban Character name   You can reject whispering from specific character, others same as above\
+;@외치기거부  외치는 소리를 듣지 않는 기능, 위와 같음\
+@rejectshouting       This will block any incoming shouting\
+;@문파전음차단 문파전음을 듣지 않는 기능, 위와 같음.\
+@reject_Guild_Chat    This will block any incoming Guild Chat\
+;@문파탈퇴  문파에 가입되어 있는 경우 문파를 탈퇴하게 된다.\
+@leave_Guild          You can left your current guild.\
+;방향키  방향키를 사용하면 지나간 부분의 대화를 볼 수 있다.\ \
+Direction keys        You can see past dialogue by using them.\ \
+;<뒤로/@Talk>
+<back/@Talk>
+
+[@Skill]
+;각 직업별로 가장 처음 배우는 무공의 필요레벨은 7입니다.\
+In order to learn your first skill, your character need to be level 7.\
+;전사는 <외수검법/@Onehand>, 도사는 <회복술/@Heal>, 술사는 <화염장/@Fireball>\
+Warrior can learn <Fencing/@Onehand>, Taoist can learn <Healing/@Heal> \
+;입니다. 책은 국경마을이나 비천성, 몽촌현의 책방에서\
+and wizard can learn <Fireball/@Fireball>.\
+;구하실 수 있습니다. 이후에 배우는 무공의 책은 책방에서\
+Books are sold at the bookstore of Border village, Bichon wall or Mongchon province. \ 
+;구할 수 있는것도 있고 없는것도 있습니다. 책방에서 팔지\
+After the first skills, some book can be bought from bookstore\
+;않는 경우에는 직접 몬스터를 잡으셔서 구하시거나 다른\
+others can be acquired only by killing Mob\
+;사용자들에게서 사셔야 합니다.\ \
+or traded between players.\ \
+;<뒤로/@Main>
+<Back/@Main>
+
+[@Onehand]
+;전사의 무공으로서 레벨 7이 되실 경우\
+As a warrior's martial art, you can learn it\
+;책을 구입하셔서 더블클릭 하시면 배우실\
+by double clicking on book when you reach level 7\
+;수 있습니다.\
+Accuracy value will increase as you level up\
+;무공을 수련하셔서 단계가 오를때마다\
+;정확수치가 올라 몬스터를 정확히 맞추는\
+;확률이 상승됩니다.\ \
+so will the attack success chances.\ \
+;<뒤로/@Skill>
+<Back/@Skill>
+
+[@Heal]
+;도사의 무공으로서 레벨 7이 되실 경우\
+As a Taoist's martial art , you can learn it\
+;책을 구입하셔서 더블클릭 하시면 배우실\
+by double clicking on book when you reach level 7\
+;수 있습니다.\
+;무공을 수련하셔서 단계가 오를때마다\
+;회복술로 회복되는 양이 올라갑니다.\ \
+as skill level increase, HP healed will raise\ \
+;<뒤로/@Skill>
+<Back/@Skill>
+
+[@Fireball]
+;술사의 무공으로서 레벨 7이 되실 경우\
+As a wizard's skill, you can learn it\
+;책을 구입하셔서 더블클릭 하시면 배우실\
+by double clicking on book when you reach level 7\
+;수 있습니다.
+;무공을 수련하셔서 단계가 오를때마다\
+;화염장의 공격력이 세집니다.\ \
+as skill level increase, damage dealt will raise\ \
+;<뒤로/@Skill>
+<Back/@Skill>
+
+[@Hotkey]
+;F1~F8   무공 단축키\
+F1~F8    Shortcut for skills\
+;F9      가방창을 보여준다\
+F9       Bag window\
+;F10     상태창을 보여준다\
+F10      Status window\
+;F11     무공창을 보여준다\
+F11      Skill status window\
+;Ctrl+H  공격모드 변환\
+Ctrl+H   changing attack mode\
+;Ctrl+F  글꼴 변환\
+Ctrl+F   changing letter font \
+;Ctrl+A  <부하몬스터/@Slave> 공격모드 변환\ \
+Ctrl+A   <Tamed monster/@Slave> attack mode\ \
+;<뒤로/@Main>
+<back/@Main>
+
+[@Slave]
+;부하몬스터란 도사의 백골소환술로 불러낸\
+Tamed monster means slave monster controlled \
+;백골이나 주술사의 뢰혼격으로 꼬셔서\
+by skills such as Taoist's SummonSkel or \
+;자기가 부릴 수 있는 몬스터를 말합니다.\ \
+wizard's ElectricShock.\ \
+;<뒤로/@Hotkey>
+<Back/@Hotkey>

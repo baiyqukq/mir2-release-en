@@ -1,0 +1,52 @@
+;무기
+%100
+;목걸이
++20
++19
++21
+
+;대화, '*' : 대화 태그
+[@main]
+;어서오세요.  무슨 일로 오셨나요?\ \
+Welcome. What can I do for you?\ \
+ ;목걸이를 <산다/@buy>\
+<Buy/@buy> necklace \
+ ;목걸이를 <판다/@sell>\
+<Sell/@sell> necklace\
+ ;목걸이를 <고친다/@repair>\
+<Repair/@repair> necklace\
+ ;<그만둔다/@exit>
+<Cancel/@exit>
+<>
+
+[@buy]
+;목걸이를 사시게요?\ \ \
+Would you like to buy a necklace?\ \ \
+ ;<뒤로/@main>
+<Back/@main>
+
+[@sell]
+;목걸이를 파실래요?\ \ \
+What kind of necklace would you like to sell?\ \ \
+ ;<뒤로/@main>
+<Back/@main>
+
+[@repair]
+;목걸이를 수리하시게요?\ \ \
+Would you want to repair necklace?\ \ \
+ ;<뒤로/@main>
+<Back/@main>
+
+[~@repair]
+;그런대로 잘 수리되네요.\ \
+It seems in good condition now.\ \
+ ;<뒤로/@main>
+<Back/@main>
+
+;[상품]
+[goods]
+;젠되는 상품    물량       hour
+;금목걸이         3         3
+GoldNecklace 
+;평온의목걸이     3         3
+PrecisionNeckl

@@ -1,0 +1,55 @@
+;무기
+%100
+;반지
++22
++23
+
+;대화, '*' : 대화 태그
+[@main]
+;어서오세요. 저희 가게는 반지를 취급한답니다.\
+Welcome to our shop, we treat rings. \
+;이곳은 <$OWNERGUILD>의 성이라서 특별히 \
+We offer special 20% discount to <$OWNERGUILD>'s members \
+;<$OWNERGUILD>의 문원에게는 20% 저렴하게 물건을 팔고 있답니다.\ \
+because this wall is onwed them.\ \
+ ;반지를 <산다/@buy>,  <판다/@sell>\
+<Buy/@buy> or <Sell/@sell> ring \
+ ;반지를 <고친다/@repair>\
+<Repair/@repair> ring\
+ ;<그만둔다/@exit>
+<Cancel/@exit>
+<>
+
+[@buy]
+;반지를 사시게요?\ \ \
+Would you like to buy a ring?\ \ \
+ ;<뒤로/@main>
+<Back/@main>
+
+[@sell]
+;반지를 파실래요?\ \ \
+Would you like to sell a ring?\ \ \
+ ;<뒤로/@main>
+<Back/@main>
+
+[@repair]
+;반지를 수리하시게요?\ \ \
+Would you like to repair a ring?\ \ \
+ ;<뒤로/@main>
+<Back/@main>
+
+[~@repair]
+;그런대로 잘 수리되네요.\ \
+It seems repaired well.\ \
+ ;<뒤로/@main>
+<Back/@main>
+
+;[상품]
+[Goods]
+;젠되는 상품    물량       hour
+;구리반지        3          3
+CopperRing
+;육각반지        3          3
+HexagonalRing
+;유리반지        3          3
+GlassRing

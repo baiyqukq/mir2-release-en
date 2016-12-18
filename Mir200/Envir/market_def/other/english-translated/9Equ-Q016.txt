@@ -1,0 +1,336 @@
+[@main]
+#IF
+#ACT
+goto @QUEST
+
+[@QUEST]
+#IF
+check [317] 1
+#ACT
+goto @Q317
+break
+
+#IF
+#ACT
+mov p1 0
+mov p2 0
+mov p3 0
+mov p4 0
+goto @Q316
+break
+
+[@Q316]
+#IF
+#SAY
+;당싱이 여기 까지 오셨으니, 제가 그냥 보고만 있을수는 없겠지요. \
+As you came here, I can not just stand more without doing something. \
+;제가 오랫동안 여기에 살면서 만든 물건들이 몇가지 있습니다. \
+There are several items that I have made since I stayed here. \
+;이 물건들은 밖의 세상에서는 얼마나 하는지는 잘은 모르겠으나. \
+I don't know How much these items is at outside world. \
+;전 이 물건들에 대한 자신감은 가지고 있습니다. \
+But I have a pride of these items. \
+;이 물건들을 구경을 해 보시겠습니까?? \ \
+Would you like to see these items?? \ \
+;한번 보아 보기나 <한다/@Q316_1> \
+<Take/@Q316_1>a just looking\
+;안보구 <만다/@Q316_2>
+<Refuse/@Q316_2>
+
+[@Q316_2]
+#IF
+#SAY
+;안보신다 이건가요? 그래요.. 안볼수도 있지요, 그렇다면 돌아가세요... \ \
+You don't like to see ? I got it.. you can do it, then Go back... \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q316_1]
+#IF
+checkjob warrior
+#ACT
+goto @warr
+break
+#IF 
+checkjob wizard
+#ACT
+goto @wiza
+break
+#IF
+checkjob taoist
+#ACT
+goto @taoi
+break
+
+[@warr]
+#IF
+#SAY
+;제가 만들수 있는 물건을 보여 주겠습니다. 잘 보세요 \
+Let me show you items that I can make. Take a look carefully \ 
+;삼적대부   (금괴 1,순도 13이상 금광석 5) 만드는 것을 <부탁한다/@Q316_1_1> \
+<Ask/@Q316_1_1> making GreatAxe(GoldBar 1,Purity 13 or more GoldOre 5) \
+;축복의기름 (금전 50만전,선화수(중) 5)    만드는 것을 <부탁한다/@Q316_1_4> \
+<Ask/@Q316_1_4> making Benediction Oil(Gold 500,000 , Sunpotion(Medium) 5)
+;<그만둔다/@exit> 
+<Cancel/@exit>
+#ACT
+SET [317] 1
+
+[@wiza]
+#IF
+#SAY
+;제가 만들수 있는 물건을 보여 주겠습니다. 잘 보세요 \ 
+Let me show you items that I can make. Take a look carefully \ 
+;청마장     (금괴 1,순도 13이상 금광석 3) 만드는 것을 <부탁한다/@Q316_1_3> \
+<Ask/@Q316_1_3> making Mage Staff(GoldBar 1, Purity 13 or more GoldOre 3) \
+축복의기름 (금전 50만전,선화수(중) 5)    만드는 것을 <부탁한다/@Q316_1_4> \
+<Ask/@Q316_1_4> making Benediction Oil(Gold 500,000 , Sunpotion(Medium) 5) \
+;<그만둔다/@exit> 
+<Cancel/@exit>
+#ACT
+SET [317] 1
+
+[@taoi]
+#IF
+#SAY
+;제가 만들수 있는 물건을 보여 주겠습니다. 잘 보세요 \ 
+Let me show you items that I can make. Take a look carefully \ 
+;사모검     (금괴 1,순도 13이상 금광석 4) 만드는 것을 <부탁한다/@Q316_1_2> \
+<Ask/@Q316_1_2> making Serpent Sword(GoldBar 1 , Purity 13 or more GoldOre 4)
+;축복의기름 (금전 50만전,선화수(중) 5)    만드는 것을 <부탁한다/@Q316_1_4> \
+<Ask/@Q316_1_4> making Benediction Oil(Gold 500,000 , SunPotion(Medium) 5) \
+;<그만둔다/@exit> 
+<Cancel/@exit>
+#ACT
+SET [317] 1
+
+[@Q316_1_1]
+#IF
+equal p1 1
+#ACT
+goto @Nopay1
+#ELSEACT
+goto @Q316_1_1_1
+
+[@Nopay1]
+#IF
+#SAY
+;죄송 합니다. 삼적대부는 1개 뿐이 만들수 없습니다. \ \
+I am sorry. Just one of Great Axe is available. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q316_1_1_1]
+#IF
+;checkitem 금괴 1 
+checkitem GoldBar 1
+;checkitem 금광석 5
+checkitem GoldOre 5
+;checkduraeva 금광석 10
+checkduraeva GoldOre 10
+#ACT
+;take 금광석 5
+take GoldOre 5
+;take 금괴 1  
+take GoldBar 1
+#SAY
+;삼적대부를 만들어 보겠다 이건가요?? 그래요 잠시 기다리세요. \ \
+Do you want to make a GreatAxe?? then wait in while. \ \ 
+;<다  음/@Q316_1_1_1_1>
+<Next/@Q316_1_1_1_1>
+#ELSESAY
+;이 삼적대부를 만들기 위해서는, 아까 말한 재료가 필요합니다. \
+To make a GreatAxe, I need raw materials that I told a short time aog.\
+;그 재료를 구해 주어야 만들수 있는 것이지, \
+after you bring me those I can make it \
+;막 만들수는 없지 않겠습니까? \ \
+I can nothing without it? \ \
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q316_1_1_1_1]
+#IF
+#ACT
+mov p1 1
+;give 삼적대부 1
+give GreatAxe 1
+#SAY
+;자 여기 있습니다. 잘 쓰세요. \ \
+Here it is. use it well. \ \
+;<닫  기/@exit> 
+<Close/@exit>
+
+[@Q316_1_2]
+#IF
+equal p2 1
+#ACT
+goto @Nopay2
+#ELSEACT
+goto @Q316_1_2_1
+
+[@Nopay2]
+#IF
+#SAY
+;죄송 합니다. 사모검는 1개 뿐이 만들수 없습니다. \ \
+I am sorry. Just one of SerpentSword is available. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q316_1_2_1]
+#IF
+;checkitem 금괴 1 
+checkitem GoldBar 1
+;checkitem 금광석 4
+checkitem GoldOre 4
+;checkduraeva 금광석 10
+checkitem GoldOre 10
+#ACT
+;take 금광석 4
+checkitem GoldOre 4
+;take 금괴 1  
+take GoldBar 1
+#SAY
+;사모검를 만들어 보겠다 이건가요?? 그래요 잠시 기다리세요. \ \
+Do you want to make a SerpentSword?? then wait in while. \ \ 
+;<다  음/@Q316_1_2_1_1>
+<Next/@Q316_1_2_1_1>
+#ELSESAY
+;이 사모검을 만들기 위해서는, 아까 말한 재료가 필요합니다. \
+To make a SerpentSword, I need raw materials that I told a short time aog.\
+;그 재료를 구해 주어야 만들수 있는 것이지,\
+after you bring me those I can make it \
+;막 만들수는 없지 않겠습니까? \ \
+I can nothing without it? \ \
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q316_1_2_1_1]
+#IF
+#ACT
+mov p2 1
+;give 사모검 1
+give SerpentSword 1
+#SAY
+;자 여기 있습니다. 잘 쓰세요. \ \
+Here it is. Use it well. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q316_1_3]
+#IF
+equal p3 1
+#ACT
+goto @Nopay3
+#ELSEACT
+goto @Q316_1_3_1
+
+[@Nopay3]
+#IF
+#SAY
+;죄송 합니다. 청마장은 1개 뿐이 만들수 없습니다. \ \
+I am sorry. Just one of MageStaff is available. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q316_1_3_1]
+#IF
+;checkitem 금광석 3
+checkitem GoldOre 3
+;checkitem 금괴 1 
+checkitem GoldBar 1
+;checkduraeva 금광석 10
+checkitem GoldOre 10
+#ACT
+;take 금괴 1  
+take GoldBar 1
+;take 금광석 3
+take GoldOre 3
+#SAY
+;청마장를 만들어 보겠다 이건가요?? 그래요 잠시 기다리세요. \ \
+Do you want to make a MageStaff?? then wait in while. \ \ 
+;<다  음/@Q316_1_3_1_1>
+<Next/@Q316_1_3_1_1>
+#ELSESAY
+;이 사모검을 만들기 위해서는, 아까 말한 재료가 필요합니다. \
+To make a MageStaff, I need raw materials that I told a short time aog.\
+;그 재료를 구해 주어야 만들수 있는 것이지, \
+after you bring me those I can make it \
+;막 만들수는 없지 않겠습니까? \ \
+I can nothing without it? \ \
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q316_1_3_1_1]
+#IF
+#ACT
+mov p3 1
+;give 청마장 1
+give MageStaff 1
+#SAY
+;자 여기 있습니다. 잘 쓰세요. \ \
+Here it is. Use it well. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q316_1_4]
+#IF
+equal p4 5
+#ACT
+goto @Nopay4
+#ELSEACT
+goto @Q316_1_4_1
+
+[@Nopay4]
+#IF
+#SAY
+;죄송 합니다. 축복의기름은 5개 뿐이 만들수 없습니다. \ \
+I am sorry. Just five of Benediction Oils are available. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q316_1_4_1]
+#IF
+checkgold 500000
+;checkitem 선화수(중) 5
+checkitem Sunpotion(Medium) 5
+#ACT
+;take 돈 500000
+take Gold 500000
+;take 선화수(중) 5 
+take Sunpotion(medium) 5 
+#SAY
+;축복의 기름을 만들어 보겠다 이건가요?? 그래요 잠시 기다리세요. \ \
+Do you want to make a Benediction Oil?? then wait in while. \ \ 
+;<다  음/@Q316_1_4_1_1>
+<Next/@Q316_1_4_1_1>
+#ELSESAY
+;이 축복의 기름을 만들기 위해서는, 아까 말한 재료가 필요합니다. \
+To make a Benediction Oil, I need raw materials that I told a short time aog.\
+;그 재료를 구해 주어야 만들수 있는 것이지,\
+after you bring me those I can make it \
+;막 만들수는 없지 않겠습니까? \ \
+I can nothing without it? \ \
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q316_1_4_1_1]
+#IF
+#ACT
+inc p4 1
+;give 축복의기름 1 
+give Benediction Oil 1
+#SAY
+;자 여기 있습니다. 잘 쓰세요. \ \
+Here it is. Use it well. \ \ 
+;<다  음/@Q316_1_4>
+<Next/@Q316_1_4>
+
+[@Q317]
+#IF
+#SAY
+;제가 만들어 드리는 물건은 한번 거래후에는 다시는 거래를 \
+It is a rule for me to make you a certain item just one time \
+;하지를 않습니다. 어서 돌아 가세요 \ \
+same item is never made again.  go back right now \ \ 
+;<닫  기/@exit>
+<Close/@exit>

@@ -1,0 +1,29 @@
+;
+;items  肉  , 干肉产品
+%100
++40
++1
+
+;对话, '*' : 对话框
+[@main]
+Welcome, what can I do for you ?\ \
+ <Buy/@buy> Meat\ 
+ <Sell/@sell> Meat\
+ <Cancel/@exit>
+<>
+
+
+[@buy]
+Please Chose what you want to buy.\ \ \
+ <Back/@main>
+
+[@sell]
+We'll buy high qualitiy at high price.\
+But we'll buy at low price meat stained with soil or burned by fire.\ \
+ <Back/@main>
+
+
+[goods]
+;  科目   数量        时间(hour)
+Meat     1000            1
+Chicken  1000            1 

@@ -1,0 +1,58 @@
+;무기
+%100
+;목걸이
++20
++19
++21
+
+;대화, '*' : 대화 태그
+[@main]
+;오호호호호  목걸이 사셔요. \
+Please kindly buy necklace.
+;제정신 아닐때는 싸게 팔기도 한답니다. 오호호호호~\
+When I am out of my sense, items could sell for low price \
+;어머? 오빠 <$OWNERGUILD>의 문원이네? \
+Oh, you are a <$OWNERGUILD>'s member, aren't you? \
+;그럼 특별히 왕 싸게 해줄께~ 20%. 어때? 기분좋지? 오호호호호\ \
+then I shall offer a killing price, a discount of 20 percent, How about that?\ \ 
+ ;목걸이를 <산다/@buy>,  <판다/@sell>\
+<Buy/@buy> or <Sell/@sell> necklace\
+ ;목걸이를 <고친다/@repair>\
+<Repair/@repair> necklace\
+ ;<그만둔다/@exit>
+<Cancel/@exit>
+<>
+
+[@buy]
+;목걸이란 목걸이는 모두 있답니다. \
+We have all kinds of necklace. \
+;단, 없는 거만 빼고요 오호호호호. \ \ \
+ but, except for just what we don't have \ \ \
+ ;<뒤로/@main>
+<Back/@main>
+
+[@sell]
+;목걸이를 저에게 주는건가요? 아~ 파신다고요... \ \ \
+ Will you give me a necklace? oh, you want to sell it, don't you ?\ \ \
+ ;<뒤로/@main>
+<Back/@main>
+
+[@repair]
+;목걸이를 수리하신다고요? 그냥 새걸로 사시지..\ \ \
+You want to repair necklace? Why don't you buy new one...\ \ \
+ ;<뒤로/@main>
+<Back/@main>
+
+[~@repair]
+;오호호호호 완벽하게 수리했답니다. \ \
+It seems repaired completely.  \ \
+ ;<뒤로/@main>
+<Back/@main>
+
+;[상품]
+[Gold]
+;젠되는 상품    물량       hour
+;금목걸이         3         3
+GoldNecklace
+;평온의목걸이     3         3
+PrecisionNeckl

@@ -1,0 +1,640 @@
+[@main]
+#IF
+#SAY
+;자네 내가 무슨 일은 하는 사람인줄 아나? \ 
+Do you know what I do for living? \  
+;내가 하는 일은 아래와 같다네... \ 
+My job is same as below...\ 
+;한번 해보겠나..? 부탁 할것을 말해보게 \ \  
+Would you try..? Let me hear it for you to request \ \
+
+;돈을 금괴로 <교환을 한다./@changeGold> \ 
+<Exchange money into Gold Bar/@changeGold>\
+;금괴를 돈으로 <교환을 한다./@changeMoney> \ 
+<Exchange Gold Bar into money/@changeMoney>\
+;묶음으로 <묶는다./@bind> \ 
+<Bundle Drug together/@bind> \ 
+
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@changeGold]
+#IF
+   checkgold 1000000
+#SAY
+;자네 돈을 금괴로 바꾸고 싶다고 했나? \  
+Do you want to exchange money into GoldBar? \
+;그래 자네를 위해서 금괴로 바꾸어 줄수는 있네 \ 
+I can do it, but you should pay me a commission\
+;하지만 소정의 수수료를 나에게 주어야 하네 \ 
+But you should pay me a commission \
+;그 수수료는 2000전 일세 그래도 바꾸겠나? \ \  
+The commissoin is 2000 gold, do you still want to exchange it? \ \
+
+;<환전한다./@changeGold_1> \  
+<Exchange/@changeGold_1> \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+#ELSESAY
+;자네 그만한 돈도 없으면서 나에게 무슨 환전을 \  
+Your money is not enough for an exchange \
+;해달라고 부탁을 하나? 자네 돈이 충분 하면 \  
+Come again later when you have enough money\\
+다시오게 \ \
+;<뒤로/@main> 
+<Back/@main>
+
+[@changeGold_1]
+#IF 
+   checkbaggage
+   checkgold 1002000
+#ACT
+   ;take 돈 1002000   
+take Gold 1002000
+   ;give 금괴 1  
+give GoldBar 1
+#SAY
+;돈을 금괴로 잘바꾸어졌네. \  
+I exchanged your money into GoldBar. \ 
+;또 바꾸시겠는가? \ \ 
+Would you like to exchange more? \ \
+
+;<바꾼다./@changeGold> \ 
+<Exchange/@changeGold> \
+;<바꾸지않는다./@exit> 
+<Cancel/@exit>
+
+#ELSESAY
+;가방이 찼거나 혹은 자네가 수수료가 없어서 \  
+Because either your bag is full or you have no money to pay the commission \
+;바꾸어 줄수가 없네.. 다시 한번 확인해 보게 \ \  
+I can't make exchange... check it out again \ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@changeMoney]
+#IF
+   ;checkitem 금괴 1 
+checkitem GoldBar 1
+#SAY 
+;자네 금괴를 돈으로 바꾸고 싶다고 했나? \  
+You said you want to exchange GoldBar into money? \
+;그래 자네를 위해서 돈로 바꾸어 줄수는 있네 \ 
+Well, no problem... \
+;하지만 소정의 수수료를 나에게 주어야 하네 \ 
+But you should pay me a commission \
+;그 수수료는 2000전 일세 그래도 바꾸겠나? \ \  
+The commissoin is 2000 gold, do you still want to exchange it? \ \
+
+;<환전한다./@changeMoney_1> \ 
+<Exchange/@changeMoney_1> \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+#ELSESAY
+;자네 금괴도 없으면서 나에게 바꾸어 달라니? \  
+You have no GoldBar for making exchange? \
+;사기칠려구 하나? 어서 썩 꺼지게! \ \ 
+Did you want to cheat me? Get out of here now! \ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@changeMoney_1]
+#IF
+   ;checkitem 금괴 1 
+checkitem GoldBar 1
+   checkgold 4002001
+#SAY
+;자네 내가 바꾸어 주고 싶지만. \  
+Hey you, I want to make this exchange for you \
+;자네가 가진 돈이 너무 많아서 바꾸어 줄수가 없네. \ \ 
+but your money is over my capacity, so I can't do it. \ \
+;<그만둔다./@exit> 
+Cancel./@exit>
+
+#ELSEACT
+   goto @changeMoney_2
+
+
+[@changeMoney_2]
+#IF 
+   ;checkitem 금괴 1 
+checkitem GoldBar 1
+#ACT
+   ;take 금괴 1  
+take GoldBar 1
+   ;give 돈 998000  
+give Gold 998000
+#SAY
+;금괴를 돈으로 잘바꾸어졌네. \ 
+GoldBar was exchanged into money. \  
+;또 바꾸시겠는가? \ \ 
+Would you like to exchange more? \ \
+
+;<바꾼다./@changeMoney> \  
+<Exchange/@changeMoney> \
+;<바꾸지않는다./@exit> 
+Cancel/@exit>
+
+[@bind]
+;지금은 내가 묶을수 있는 부분이 물약 부분과 \ 
+At this moment what I can bind are all kinds of \
+;각종 주문서 부분 일세 한번 묶어 보시겠나? \ 
+liquid drug and scroll. Do you want to try? \  
+;묶음을 만드는데는 100전이 돈의 필요하네. \ \ 
+It costs 100 gold to bind in a bundle. \ \
+;물약쪽을 <묶는다./@P_bind> \ 
+<Bind./@P_bind>a kind of Drug \
+;주문서쪽을 <묶는다./@Z_bind> \ 
+<Bind./@Z_bind>a kind of scroll \
+
+[@P_bind]
+;체력회복약(대)를 <묶는다./@ch_bind1> \ 
+<Bind./@ch_bind1>(HP)Druglarge \
+;마력회복약(대)를 <묶는다./@ma_bind1> \ 
+<Bind./@ch_bind1>(MP)Druglarge \ 
+;체력회복약(중)를 <묶는다./@ch_bind2> \ 
+<Bind./@ch_bind1>(HP)Drugmedium \
+;마력회복약(중)를 <묶는다./@ma_bind2> \ 
+<Bind./@ch_bind1>(MP)Drugmedium \
+;체력회복약(소)를 <묶는다./@ch_bind3> \ 
+<Bind./@ch_bind1>(HP)Drugsmall \
+;마력회복약(소)를 <묶는다./@ma_bind3> \ <
+Bind./@ch_bind1>(MP)Drugsmall \
+;<뒤  로/@bind> 
+<Back/@bind>
+
+[@Z_bind]
+;아공전서를 <묶는다./@zum_bind1> \ 
+<Bind/@zum_bind1>DungeonEscape Scroll \
+;아공도약서를 <묶는다./@zum_bind2> \ 
+<Bind/@zum_bind1>RandomTeleport Scroll\
+;초공전서를 <묶는다./@zum_bind3> \ 
+<Bind/@zum_bind1>TownTeleport Scroll \
+;귀성전서를 <묶는다./@zum_bind4> \ 
+<Bind/@zum_bind1>TeleportHome Scroll 
+;<뒤  로/@bind> 
+<Back/@bind>
+
+[@ch_bind1]
+#IF
+   ;checkitem 체력회복약(대) 6  
+checkitem (HP)Druglarge 6
+#ACT
+   goto @ch_bind1_1
+#ELSESAY
+;자네 묶을수 있는 물약도 없으면서 어떻게 묶어 달라는건가? \ 
+You don't have enough Drugs to make a bundle\
+;물약을 준비 한다음에 다시오시게나.. \ \ 
+Come again later with enough Scroll... \ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@ch_bind1_1]
+#IF 
+   checkgold 100
+   ;checkitem 체력회복약(대) 6  
+checkitem (HP)Druglarge 6
+#ACT
+   ;take 돈 100  
+take Gold 100
+   ;take 체력회복약(대) 6  
+take (HP)DrugLarge 6
+   ;give 체력약묶음 1  
+give (HP)DrugBundle 1
+#SAY
+;잘 묶어졌네... 나의 기술은 대단하지.. \ 
+Well done... my skill is good, isn't it?\
+;그럼 또 묶을일 있으면 나를 찾게.. \ \ 
+If you need my help again please ask me... \ \
+
+;<다시 묶는다./@P_bind> \ 
+<Bundle up again/@bind> \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+#ELSESAY
+;자네 묶음을 만들수 있는 돈도 없으면서 묶음을 \ 
+Your money is not enough to make bundle \
+;묶음을 어찌 만들겠는가? \
+;썩 돌아가게.... \ \ 
+Come back when you will have enough\ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@ma_bind1]
+#IF
+   ;checkitem 마력회복약(대) 6  
+checkitem (MP)DrugLarge 6
+#ACT
+   goto @ma_bind1_1
+#ELSESAY
+;자네 묶을수 있는 물약도 없으면서 어떻게 묶어 달라는건가? \ 
+You don't have enough Drugs to make a bundle\
+;물약을 준비 한다음에 다시오시게나.. \ \ 
+Come again later with enough Scroll... \ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@ma_bind1_1]
+#IF 
+   checkgold 100
+   ;checkitem 마력회복약(대) 6  
+checkitem (MP)DrugLarge 6
+#ACT
+   ;take 돈 100  
+take Gold 100
+   ;take 마력회복약(대) 6 
+take (MP)DrugLarge 6
+   ;give 마력약묶음 1  
+give (MP)DrugBundle 1
+#SAY
+;잘 묶어졌네... 나의 기술은 대단하지.. \ 
+Well done... my skill is good, isn't it?\
+;그럼 또 묶을일 있으면 나를 찾게.. \ \ 
+If you need my help again please ask me... \ \
+
+;<다시 묶는다./@P_bind> \ 
+<Bundle up again/@bind> \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+#ELSESAY
+;자네 묶음을 만들수 있는 돈도 없으면서 묶음을 \ 
+Your money is not enough to make bundle \
+;묶음을 어찌 만들겠는가? \
+;썩 돌아가게.... \ \ 
+Come back when you will have enough\ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@ch_bind2]
+#IF
+   ;checkitem 체력회복약(중) 6   
+checkitem (HP)Bundle of DrugMedium 6
+#ACT
+   goto @ch_bind2_1
+#ELSESAY
+;자네 묶을수 있는 물약도 없으면서 어떻게 묶어 달라는건가? \ 
+You don't have enough Drugs to make a bundle\
+;물약을 준비 한다음에 다시오시게나.. \ \ 
+Come again later with enough Scroll... \ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@ch_bind2_1]
+#IF 
+   checkgold 100
+   ;checkitem 체력회복약(중) 6   
+checkitem (HP)Bundle of DrugMedium 6
+#ACT
+   ;take 돈 100  
+take Gold 100
+   ;take 체력회복약(중) 6  
+take (HP)Bundle of DrugMedium 6
+   ;give 체력약묶음(중) 1  
+give (HP)Bundle of DrugMedium 1
+#SAY
+;잘 묶어졌네... 나의 기술은 대단하지.. \ 
+Well done... my skill is good, isn't it?\
+;그럼 또 묶을일 있으면 나를 찾게.. \ \ 
+If you need my help again please ask me... \ \
+
+;<다시 묶는다./@P_bind> \ 
+<Bundle up again/@bind> \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+#ELSESAY
+;자네 묶음을 만들수 있는 돈도 없으면서 묶음을 \ 
+Your money is not enough to make bundle \
+;묶음을 어찌 만들겠는가? \
+;썩 돌아가게.... \ \ 
+Come back when you will have enough\ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@ma_bind2]
+#IF
+   ;checkitem 마력회복약(중) 6  
+checkitem (MP)Bundle of DrugMedium 6
+#ACT
+   goto @ma_bind2_1
+#ELSESAY
+;자네 묶을수 있는 물약도 없으면서 어떻게 묶어 달라는건가? \ 
+You don't have enough Drugs to make a bundle\
+;물약을 준비 한다음에 다시오시게나.. \ \ 
+Come again later with enough Scroll... \ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@ma_bind2_1]
+#IF 
+   checkgold 100
+   ;checkitem 마력회복약(중) 6  
+checkitem (MP)Bundle of DrugMedium 6
+#ACT
+   ;take 돈 100  
+take Gold 100
+   ;take 마력회복약(중) 6  
+take (MP) Druglarge 6
+   ;give 마력약묶음(중) 1 
+give (MP) Bundle of DrugMedium 1
+#SAY
+;잘 묶어졌네... 나의 기술은 대단하지.. \ 
+Well done... my skill is good, isn't it?\
+;그럼 또 묶을일 있으면 나를 찾게.. \ \ 
+If you need my help again please ask me... \ \
+
+;<다시 묶는다./@P_bind> \ 
+<Bundle up again/@bind> \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+#ELSESAY
+;자네 묶음을 만들수 있는 돈도 없으면서 묶음을 \ 
+Your money is not enough to make bundle \
+;묶음을 어찌 만들겠는가? \
+;썩 돌아가게.... \ \ 
+Come back when you will have enough\ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+
+
+
+[@ch_bind3]
+#IF
+   ;checkitem 체력회복약 6  
+checkitem (HP)Drug 6
+#ACT
+   goto @ch_bind3_1
+#ELSESAY
+;자네 묶을수 있는 물약도 없으면서 어떻게 묶어 달라는건가? \ 
+You don't have enough Drugs to make a bundle\
+;물약을 준비 한다음에 다시오시게나.. \ \ 
+Come again later with enough Scroll... \ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@ch_bind3_1]
+#IF 
+   checkgold 100
+   ;checkitem 체력회복약 6  
+checkitem (HP)Drug 6
+#ACT
+   ;take 돈 100  
+take Gold 100
+   ;take 체력회복약 6   
+take (HP) Drug 6
+   ;give 체력약묶음(소) 1  
+give (HP) Bundle of DrugSmall 1
+#SAY
+;잘 묶어졌네... 나의 기술은 대단하지.. \ 
+Well done... my skill is good, isn't it?\
+;그럼 또 묶을일 있으면 나를 찾게.. \ \ 
+If you need my help again please ask me... \ \
+
+;<다시 묶는다./@P_bind> \ 
+<Bundle up again/@bind> \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+#ELSESAY
+;자네 묶음을 만들수 있는 돈도 없으면서 묶음을 \ 
+Your money is not enough to make bundle \
+묶음을 어찌 만들겠는가? \
+;썩 돌아가게.... \ \ 
+Come back when you will have enough\ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@ma_bind3]
+#IF
+   ;checkitem 마력회복약 6  
+checkitem (MP) Drug 6
+#ACT
+   goto @ma_bind3_1
+#ELSESAY
+;자네 묶을수 있는 물약도 없으면서 어떻게 묶어 달라는건가? \ 
+You don't have enough Drugs to make a bundle\
+;물약을 준비 한다음에 다시오시게나.. \ \ 
+Come again later with enough Scroll... \ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@ma_bind3_1]
+#IF 
+   checkgold 100
+   ;checkitem 마력회복약 6  
+checkitem (MP) Drug 6
+#ACT
+   ;take 돈 100  
+take Gold 100
+   ;take 마력회복약 6  
+take (MP) Drug 6
+   ;give 마력약묶음(소) 1 
+give (MP) Bundle of DrugSmall 1
+#SAY
+;잘 묶어졌네... 나의 기술은 대단하지.. \ 
+Well done... my skill is good, isn't it?\
+;그럼 또 묶을일 있으면 나를 찾게.. \ \ 
+If you need my help again please ask me... \ \
+
+;<다시 묶는다./@P_bind> \ 
+<Bundle up again/@bind> \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+#ELSESAY
+;자네 묶음을 만들수 있는 돈도 없으면서 묶음을 \ 
+Your money is not enough to make bundle \
+묶음을 어찌 만들겠는가? \
+;썩 돌아가게.... \ \ 
+Come back when you will have enough\ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+
+
+[@zum_bind1]
+#IF
+   ;checkitem 아공전서 6  
+checkitem DungeonEscape 6
+#ACT
+   goto @zum_bind1_1
+#ELSESAY
+;자네 묶을수 있는 주문서도 없으면서 어떻게 묶어 달라는건가? \  
+Why do you ask me binding without enough Scroll ? \
+;물약을 준비 한다음에 다시오시게나.. \ \ 
+Come again later with enough Scroll... \ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@zum_bind1_1]
+#IF 
+   checkgold 100
+   ;checkitem 아공전서 6  
+checkitem DungeonEscape 6
+#ACT
+   ;take 돈 100  
+take Gold 100
+   ;take 아공전서 6  
+take DungeonEscape Scroll 6
+   ;give 아공전서묶음 1   
+give Bundle of DungeonEscape Scroll 1
+#SAY
+;잘 묶어졌네... 나의 기술은 대단하지.. \ 
+Well done... my skill is good, isn't it?\
+;그럼 또 묶을일 있으면 나를 찾게.. \ \ 
+If you need my help again please ask me... \ \
+
+;<다시 묶는다./@Z_bind> \ 
+<Bind again/@Z_bind> \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+#ELSESAY
+;자네 묶음을 만들수 있는 돈도 없으면서 묶음을 \ 
+Your money is not enough to make bundle \
+묶음을 어찌 만들겠는가? \
+;썩 돌아가게.... \ \ 
+Come back when you will have enough\ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+
+[@zum_bind2]
+#IF
+   ;checkitem 아공도약서 6  
+checkitem RandomTeleport Scroll 6
+#ACT
+   goto @zum_bind2_1
+#ELSESAY
+;자네 묶을수 있는 주문서도 없으면서 어떻게 묶어 달라는건가? \  
+Why do you ask me binding without enough Scroll ? \
+;물약을 준비 한다음에 다시오시게나.. \ \ 
+Come again later with enough Scroll... \ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@zum_bind2_1]
+#IF 
+   checkgold 100
+   ;checkitem 아공도약서 6  
+checkitem RandomTeleport Scroll 6
+#ACT
+   ;take 돈 100  
+take Gold 100
+   ;take 아공도약서 6   
+take RandomTeleport Scroll 6
+   ;give 아공도약서묶음 1  
+give Bundle of RandomTeleport Scroll 6
+#SAY
+;잘 묶어졌네... 나의 기술은 대단하지.. \ 
+Well done... my skill is good, isn't it?\
+;그럼 또 묶을일 있으면 나를 찾게.. \ \ 
+If you need my help again please ask me... \ \
+
+;<다시 묶는다./@Z_bind> \ 
+<Bind again/@Z_bind> \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+#ELSESAY
+;자네 묶음을 만들수 있는 돈도 없으면서 묶음을 \ 
+Your money is not enough to make bundle \
+묶음을 어찌 만들겠는가? \
+;썩 돌아가게.... \ \ 
+Come back when you will have enough\ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+
+[@zum_bind3]
+#IF
+   ;checkitem 초공전서 6   
+checkitem TownTeleport Scroll 6
+#ACT
+   goto @zum_bind3_1
+#ELSESAY
+;자네 묶을수 있는 주문서도 없으면서 어떻게 묶어 달라는건가? \  
+Why do you ask me binding without enough Scroll ? \
+;물약을 준비 한다음에 다시오시게나.. \ \ 
+Come again later with enough Scroll... \ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@zum_bind3_1]
+#IF 
+   checkgold 100
+   ;checkitem 초공전서 6   
+checkitem TownTeleport Scroll 6
+#ACT
+   ;take 돈 100  
+take Gold 100
+   ;take 초공전서 6   
+take TownTeleport Scroll 6
+   ;give 초공전서묶음 1  
+give Bundle of TownTeleport Scroll 1
+#SAY
+;잘 묶어졌네... 나의 기술은 대단하지.. \ 
+Well done... my skill is good, isn't it?\
+;그럼 또 묶을일 있으면 나를 찾게.. \ \ 
+If you need my help again please ask me... \ \
+
+;<다시 묶는다./@Z_bind> \ 
+<Bind again/@Z_bind> \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+#ELSESAY
+;자네 묶음을 만들수 있는 돈도 없으면서 묶음을 \ 
+Your money is not enough to make bundle \
+;묶음을 어찌 만들겠는가? \
+;썩 돌아가게.... \ \ 
+Come back when you will have enough\ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+
+[@zum_bind4]
+#IF
+   ;checkitem 귀성전서 6  
+checkitem TeleportHome Scroll 6
+#ACT
+   goto @zum_bind4_1
+#ELSESAY
+;자네 묶을수 있는 주문서도 없으면서 어떻게 묶어 달라는건가? \  
+Why do you ask me binding without enough Scroll ? \
+;물약을 준비 한다음에 다시오시게나.. \ \ 
+Come again later with enough Scroll... \ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+
+[@zum_bind4_1]
+#IF 
+   checkgold 100
+   ;checkitem 귀성전서 6  
+checkitem TeleportHome Scroll 6
+#ACT
+   ;take 돈 100  
+take Gold 100
+   ;take 귀성전서 6  
+take TeleportHome Scroll 6
+   ;give 귀성전서묶음 1  
+give Bundle of TeleportHome Scroll 1
+#SAY
+;잘 묶어졌네... 나의 기술은 대단하지.. \ 
+Well done... my skill is good, isn't it?\
+;그럼 또 묶을일 있으면 나를 찾게.. \ \ 
+If you need my help again please ask me... \ \
+
+;<다시 묶는다./@Z_bind> \ 
+<Bind again/@Z_bind> \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+#ELSESAY
+;자네 묶음을 만들수 있는 돈도 없으면서 묶음을 \ 
+Your money is not enough to make bundle \
+;묶음을 어찌 만들겠는가? \
+;썩 돌아가게.... \ \ 
+Come back when you will have enough\ \
+;<그만둔다./@exit> 
+<Cancel./@exit>
+

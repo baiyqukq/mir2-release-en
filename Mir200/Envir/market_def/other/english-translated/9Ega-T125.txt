@@ -1,0 +1,211 @@
+[@main]
+#IF
+equal p9 0
+#ACT
+goto @main-1
+BreakTimeRecall 
+break
+
+#IF
+equal p9 1
+#ACT
+goto @cube
+BreakTimeRecall 
+break
+
+#IF
+equal p9 9
+#ACT
+goto @quit
+BreakTimeRecall 
+break
+
+[@main-1]
+#IF
+#ACT
+mov p9 0
+#SAY
+;안녕하세요. 당신은 안식의 방에 오셨습니다. \
+Welcome ! this is PeacefulRoom. \
+;이 안식의 방에서는 투패와 체력약묶음과 마력약묶음으로 \
+At this room, you can exchange GambleChip  \
+;바꾸어 드릴수가 있습니다. 원하시는 메뉴를 고르세요 \ \
+into Bundle of (HP)Drug or (MP)Drug. Would you select what you want \ \ 
+;투패로 체력약묶음을 <산다./@buyP> \
+<Buy./@buyP>(HP)Drug with GambleChip \
+;투패로 마력약묶음을 <산다./@buyB> \
+<Buy./@buyP>(MP)Drug with GambleChip \
+;주사위를 <굴린다./@pre2_cube>
+<Throw./@pre2_cube>Dice
+
+#ACT
+breaktimerecall
+
+[@buyP]
+#IF
+;checkitem 투패 1  
+checkitem GambleChip 1
+#ACT
+;take 투패 1  
+take GambleChip 1
+;give 체력약묶음 1
+give (HP)DrugBundle 1
+#SAY
+;투패를 체력약묶음으로 교환을 해드렸습니다. \ \
+GambleChip is exchanged into Bundle of (HP)Drug . \ \
+;<이  전/@main-1>
+<Exchange/@main>
+
+[@buyB]
+#IF
+;checkitem 투패 1  
+checkitem GambleChip 1
+#ACT
+;take 투패 1  
+take GambleChip 1
+;give 마력약묶음 1
+give (MP)DrugBundle 1
+#SAY
+;투패를 마력약묶음으로 교환을 해드렸습니다. \ \
+GambleChip is exchanged into Bundle of (MP)Drug . \ \
+;<이  전/@main-1>
+<Exchange/@main-1>
+
+[@Quit]
+#IF
+#ACT
+map B011
+
+[@pre_cube]
+#IF
+;checkitem 투패 1  
+checkitem GambleChip 1
+#ACT
+;take 투패 1  
+take GambleChip 1
+mov p9 1
+movr d0 6
+inc d0 1
+playdice 1 @cube
+#SAY
+;주사위를 굴리고 있습니다. \ \  
+Dice is thrown . \ \ 
+;<다  음/@cube>  
+<Next/@cube>
+#ELSESAY
+;<$USERNAME>님, 투패가 한개도 없으시네요. \  
+<$USERNAME>, You don't have GambleChip at all. \
+;이 게임을 하기 위해서는 투패가 필요 하거든요 \  
+You need GambleChip to play this game \
+;이 투패가 없으면 더이상 진행을 할수가 없네요.. \  
+Process could not go on without GambleChip .. \
+;투패가 준비가 되거든 다시 오세요.. \ \ 
+Come again later with GambleChip.. \ \ 
+;<닫  기/@Quit> 
+<Close/@Quit>
+#ELSEACT
+mov p9 9
+
+[@cube]
+#SAY
+;주사위의 값은 <$STR(D0)>  입니다. \ 
+Dice shows <$STR(D0)>. \
+;당신을 <$STR(D0)> 만큼 앞으로 이동을 시켜 드리겠습니다. \ \  
+You will be moved forward as long as <$STR(D0)> . \ \
+;<이  동/@next_cube>  
+<Move/@next_cube>
+
+[@next_cube]
+#IF
+equal d0 1 
+#ACT
+goto @posi1
+break
+
+#IF
+equal d0 2 
+#ACT
+goto @posi2
+break
+
+#IF
+equal d0 3 
+#ACT
+goto @posi3
+break
+
+#IF
+equal d0 4 
+#ACT
+goto @posi4
+break
+
+#IF
+equal d0 5
+#ACT
+goto @posi5
+break
+
+#IF
+equal d0 6 
+#ACT
+goto @posi6
+break
+
+[@Posi1]
+#IF
+#ACT
+batchDelay 1
+addbatch B126
+batchmove
+
+[@Posi2]
+#IF
+#ACT
+batchDelay 1
+addbatch B126
+addbatch B127
+batchmove
+
+[@Posi3]
+#IF
+#ACT
+batchDelay 1
+addbatch B126
+addbatch B127
+addbatch B128
+batchmove
+
+[@Posi4]
+#IF
+#ACT
+batchDelay 1
+addbatch B126
+addbatch B127
+addbatch B128
+addbatch B129
+batchmove
+
+[@Posi5]
+#IF
+#ACT
+batchDelay 1
+addbatch B126
+addbatch B127
+addbatch B128
+addbatch B129
+addbatch B130
+batchmove
+
+[@Posi6]
+#IF
+#ACT
+batchDelay 1
+addbatch B126
+addbatch B127
+addbatch B128
+addbatch B129
+addbatch B130
+addbatch B131
+batchmove
+

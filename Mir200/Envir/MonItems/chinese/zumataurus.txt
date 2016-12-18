@@ -1,0 +1,107 @@
+1/1  gold  20000
+
+1/1    SunPotion
+1/1    SunPotion
+1/1    SunPotion
+1/1    SunPotion
+1/1    SunPotion
+1/1    SunPotion
+1/1    SunPotion
+1/1    SunPotion
+1/2    SunPotion(M)
+1/2    SunPotion(M)
+1/1    SunPotion
+1/1    SunPotion
+1/1    SunPotion
+1/1    SunPotion
+1/1    SunPotion
+1/1    SunPotion
+1/1    SunPotion
+1/1    SunPotion
+1/2    SunPotion(M)
+1/2    SunPotion(M)
+1/1    (HP)DrugLarge
+1/1    (HP)DrugLarge
+1/1    (HP)DrugLarge
+1/1    (HP)DrugLarge
+1/1    (HP)DrugLarge
+1/1    (HP)DrugLarge
+1/1    (HP)DrugLarge
+1/1    (HP)DrugLarge
+1/2    (HP)DrugLarge
+1/2    (HP)DrugLarge
+1/1    (MP)DrugLarge
+1/1    (MP)DrugLarge
+1/1    (MP)DrugLarge
+1/1    (MP)DrugLarge
+1/1    (MP)DrugLarge
+1/1    (MP)DrugLarge
+1/1    (MP)DrugLarge
+1/1    (MP)DrugLarge
+1/2    (MP)DrugLarge
+1/2    (MP)DrugLarge
+
+
+1/20    强力斧
+1/1000  TeleportRing
+
+1/10   DragonRing
+1/50   GaleRing
+1/40   蛇形剑
+1/40   MageStaff
+1/5   奥玛号角
+1/5    BenedictionOil
+1/50   3rdEyeBracelet
+1/50   SpellBracelet
+1/50   RecallNecklace
+1/50   RecallHelmet
+1/50   LifeNecklace
+1/30   RubyRing
+1/30   白金戒指
+
+1/200   RecallRing
+
+1/20   ShoulderDash
+1/20   MagicShield
+1/30   MassHealing
+1/30   TurnUndead
+1/40   FlamingSword
+1/40   SummonShinsu
+1/40   IceStorm
+
+1/6   ConvexLens
+1/3   BambooPipe
+1/3   ShamanHelmet
+1/3   精致长剑
+1/3   CoralRing
+1/3   ExpelRing
+
+1/6   SkeletonHelmet
+1/6   DeathGauntlet
+1/6   大力斧
+
+1/2   HeavyArmour(M)
+1/2   HeavyArmour(F)
+1/2   SoulArmour(F)
+1/2   SoulArmour(M)
+1/2   MagicRobe(M)
+1/2   MagicRobe(F)
+1/2   GoldRing
+1/2   BlueJadeneck
+1/2   GoldBracelet
+1/2   MoralRing
+1/2   CharmRing
+1/2   MonkBracelet
+1/2   EbonyBracelet
+1/2   长剑
+1/2   BlackRing
+1/2   SerpentEyeRing
+1/2   PearlRing
+1/2   王子剑
+1/2   战美剑
+1/2   钩矛
+1/2   IronRing
+1/2   TigerNecklace
+1/2   白金戒指
+1/2   SkeletonRing
+1/2   ThinBracelet

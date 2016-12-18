@@ -1,0 +1,17 @@
+100    (HP)DrugLarge
+101    (MP)DrugLarge
+102    (HP)DrugSmall
+103    (MP)DrugSmall
+104    (HP)DrugMedium
+105    (MP)DrugMEdium
+106    DungeonEscape
+107    RandomTeleport
+108    TownTeleport
+109    TeleportHome
+110    GambleChip
+111    Amulet
+112    BrownLog
+113    RedLog
+114    BlueLog
+115    RedPoison
+116    GreenPoison

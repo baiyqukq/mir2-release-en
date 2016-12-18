@@ -1,0 +1,2 @@
+* Name   = GM With FULL commands
+1 Name   = GM With Godmode only

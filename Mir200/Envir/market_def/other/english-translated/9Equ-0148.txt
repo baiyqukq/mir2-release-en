@@ -1,0 +1,266 @@
+[@main]
+#IF
+random 2
+#ACT
+goto @QUEST
+#ELSEACT
+goto @normal
+
+[@QUEST]
+#IF
+check [315] 1
+#ACT
+goto @Q315
+break
+
+#IF
+check [314] 1
+#ACT
+goto @Q314
+#ELSEACT
+goto @normal
+
+[@normal]
+;에혀... 나도 빨리 돈을 모아서 이런 주점을 차려야 겠네요.. \ 
+I make money onestly running a pub like this... \
+;그러기 위해서는 열심히 일을 해야 겠죠.. \ \  
+I have to work hard in order to make it.. \ \
+;<닫기/@exit> 
+<Close/@exit>
+
+[@Q314]
+#IF
+#SAY
+;제일 친한 친구인 수한씨에게 들었습니다. \  
+I heard you from my best friend Rupert. \ 
+;수한씨를 위해 많은 일을 하셨다고요? \ 
+You helped Rupert, don't you? \
+;정말 친한 친구로서 저도 감사 드립니다. \  
+As her best friend, I thank you too, \
+;수한씨가 저에게 부탁한것을 드릴려고 합니다. \ \ 
+and I will give you what Rupert asked me to give.\ \
+;<다음/@Q314_1> \ 
+<Next/@Q314_1> \
+;<닫기/@exit> 
+<Close/@exit>
+
+[@Q314_1]
+#IF
+#SAY
+;그럼 <$USERNAME>님의 성격 테스트를 해서 그에 맞는 \  
+Anyway <$USERNAME>, you first have to pass a character test...\
+;물건을 드릴게요 이것도 수한씨가 원하시는 걸겁니다. \ 
+I'll give your reward accordingly to the test result.\
+;만약 제가 수한씨가 주신 물건을 가지고 드리지 않는다면 \ 
+Of course this is what Rupert want. First question...\
+;<$USERNAME>님은 어떻게 하실건가요? \ \  
+If I will not give you Rupert's item, what <$USERNAME> will do then ? \ \
+
+;아무런 느낌이 <없다/@Q314_1_1>\ 
+<I have no idea/@Q314_1_1>\
+;주어도 상관이 <없다/@Q314_1_2>\ 
+<I don't care/@Q314_1_2>\
+;기분이 몹시 <안좋을것이다/@Q314_1_3>\ 
+<I will feel so badly/@Q314_1_3>\
+
+[@Q314_1_1]
+#IF
+#ACT
+SET [315] 1
+;give 축복의기름 1 
+give BenedictionOil 1
+#SAY
+;<$USERNAME>님의 성격은 정말 무덤덤 하시군요.. \ <$USERNAME>, 
+you are really blunt... \ 
+;물건에 대한 욕심이 없으시다니요.. \ 
+Because you are not greedy for items... \ 
+;정말 대단 하시네요 그런 성격에 맞는 것을 수한씨가 이것을 \ 
+Rupert prepared this item for person like you. \
+;드리라고 하더군요 여기 있습니다. 축복의기름 입니다. \ 
+This is a Benediction Oil, \
+;잘 쓰십시요. 그리고 유노인을 찾아 주세요.\ \ 
+use this well and find out Jonathan.\ \
+;<닫기/@exit> 
+<Close/@exit>
+
+[@Q314_1_2]
+#IF
+#SAY
+;<$USERNAME>님의 성격은 정말 너무 헌신적이시군요.. \ 
+<$USERNAME>, you look very generous \  
+;무엇인지는 모르지만 그 물건을 따른 사람에게 그냥 줄수 있다는 \ 
+although you don't know what the item was...\ 
+;것이........ 정말 이 세상에서 보기 힘든분이네요 \ 
+Anyway it's rare to see a person like you in this world \
+;다음 문제를 드리지요 \ \ 
+Next question then... \ \
+;<다음/@Q314_1_2_1> 
+<Next/@Q314_1_2_1>
+
+[@Q314_1_3]
+#IF
+#ACT
+SET [315] 1
+;give 청동장갑 1 
+give BronzeGlove 1
+#SAY
+;<$USERNAME>님의 성격은 물건에 대한 소유욕이 강하시군요.. \  
+<$USERNAME> has a strong desire to possess...\ 
+;수한씨가 이것을 드리라고 하더군요..\ 
+Rupert asked me to give you this item...\
+;청동장갑 입니다.   잘 쓰십시요.. \ 
+It's a Bronze Glove.  Use this item well... \  
+;그리고 유노인을 찾아 주세요. \ \  
+and find out Jonathan please. \ \
+;<닫기/@exit> 
+<Close/@exit>
+
+[@Q314_1_2_1]
+#IF
+#SAY
+;왜람된 말씀 일지 모르겠지만, 당신은 위메이드란 곳을 아십니까? \ 
+It might sound strange to you but do you know Game Network? \
+;이 위메이드를 어떻게 생각 하시는지 묻고 싶네요? \ \  
+How do you feel about Game Network? \ \
+
+;위메이드는 아무런 느낌이 <없다/@Q314_1_2_1_1> \ 
+<I have no feeling about GN/@Q314_1_2_1_1> \ 
+;위메이드를 폭파하고 <싶다/@Q314_1_2_1_2> \ 
+<I'd like to blow up GN/@Q314_1_2_1_2>\
+;위메이드를 매우 <좋아한다/@Q314_1_2_1_3> 
+<I love GN very much/@Q314_1_2_1_3>
+
+[@Q314_1_2_1_1]
+#IF
+#ACT
+SET [315] 1
+;give 청동장갑 1 
+give BronzeGlove 1
+#SAY
+;아무런 느낌이 없으시다구요?? 흠 세상에 무감각 하시군요.. \  
+You don't feel nothing?? You may not have any interest on the world... \
+;조금더 세상에 대한 관심을 갖어 보시는 것은 어떻세요?? \  
+Why don't you have more interest on the world?? \
+;수한씨가 부탁한 청동 장갑을 드리겠습니다. 잘 쓰세요 \  
+I'll give you a Bronze Glove as Rupert asked me. Use it well \  
+;그리고 유노인을 찾아 주세요. \ \  
+and find out Jonathan please. \ \
+;<닫기/@exit> 
+<Close/@exit>
+
+[@Q314_1_2_1_2]
+#IF
+#SAY
+;이런 위메이드에 대해 대단한 불만을 가지고 계시는 군요? \ 
+Oh, you expressed a complain against GN? \
+;그 느낌을 솔직하게 표현 하는 <$USERNAME>님은 멋있는 분이시네요 \ 
+Since you frankly express your feeling, <$USERNAME>,\
+;그럼 다음 질문은 받아 보세요 \ \  
+please answer the next question... \ \
+;<다음/@Q314_1_2_1_2_1> 
+<Next/@Q314_1_2_1_2_1>
+
+[@Q314_1_2_1_3]
+#IF
+#ACT
+SET [315] 1
+;give 축복의기름 1 
+give BenedictionOil 1
+#SAY
+;위메이드를 매우 좋아 하십니까?? \ 
+You have a good feel about GN?? \
+;보기보다 위선적이신분 같군요.. 솔직한 대답이었으면 좋겠습니다. \  
+You are lying to me... I want your real answer! \
+;그럼 수한씨가 준비 해주신 축복의기름을 드리죠 \  
+Then here is a Benediction Oil that Rupert prepared \
+;그리고 유노인을 찾아 주세요 \ \ 
+and find out Jonathan, please \ \
+;<닫기/@exit> 
+<Close/@exit>
+
+[@Q314_1_2_1_2_1]
+#IF
+#SAY
+;마지막 질문을 드리지요.. 잘들어 보세요 \  
+This is my last question... listen carefully \
+;이 퀘스트를 진행 시키는 수한씨가 어떻게 보이세요? \ 
+How do you feel about Rupert's quest? \
+;잘 생각을 해보시고 대답을 해주세요.. \ \ 
+Please, think well and answer.. \ \
+
+;매우 재미 있게 <생긴사람이다/@Q314_1_2_1_2_1_1>\ 
+<It was very funny/@Q314_1_2_1_2_1_1>\
+;아주 짜증 나게 <생긴사람이다/@Q314_1_2_1_2_1_2>  
+<It irritated me/@Q314_1_2_1_2_1_2>\
+
+[@Q314_1_2_1_2_1_1]
+#IF
+#ACT
+SET [315] 1
+;give 축복의기름 1 
+give BenedictionOil 1
+#SAY
+;재미 있게 생긴 분이시라구요? \ 
+Do you think that she was funny? \
+;수한 씨가 들으시면 매우 기분 나뻐 하시겠네요 \  
+I think that your words may irritate her. \
+;하지만 수고 하신점이 있으시니, 수한씨가 준비해주신 물건을 \ 
+but considering your effort, I give you Rupert's item. \
+;드리겠습니다. 수고 하셨습니다. 그리고 유노인좀 찾아 주세요 \ \ 
+Thank you very much and please, find out Jonathan \ \
+;<닫기/@exit> <Close/@exit>
+
+[@Q314_1_2_1_2_1_2]
+#IF
+#ACT
+goto @Q314_1_2_1_2_1_2_1
+
+[@Q314_1_2_1_2_1_2_1]
+#IF 
+random 5
+#ACT
+SET [315] 1
+;give 축복의기름 1 
+give BenedictionOil 1
+;give 청동장갑 1 
+give BronzeGlove 1
+#SAY
+;정말요?? 저도 그렇게 생각해요 호호.. \ 
+Is it true?? I think so, too.... \
+;<$USERNAME>님 하고는 저하고는 정말 잘 맞는것 같아요 \  
+<$USERNAME>, you are similar to me in personality \
+;제가 대신에 수한씨가 준비 해둔 물건중에 2개 드릴게요 \ 
+I'll give you both the items Rupert prepared \ 
+;수한씨에게 말하지 마세요.. 그리고 유노인좀 찾아 주세요\ \ 
+It will be a secret between us... and please look for Jonathan\ \
+;<닫기/@exit> 
+<Close/@exit>
+#ELSEACT
+goto @Q314_1_2_1_2_1_2_1_1
+
+[@Q314_1_2_1_2_1_2_1_1]
+#IF
+#ACT
+SET [315] 1
+;give 축복의기름 1 
+give BenedictionOil 1
+#SAY
+;정말요?? 저도 그렇게 생각해요 호호.. \ 
+Is it true?? I think so, too.... \
+;<$USERNAME>님 하고는 저하고는 정말 잘 맞는것 같아요 \  
+<$USERNAME>, you are similar to me in personality \
+;제가 대신에 수한씨가 준비 해둔 물건중에 1개 드릴게요 \ 
+I'll give you one of the item Rupert prepared \
+;수한씨에게 말하지 마세요.. 그리고 유노인좀 찾아 주세요\ \ 
+It will be a secret between us... and please look for Jonathan\ \
+;<닫기/@exit> 
+<Close/@exit>
+
+[@Q315]
+#IF
+#SAY
+;유노인을 빨리 찾아 주세요. \ \ 
+Please, find out Jonathan urgently. \ \
+;<닫기/@exit>
+ <Close/@exit>
+

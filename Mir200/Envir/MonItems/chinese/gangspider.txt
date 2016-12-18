@@ -1,0 +1,43 @@
+1/4    gold  400
+1/20    SunPotion(M)
+1/20    SunPotion(M)
+1/20    SunPotion(M)
+1/5    (HP)DrugLarge
+1/10    (MP)DrugLarge
+
+
+1/250  HeavyArmour(M)
+1/250  HeavyArmour(F)
+1/250  SoulArmour(F)
+1/250  SoulArmour(M)
+1/250  MagicRobe(M)
+1/250  MagicRobe(F)
+1/250  GoldRing
+1/250  BlueJadeneck
+1/250  GoldBracelet
+1/250  MoralRing
+1/250  CharmRing
+
+1/100  MonkBracelet
+1/100  EbonyBracelet
+1/100  KrissSword
+1/100  BlackRing
+
+1/200  SerpentEyeRing
+1/200  PearlRing
+1/200  PrinceSword
+1/200  MartialSword
+1/200  HookedSpear
+1/200  IronRing
+
+1/175 TigerNecklace
+1/175 PlatinumNeck
+1/175 SkeletonRing
+1/175 ThinBracelet
+
+1/2000  GaleRing
+1/2000  SharpBracelet
+1/2000  EvadeBracelet
+1/2000  ElusionNeck
+
+

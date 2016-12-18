@@ -1,0 +1,138 @@
+;
+;품목  복권
+%100
++3
+
+;대화, '*' : 대화 태그
+[@main]
+;어서오게나. 이 황량한 땅에 할일이 뭐가 있겠는가?\
+Welcome. What are you doing in this deserted land?\
+;심심할텐데...어디 자네 운을 한 번 시험해 보지 않으려나?\
+You looks bored...Would you try your luck?\
+;허나 당첨이 되지 않는다해서 나를 원망하지는 말게나.\
+but if you lost, don't blame me!\
+;돈을 가질 수 있는 한계를 넘을경우 돈이 바닥에 떨어지니\
+If the amount of money will be over the limit,\
+;주의하시오!!\ \ 
+the money over the limit will be dropped down so be careful!!\ \
+ ;복권을 <산다/@buy>\ 
+<Buy/@buy> Lottery ticket\
+ ;당첨금에 대하여 <알아본다/@Bingo>\ 
+<Check/@Bingo> the winning money\
+ ;<대화를 한다./@talkwith> , ;<그만둔다/@exit> 
+  <Talk with/@talkwith>    ,  <Cancel/@exit>
+<>
+
+[@buy]
+;사고 싶은 물품을 고르시오.\ \ \ 
+Please pick up what you want to buy.\ \ \
+ ;<뒤로/@main> 
+<Back/@main>
+
+[@Bingo]
+  ;1등    1,000,000전\  
+1st prize    1,000,000 gold\
+  ;2등      200,000전\  
+2nd prize      200,000 gold\
+  ;3등      100,000전\  
+3rd prize      100,000 gold\
+  ;4등       10,000전\  
+4th prize       10,000 gold\
+  ;5등        1,000전\  
+5th prize       1,000  gold\
+  ;6등          500전\ \   
+6th prize         500  gold\ \
+;<뒤로/@main> 
+<Back/@main>
+
+[@talkwith]
+;흠 나는 이 뒤에 있는 동굴을 뚫었지... \
+Hum, I drilled the cave behind here... \
+;오랜 시간이 걸려서 뚫었네.. 그래서 이동굴을 통하여 \
+It takes me a lot of time...\
+;석각묘와 절명곡을 갈수 있는 길을 발견 했다네.. \
+so I found out a pathway reaching to the stone tomb and the Death valley Dungeon...\
+;한번 이용해 보겠나?? \ \
+Would you try to use that ?? \ \
+
+   ;<절명곡으로이동/@move1> \
+<Move to Death Valley Dungeon/@move1> \
+   ;<석각묘으로이동/@move2> \
+<Move to Stone Tomb/@move2> \
+   ;<뒤로/@main> 
+<Back/@main>
+<>
+
+[@move1]
+;절명곡으로 이동하기 위해서는 돈이 필요 하다네  \
+You need money to move to death valley \
+;꽁짜로 자네를 이동시켜 줄수는 없지 않은가? \
+I can't move you there just for free ? \
+;절명곡은 3000전을 주어야 하네 \ 
+it is cost 3000 gold to move to Death valley \ 
+;이 돈을 지불을 하고 이동을 하겠는가? \ \
+Would you pay for it? \ \
+   
+   ;<이동한다./@pay1> \ 
+<Move/@pay1> \
+   ;<안한다./@talkwith> 
+<Cancel/@talkwith>  
+<>
+
+[@pay1]
+#IF
+checkgold 3000
+
+#ACT
+;take 돈 3000
+take gold 3000
+map D601
+
+#ELSESAY
+;장난하나??? 자네 돈도 없으면서.. \
+You kidding me!! ...without money.. \
+;이동을 하겠다니?? 다신 자네와 만나기 싫네.. \
+Don't think about it?? I don't want to see you again.. \ 
+break
+
+;<뒤로/@main> 
+<Back/@main>
+
+[@move2]
+;석각묘로 이동하기 위해서는 돈이 필요 하다네  \
+You need money to move to the Angled stone Tomb \
+;꽁짜로 자네를 이동시켜 줄수는 없지 않은가? \
+I can't move you there without charge? \
+;석각묘는 500전을 주어야 하네 \ 
+It will cost 2000 gold to reach the Angled stone tomb \
+;이 돈을 지불을 하고 이동을 하겠는가? \ \
+Will you pay me to move? \ \
+   
+   ;<이동한다./@pay2> \
+<Move/@pay2> \
+   ;<안한다./@talkwith>   
+<Cancel/@talkwith>
+<>
+[@pay2]
+#IF
+checkgold 500
+
+#ACT
+take 돈 500
+map D710
+
+#ELSESAY
+;장난하나??? 자네 돈도 없으면서.. \
+You kidding me!! Without money??? \
+;이동을 하겠다니?? 다신 자네와 만나기 싫네.. \ 
+don't even think about it?? I don't want to see you again... \ 
+break
+
+;<뒤로/@main> 
+<Back/@main>
+
+;[상품]  
+[Goods]
+;  품이름   번에나  는물량  나  는시간(hour)
+;복권    10000           1
+LotteryTicket 

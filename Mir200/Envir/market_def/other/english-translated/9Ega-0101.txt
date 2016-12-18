@@ -1,0 +1,31 @@
+[@main]
+;안녕하십니까? 당신은 마방진 게임을 하고 싶으십니까? \ \
+Hi? Would you try Ma-Bang-Jin game ? \ \
+;<마방진미로로 들어 간다./@pre> \
+<Get in/@pre>Ma-Bang-Jin Maze \
+;<마방진 게임을 하지 않는다./@exit>
+<Cancel/@exit>
+
+[@pre]
+#IF
+random 3
+#ACT
+mapmove B010 17 17
+break
+
+#IF
+random 3
+#ACT
+mapmove B010 17 61
+break
+
+#IF
+random 3
+#ACT
+mapmove B010 67 31
+break
+
+#ELSEACT
+goto @pre
+
+

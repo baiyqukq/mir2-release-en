@@ -1,0 +1,47 @@
+; NPC 정의파일
+;
+; 1.파일설명         : npc 의 각 필드를 세팅
+;
+; 2.필드설명
+; - name             : npc이름, 제한(한글7자이내, 숫자사용못함)
+;                      npc 세팅변경 후, 운영자캐릭으로 리로드명령어 사용하면 내용갱신됨(서버리붓 불필요함)
+;
+; - race             : npc 기능구분세팅, 각세팅에 따라 npc 대화창에 해당메뉴가 추가됨
+;           	        0 (상인)        - 사기/팔기메뉴 나옴
+;          	        1 (행정관)      - ?
+;         	        2 (사북성관리)  - ?
+;
+; - mapNum           : 맵번호
+;
+; - x,y              : x,y 좌표
+;
+; - fTile(face Tile) : npc 정보창에 보여줄 npc tile image, 차후 구현 예정, 
+;                      bTile 가 별도로 제작/사용가능
+;
+; - bTile(body Tile) : npc 타일이미지,
+;
+
+
+; 사북성
+; name          race      mapNum     x     y       fTile bTile
+;--------------------------------------------------------------
+Administrator  	 1         0122       29    32      0     8
+Administrator 	 2         0150       7     16      0     8
+Oldman           0         3          669   338     0     1
+
+;; 이벤트를 위해 임시기간동안 세우는 NPC
+; name          race      mapNum     x     y       fTile bTile
+;--------------------------------------------------------------
+TownTeleport     0         0          330    267    0     8
+TownTeleport     0         0          287    614    0     8
+TownTeleport     0         0          637    608    0     8
+TownTeleport     0         2          499    483    0     8
+TownTeleport     0         3          339    333    0     8
+TownTeleport     0        11          181    322    0     8
+TownTeleport     0      r001           96     94    0     8
+MapTeleport	 0	r001	       97     94    0	  8
+
+;; 이벤트를 위해 임시기간동안 세우는 NPC
+; name          race      mapNum     x     y       fTile bTile
+;--------------------------------------------------------------
+Gambler	     0         0          302    254	0     10

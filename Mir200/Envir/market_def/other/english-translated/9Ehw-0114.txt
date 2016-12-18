@@ -1,0 +1,354 @@
+;;화각도 퀘스트의 용혈선생
+;;초보 퀘스트도 포함
+[@main]
+#IF
+check [220] 1
+check [221] 0
+#ACT
+goto @clear
+break
+#IF
+check [218] 1
+#ACT
+goto @accept_1
+break
+#IF
+check [216] 1
+check [220] 0
+#ACT
+goto @news
+break
+
+#IF
+check [757] 1
+#ACT
+goto @Q707
+break 
+
+#IF
+check [756] 1
+#ACT
+goto @Q706
+break
+
+#IF
+gender man
+#ACT
+goto @main_1
+break
+#ELSEACT
+goto @main_2
+
+[@Q707]
+;자네 벌써 책을 받지 않았나?? 책을 받았으면 외수검법 \
+You received books already, didn't you ??   as you got books \
+;이라는 책을 더블클릭을 해보게(마우스 왼쪽키 두번클릭) \
+Click a book called by Fencing twice (click twice the left button of mouse) \
+;그럼 책이 없어지면서 무공을 배운걸세 이 무공은 자네의 \
+Then as the book disappears you master the skill \
+;능력중에 정확이라는 능력을 키워주게 되지 이 무공이 수련 \
+This skill increases accuracy among your ability \
+;이 되면 되어 질수록 자네의 정확은 올라 가네 \
+The heavier you train this skill, the higher your accuracy grows \
+;이제 비천현에 있는 서점에 한번 가보시게나 그 서점 주인이 \
+Now go and visit Bookstore at Bichon Province \
+;자네가 더욱 발전 할수 있는 가르쳐 줄것세 \ 
+The owner of Bookstore will advise you how to develop yourself \ \ 
+;비천 서점의 좌표는 323,247 이곳이네 한번 가보게 \
+The coordinates of Bookstore is 323,247 , Try to go there \
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q706]
+#IF
+checklevel 7
+#SAY
+;자네의 능력을 테스트 해보겠네, 양과 사슴과 닭이라는 몬스터가 \
+Let me test your ability, there are a lot of monsters called by Sheep, Deer and Hen here  \
+;많이 있다네, 이 것들은 5분내에 잡고 나서, 나와 대화를 하세 \ \
+First, kill them all within 5 minute. let me talk to you after finishing it \ \
+;<닫 기/@Q706_1>
+<Close/@Q706_1>
+#ELSESAY
+;나의 이름은 용혈선생이라고 하네 방갑구만...\
+I am WaMaster, What's your name? \
+;자네 전사라는 직업에 대하여서는 도우미님에게 들어서 \
+I think that helper advised you enough about the occupation , Warrior \
+;많은 것을 알고 있을걸세. 전사의 첫 무공은 외수검법이라고 \
+Fensing is a first step for Warrior, To study Fensing \
+;하지. 그 무공을 익히기 위해서는 자신의 레벨이 7이상 되어야 \
+Your level should be 7 or more \
+;하네. 먼저 자네의 능력을 키워서 다시 나한테 오시겠나? \ \
+Come again later with enough level? \ \
+;<닫 기/@exit>
+<Close/@exit>
+[@Q706_1]
+#IF
+checkhum 01142 1
+#SAY
+;지금 나에게 테스트를 받는 사람이 있네 그 사람의 테스트가 \
+At this moment there is someone under test \
+;끝이 날때 까지 기다려 주게나.. 대단히 미안하네. \ \
+Please wait until the person's test is finished. \ \
+;<닫  기/@exit>
+<Close/@exit>
+#ELSEACT
+Monclear 01142
+Param1 01142
+Param2 19
+Param3 19
+;MonGen 사슴 10 10
+MonGen Deer 10 10
+;MonGen 닭 20 10
+MonGen Hen 20 10
+;MonGen 양 10 10
+MonGen Sheep 10 10
+TimeRecall 5
+map 01142
+
+[@main_1]
+;이런 외진곳에 찾아오다니. 자네 이름이\
+What brought you here, this is really isolated place. What's your name?\
+;무언가? <$USERNAME>라...흠...이름이 모 그런가?\
+<$USERNAME>... Well... your name sounds strange to me?\
+;난 지금 할일이 있어 바쁘네...그만 나가보도록 하게나.\ \
+I am busy now... so get out of here please.\ \
+ ;<닫기/@exit> 
+<Close/@exit>
+
+[@main_2]
+;<$USERNAME>라 정말 아름다운 이름이군...\
+<$USERNAME> What a beautiful name!...\
+;지금 시간좀 있나? 우리 비천성 주점가서\
+Are you free now ? Would you like to drink with me \
+;가볍게 대포라도 한잔 걸치는게?...ㅡㅡ;;\
+at Tavern in Bichon Wall? ...ㅡㅡ;;\
+;알았네...째려보지 말게, 난 지금 바쁘니\
+I see what do you mean... Don't look at me so, I'm busy now \
+;그만 나가보도록 하게나...\ \
+Get out of here now...\ \ 
+ ;<닫기/@exit> 
+<Close/@exit>
+
+[@news]
+;무슨일로 찾아왔는가? 뭐? 강다구?\
+What can I do for you? what? Becker?\
+;자네가 내 제자를 어떻게 아는가?\
+How do you know my apprentice's name?\
+;그러나 나와 이야기를 하고싶다면\
+but if you want to talk to me\
+;가위, 바위, 보를 하세...이기면 자네\
+Let's play a Morra game ...if you won\
+;이야기를 한 번 들어보도록 하지.\ \
+I'll listen to your story.\ \
+ ;<가위/@gawi>,  ;<바위/@bawi>,  ;<보/@bo>
+  <Rock/@gawi>    <Scissor/@bawi> <Paper/@bo>
+[@gawi]
+#IF
+random 20
+#ACT
+set [218] 1
+#SAY
+;헉, 난 보를 냈다네...나를 이기다니\
+Damn, I put paper... you win! \
+;대단하군, 어디 한 번 이야기를 들어보세\ \
+Great, ok let's talk about it\ \
+ ;<다음/@next>
+<Next/@next>
+#ELSEACT
+reset [210] 10
+#ELSESAY
+;난 주먹이라네 내가 이겼으니 돌아가보게.\ \
+I put rock... I win, go back. \ \ 
+ ;<닫기/@exit> 
+<Close/@exit>
+
+[@bawi]
+#IF
+random 20
+#ACT
+set [218] 1
+#SAY
+;헉, 난 가위를 냈다네...나를 이기다니\
+Damn,I put sissor... you win! \
+;대단하군, 어디 한 번 이야기를 들어보세\ \
+Great, ok let's talk about it\ \
+ ;<다음/@next>
+<Next/@next>
+#ELSEACT
+reset [210] 10
+#ELSESAY
+;난 보라네 내가 이겼으니 돌아가보게.\ \
+I put paper, I win and go back. \ \ 
+ ;<닫기/@exit> 
+<Close/@exit>
+
+[@bo]
+#IF
+random 20
+#ACT
+set [218] 1
+#SAY
+;헉, 난 주먹을 냈다네...나를 이기다니\
+ Huk, I put rock, you win...\
+;대단하군, 어디 한 번 이야기를 들어보세\ \
+Great, ok let's talk about it\ \
+ ;<다음/@next>
+<Next/@next>
+#ELSEACT
+reset [210] 10
+#ELSESAY
+;난 가위라네 내가 이겼으니 돌아가보게.\ \
+My scissor cut your paper, I win and go back. \ \ 
+ ;<닫기/@exit> 
+<Close/@exit>
+ 
+[@next]
+;흠...내 제자인 강다구를 만났다고 했나?\
+Hum...Did you meet my apprentice Becker?\ 
+;어디 그놈은 죽지않고 잘 살아 있던가??\
+Is he still alive??\
+;타고난 자질은 그리 좋지 않았다만 열정 하나를\
+He was not talented but, due to his passion,\
+;높이 사서 내 곁에 두고 가르쳤거늘...\
+I would have taught him anyway...\
+;게을리해도 내 나쁘게 대하지 않았거늘...\
+so I didn't scold him for his negligence...\
+;어디 지금은 어디서 무얼하고 있는가?\ \
+where is he and what is he doing now?\ \
+ ;<지금은 비천노점에서 대장장이를 합니다/@next_1>\
+<He is a BlackSmith at street stall in Bichon wall/@next_1>\
+ ;<그렇게 말씀하지 마시고 우선 제말을 들어보세요/@next_2>
+<Don't say so and first listen to me/@next_2>
+ 
+[@next_1]
+#IF
+#ACT
+reset [210] 10
+set [217] 1
+#SAY
+;흠...그런가? 알았네 그럼 이제 돌아가보게.\ \
+Hum...is that so? I got it and you better go away. \ \ 
+ ;<닫기/@exit> 
+<Close/@exit>
+
+[@next_2]
+;그래 무슨말이 하고싶은겐가?\ \
+What do you want to tell me?\ \
+ ;<사실은 강씨아저씨도 스승님을 그리워합니다/@remember>\
+<In fact, Becker is missing you too/@remember>\
+ ;<한때 제자였던 사람을 왜그리 나쁘게 말씀하시나요?/@criticize>
+<Why do you criticize your former apprentice?/@criticize>
+ 
+[@remember]
+;그래...그렇단 말이지...사실은 나도 그녀석을 잊어버린건\
+Well...really... frankly speaking, I either miss him \
+;아니야. 그녀석을 거둬들였던건 내가 꼭 남기고 싶은 기술이\
+the reason why I taught him is that I want to hand down my skill...\
+;있었기 때문이지...그 기술은 재능만으로는 절대 안되는 어려운\
+The technic is so difficult that just talent could not reach \
+;것이야 계속되는 실패를 거쳐서 경험으로만 완성할 수 있는\
+As failure repeats itself, accumulated experience will reach the completion of this technic \
+;것이지 그녀석에게는 열정이 있었기에 가능하리라 생각했었어.\
+I thought it could be for him to make it because he has passion. \
+;하지만 이제 나이가 너무 많이 들어 그 기술이 정확히\
+As I am too old now I can't remember the technic detaily\
+;생각나지 않네. 게다가 그 기술에 대한 내용을 집필하던 도중...\ \
+Further in amid of writing this techinc ... \ \ 
+ ;<다음/@remember_1>
+<Next/@remember_1>
+ 
+[@remember_1]
+;마귀가 책에 깃들고 말았다네...왜 그랬는지 예전에 한 번\
+the Evil spirits got into that book...\
+;그 마귀들을 퇴치하려고 책을 펼쳐 마귀를 불러낸 적이\
+I tried to expel the evil from the book but I failed\
+;있었으나 그놈들이 너무 강해서 나로서는 엄두를 내지 못하고있네\
+because these spirits are too strong.\
+;어떤가, 자네가 책에 깃들어있는 마귀를 퇴치해 보겠는가?\ \
+How about you? Would you try to expel the evil spirits from my book?\ \
+ ;<승락한다/@accept>\
+<Accept/@accept>\
+ <거절한다/@noaccept>
+<Refuse/@noaccept>
+
+[@accept]
+#IF
+#ACT
+set [218] 1 
+#SAY
+;좋네, 책속에 숨어있는 마귀들은 아주 강력하다네...마음의 준비가\
+OK, the evil spirits in book are so strong... Are you ready?\
+;되면 말하게나, 아직 준비가 되지 않았다면 정비를 단단히 하고오게.\
+If you are not ready please come again later with better training.\
+;그놈들은 아주 무섭다네...\ \
+they are really strong ...\ \
+ ;<준비됐습니다/@next_3>\
+<Ready/@next_3>\
+ ;<준비하고 오겠습니다/@exit>
+<I'll come later/@exit>
+
+[@accept_1]
+;그래 준비는 다 되었나? 그럼 시작하겠네...\ \
+So, you are ready... here we go...\ \
+ ;<다음/@next_3>
+<Next/@next_3>
+ 
+[@next_3]
+#IF
+check [220] 0
+checkhum 01141 1
+#SAY
+;지금 마귀를 물리치고 있는 사람이 있다네...\
+There is a someone who is fighting against monsters...\
+;잠시후에 다시오게나...\ \
+Come again later...\ \
+ ;<닫기/@exit> 
+<Close/@exit>
+#ELSEACT
+close
+monclear 01141
+param1 01141
+param2 10 
+param3 10
+;mongen 화염우면귀2 30 10
+mongen FlamingWooma2 30 10
+map 01141
+break
+
+[@criticize]
+#IF
+#ACT
+reset [210] 10
+#SAY
+;아니 뭐라고? 지금 자네 나한테 따지는겐가?\
+What do you say? Are you complaining me right now?\
+;내가 뭐라고 말하던간에 그건 내맘이야!!!\
+Whatever I said, I'm a ruler!!!\
+;자네같은 사람하고는 이제 그만 얘기하고 싶구만.\
+I don't want to talk with you any more.\
+;어서 돌아가보게!!\ \
+Go away please!!\ \
+ ;<닫기/@exit> 
+<Close/@exit>
+ 
+[@clear]
+#IF
+checkjob warrior
+checklevel 35
+#ACT
+reset [210] 10
+set [221] 1
+;give 제군도서
+give FateSwordBook
+#SAY
+;오, 자네는 진정한 용사일세...그 마귀들을 물리치다니\
+Oh, You are a real warrior... since you expel the evil\
+;정말 수고했네. 이 책을 다시 펼쳐볼 수 있는 날이 다시\
+Thank you so much. I am really glad to read this book again...\
+;올줄이야...자, 내가 이 책을 자네에게 줄테니 강다구에게\
+Please deliever this book to Becker...\
+;가져가게...그는 나의 뜻을 받아들여 줄 것이야...\ \
+He will understand my intention...\ \
+ ;<닫기/@exit> 
+<Close/@exit>

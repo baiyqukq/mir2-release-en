@@ -1,0 +1,104 @@
+<Player Commands>
+@AllowMsg - reject whisper
+@BanShout - reject shouting
+@BanTrade - reject trade
+@LetGuild - allowguild
+@EndGuild - leave guild
+@AuthAlly - allow ally
+@BanGuildChat - allow guild chat
+@Priv - Interception
+@Searching - Probe Necklace
+@allowgrecall - allow/deny group recall
+@grprecal - Group Recall
+
+<GM Commands>
+/who - Shows online players
+/total - Shows total players over all servers
+@GameMaster - GameMaster Mode
+@Observer - Observer Mode
+@Superman - Superman Mode
+@Move - @move mapnr
+@PositionMove - @positionmove Mapnr X Y
+@Info - @info playername - Shows player information
+@MobLevel - shows player/mob info surrounding you
+@MobCount - Shows amount of mobs (not correct)
+@Human - Shows amount of players (always 0)
+@Map - shows map nr (doesnt work somehow)
+@Kick - kick player of server
+@Recall - recall player to yourself
+@Ting - random teleport a player.
+@SuperTing - Random teleport a player + all the surrounding players
+@Shutup - chatban someone for and X amount of time
+@ReleaseShutup - release chatban
+@ShutupList - show chatban list
+@ChangeJob - JobName (Warr, Wizard, Taos)
+@ChangeGender - Sex Change
+@Level - adjust your own level upto 40
+@AdjustLevel - adjust someone elses level upto 40
+@AdjustTestLevel - adjust your own level upto 50
+@Level0 - adjust your own level upto 40
+@AdjustExp - adjust exp: command name amount
+@Make - Make item amount
+@Deleteitem - delete item amount
+@DelGold
+@AddGold
+@Test_GOLD_Change
+@Training
+@OPTraining
+@DeleteSkill
+@OPDeleteSkill
+@ChangeWeaponDura
+@Mob
+@RecallMob
+@LuckyPoint
+@FreePenalty
+@PKpoint
+@IncPKpoint
+@ChangeLuck
+@ContestPoint
+@StartContest
+@EndContest
+@Announcement
+@OXQuizRoom
+@ChangeSabukLord
+@ForcedWallConquestWar
+@SabukWallGold
+@Mission - Mission X Y : Monster Rush to X Y(Always use with mobplace, Guard don't kill Monster)
+@MobPlace - Mobplace X1 Y1 A B : Generation A X1, Y1 amount B, They rush to X, Y
+@ItemEventTerm
+@AddToItemEvent
+@AddToItemEventAsPieces
+@ItemEventList
+@StartingGiftNo
+@DeleteAllItemEven
+@StartItemEvent
+@Transparency
+@Reconnection
+@BackStep
+@AttackMode
+@Rest
+@Attack
+@Hunger
+@Hair
+@NameColor - Char name color
+
+<Admin Commands>
+@testga
+@gsa
+@AddGuild
+@DelGuild
+@DisableFilter
+@ReloadGuild - reload guild
+@ReloadGuildAll - reload all guilds
+@ReloadLineNotice - reload line notice
+@ReloadAdmin - reload GM list
+@ReloadNpc - reload merchant npc in sight
+@ReloadDiary - reload quest diary
+@ReloadMonItems - reloads drop files
+@ReadAbuseInformation - reloads !abuse.txt
+@Flag - @flag user_name number_of_flag
+@ShowOpen - @ShowOpen user_name number_of_unit
+@ShowUnit - @ShowUnit user_name number_of_unit
+@setflag - @setflag user_name number_of_flag set_value (to test quests)
+@setopen - @setopen user_name number_of_unit set_value 
+@setunit - @setunit user_name number_of_unit set_value

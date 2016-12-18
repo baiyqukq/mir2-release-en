@@ -1,0 +1,787 @@
+;;점성술사 NPC
+
+[@main]
+#IF
+#ACT
+goto @horo
+
+[@horo]
+#IF
+#SAY
+;자신의 운명을 모른다는 것은 나침반을 잃고 망망대해를 떠도는 \
+Not knowing one's own destiny is same as sailing ocean without a compass \
+;신세와 다름 없지. 자신의 운명을 알고 싶지 않나~~. \
+Do you want to know your own destiny? \
+;내가 누구냐고? 나는 별을 보고, 점을 치는 깐따삐아 왕자라네. \ 
+Who am I ? I am an astrologist, \
+;별의 운형을 보고, 사람의 운명을 읽는 능력을 가지고 있지.\
+Who observes stars and read someone's destiny.\
+;자네의 운명을 가르쳐 줄까? \ \
+Do you want to know your destiny? \ \
+;<점을 본다/@horo1> \
+<Listen to destiny/@horo1> \ 
+;<점을 안본다/@exit> \
+<Refuse/@exit> \
+
+
+
+[@horo1]
+;복채만 내면 자네에게 지어진 업보을 알려주지. 돈이 부담된다고? \
+If you pay me Gold I can tell you Karma. Is paying Gold a burden to you ? \
+;염려 말게. 자신의 사정에 맞는 점을 보면 되니까. \
+Don't worry about it. There are various category according to the amount of your Gold. \
+;자 어떤것을 알고 싶은가? \ \
+Now, what do you want to know? \ \
+;자신의 행운치(행운값)를 <살펴본다/@horo_1> \
+<Check/@horo_1>one's own fortunate grade  \
+;자신의 업보(pk수치)를 <알아본다/@point>\
+<Check/@point>one's own Karma(PK grade) \
+;<그만둔다/@exit> 
+<Cancel/@exit>
+ 
+[@point]
+#IF
+#SAY
+;자신의 업보를 아는 것은 중요한 일이지. 특히 죄의 낙인이 찍힌 \
+Knowing own's own Karma is very important. In case of a person branded a criminal \
+;사람은 불이익이 많거든. 하루 빨리 죄업을 벗어야 정상적인 \
+The person will get a lot of disadvantage. the person should clean his own criminal report \
+;사람으로 활동할 수 있다네. 죄업을 풀기위해서는 우선 자신이 \
+as soon as possible to live as a regular person. Cleaning criminal record first  \
+;얼마나 많은 죄를 지었는지를 아는 것이 중요하지. \
+the person should know how much his own crime is. \ 
+;복채비는 2000전일세.  자 점을 보겠나? \ \
+A charge is 2000 gold. Would you try knowing your Karma? \ \ 
+;<업보를 알아 본다/@point1> \
+<Check Karma(PK grade)/@point1> \  
+;<업보를 보지 않는다/@point2>
+<Refuse/@point2>
+
+[@point2]
+#IF
+#SAY
+;싫다고? 뭐 할 수 없지. 그럼 잘생각해서 다음 기회에 또 오게나. \ \
+You don't want. I got it. then see you later considering it \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+
+[@point1]
+#IF
+checkgold 2000
+#SAY
+;그 돈을 내고 자네의 업보에 대해서 알아 보겠다 이거군 \ 
+You want to knwo your karma with the Gold \
+;잠시 기다려 보시게.. \ \
+Wait in a while.. \ \ 
+;<다  음/@point1_1>
+<Next/@point1_1>
+#ACT
+;take 돈 2000
+take Gold 2000
+#ELSESAY
+;돈을 내지 않고는 점을쳐 주지 않는다네. \ 
+I don't tell you anything without Gold
+;아까도 말했듯이 내 자존심이 허락지 않아서 이지.\
+Because it hurts my pride. \
+;어여 썩 돌아가시게나. \ \
+Go back right now. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@point1_1]
+#IF
+checkpkpoint 20
+#SAY
+;자네를 보니 불현듯 4자 성어가 샘솟듯이 떠오르네 그려. \
+You remimd me of some words suddenly. \
+;한번 들어 보겠나? 인간말종,인면수심,구제불능,난장불입... \
+Do you want to listen ? a rascal,ill-natured, malicious,delinquent... \
+;자네 행여나 정상으로 돌아오겠다는 생각으로 점을 치는 건 \
+I wonder if you listen to your Karma to become a regular person \
+'아니지? 고민하지 말고 그냥 케릭 접게나. 처음부터 다시 \
+Don't even think about it, Why don't you just close this character? \
+;키우는 게 차라리 빠를걸세. \ \
+You had better begin a new game character. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkpkpoint 18
+#SAY
+;아무리 게임이라지만 자네 너무 심한게 아닌가? 내 아무리 게임에 \
+No matter what it is a game, why do you treat me like this ? \
+;출현해서 먹고사는 신세지만 자네같이 파렴치한 인물하고는 \
+Although I earn a living by this job, I don't like talking with \
+;이야기하기도 싫네 썩 나가게나. \ \
+a conscienceless person like you. Get out of here. \ \
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkpkpoint 16
+#SAY
+;남들을 죽이다 보면 문득 희열을 느끼지 않는가? PK에 재미를 붙이기 \
+Do you feel murderring joy ? You seem to begin getting interesting in PK \
+;시작한 것 같군 자네 마음속에 마성의 꽃이 피기 시작햤어. 조금만 \
+Evil flower begins blooming at your mind. \
+;있으면 아마도 인생 종치게 될 걸세 \ \
+You will be died soon \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkpkpoint 14
+#SAY
+;사람을 몹 잡듯이 잡고 다녔군. 자네 같은 사람을 가르키는 사자성어가 \
+You have killed a lot of people. there is a word calling you \
+;있지. '인간백정'이라고... 들어는 봤는가? 음.. 왜 그런 눈으로 보는가? \
+It's a butcher of human... have you heard ? Hum.. Why do you look at me so ? \
+;설마 날 때리려는 것은 아니지? \ \
+Do you want to smash me? \ \
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkpkpoint 12
+#SAY
+;음... 혹시 귀가 간지럽지는 않나? 사람들의 원성이 가득한 것이 좀 있음 \
+Well... a lot of people hate you, they could attack you in revenge \
+;뒤통수를 맞겠어. 상태를 보니 차마 풀어보라는 말은 못하겠고... 그래도 \
+Considering the situation I don't want to see your karma.... but \
+;큰맘먹고 풀어보게. 자네도 사람 소리는 듣고 살아야지.... \ \
+Let me see. You either should have chance to clean your guilty record....\ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkpkpoint 10
+#SAY
+;자네의 마음속에는 마성의 삭이 자라고 있어. 이대로 가다가는 머지않아 \
+The bud of evil grows in your mind. If it keeps going on \
+;인간들에게 재앙의 대상이 될거야.... 지금이라도 늦지 않았으니. 큰 맘 \
+You will be the object of a disaster to people.... It is not late now. \
+;먹고 딱 2틀만 근신하게나. \ \
+Behave yourself for just a couple of days
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkpkpoint 8
+#SAY
+;자네도 욕께나 먹었겠군. 양심의 가책을 느낀다면 이쯤에서 죄를 뉘우치고 \
+You seem to get some blame from others. if you were stung by conscience \
+;새 삶을 살게나. \ \
+Reflect and begin new life. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkpkpoint 6
+#SAY
+;실수고 계속하다보면 습관이 되는 법이지. 지금은 하루 정도 날을 잡아서 \
+Repetitive fault will be a habit. at this moment it takes almost a day \
+죄를 뉘우치면 풀릴 정도지만 이런 식으로 살다가는 나중에 후회하게 될 \
+for you to cleaning your guilty record. but if you keep going on like this \
+;걸세. 조심하게.. \ \
+You will regret your behavior. take care.. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkpkpoint 4
+#SAY
+;음... 무슨 사연이 있어서 이렇게 죄를 지었는지는 모르지만 죄는 죄라네 \
+Uhm... I don't know why you made a crime but a crime is just a crime \
+;경비병의 응징을 피할 수는 없지. 그래도 죄질이 가벼우니 조금만 근신하면 \
+You can't avoid the punishment of guard. as your crime is not heavy \
+;풀어질 것이니 안심하게. \ \
+If you behave yourself a little, your guilty record will be cleaned. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkpkpoint 2
+#SAY
+;최근 남하고 다툰 일이 있구만. 하지만 심각한 상태는 아니야. 그래도 \
+Recently you fighted against someone. but it is not serious. \
+;앞으로는 조심하게. 한번의 실수로 범죄자의 오명은 쓰여지는 것이니 \ \
+Watch your bahavior since this time. just one fault could brand you as a criminal \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkpkpoint 0
+#SAY
+;참 착하게도 살았구만. 티끌하나 없이 착하게 살아 온 자네에게 특별한 \
+You have lived so good. Let me give you good information \
+;정보를 주지 들어 보겠나? \ 
+because you have no guilty record. Do you listen? \
+;산타쿠로수는 우는 아이에게 선물을 주지 않는다네. \
+Santa Claus doesn't give a gift to crying children. \
+;산타쿠로수가 누구냐고? 너무 많은 것을 알려하지 말게. \ \
+Who is Santa Claus ?  Search it by yourself . \ \
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+[@horo_1]
+#IF
+#SAY
+;자신의 운이 어떠한지를 알고 싶다면, 칠성신님께 물어보게. \
+If you wonder what your own dentiny is ,ask it to a god Chil-Sung . \
+;상세하게 알고 싶다면 북두신군께 물어보면 되네. 대신 복채가 \
+If you want to know detaily, ask it to a senior god Buk-Du \
+;꽤 비싸지. 하지만 돈이 없다고 해서 실망하지는 말게. \ 
+The charge is really expensive. but Don't be disappointed due to lack of Gold. \
+;영세민을 위한 염가 보급형 점도 준비되어 있다네. \ \
+Cheap category for the poor is prepared too. \ \ 
+;<다  음/@horo_2>
+<Next/@horo_2>
+
+[@horo_2]
+#IF
+#SAY
+;자~~ 선택하시게나.. \ \
+Now~~ Would you select.. \ \ 
+;1. 점술사에게 <물어본다/@horo_1_1> \ 
+<ask/@horo_1_1>of an astrologist  \ 
+;2. 칠성신에게 <물어본다/@horo_1_2> \
+<ask/@horo_1_2>of a god Chil-Sung  \
+;3. 북두신군에게 <물어본다/@horo_1_3> \
+<ask/@horo_1_3>of a senior god Buk-Du \
+;4. <그만둔다/@exit> 
+<Cancel/@exit>
+
+[@horo_1_3]
+#IF
+#SAY
+;인간의 운명을 관장하는 최고신인 북두신군 님에게 묻는 것이니 \
+As this is asked of a senoir god Buk-Du who controls the destiny of human \
+;절대 틀릴리도 없고, 정확하게 자신의 업보를 알수 있지. \
+Never wrong and you can know your karma exactly.\
+;액수가 비싸다고 생각할 수도 있지만, 자신의 운명을 볼 수 있는데 \
+You could think the charge expensive, but considering knowing one's own destiny \
+;이 정도야 비싼것도 아니지. 지은 죄가 많거나 형편이 된다면 이것을 \
+It is not expensive. If you commited a lot of crimes or your situation was not good \
+;보게나. \ \
+look over this. \ \ 
+;5000전을 <낸다/@horo_1_3_1> \
+<Pay/@horo_1_3_1>5000 gold \
+;5000전을 <내지 않는다/@horo_1_3_2>
+<Refuse/@horo_1_3_2>
+
+[@horo_1_3_2]
+#IF
+#SAY
+;뭐? 비싸거 못보겠다고? 돈 대문에 그런 약한 모습을 보이다니 \
+Don't you listen due to the lack of Gold ? \
+;째째 하구만. 싫음 말게나. \ \
+You are not generous. It's OK. \ \ 
+;<닫  기/@exit>
+<Cancel/@exit>
+
+[@horo_1_3_1]
+#IF
+checkgold 5000
+#SAY
+;아이구, 이거 큰손님을 몰라 뵈었군. 미안하네. 자, 요쿠르트 좀 \
+Wow, I made a fault not recognizing a big customer like you. sorry. \
+;들겠나? 편안한 자세로 조용히 기다리시게나... \ \
+Would like some Yogurt? wait with comfort and quiet... \ \
+;<다  음/@horo_1_3_1_1>
+<Next/@horo_1_3_1_1>
+#ACT
+;take 돈 5000
+take Gold 5000
+#ELSESAY
+;돈이 없군.. 나중에 다시 한번 들리시게나. \ \
+You don't have Gold.. Come again later. \ \ 
+;<닫기/@exit> 
+<Close/@exit>
+
+[@horo_1_3_1_1]
+;동방 창룡의 7성, 북방 현무의 7성 , 서방 백호의 7성, 남방 \
+Holy 7 stars(Chil-Sung)at eastern sky ,Holy 7 stars(Chil-Sung) at northern sky , Holy 7 stars(Chil-Sung) at western sky \
+;주작의 7성, 4상 28수의 수호신인 북두,남두,동두,서두의 \
+Holy 7 stars(Chil-Sung) at southern sky.  I pray the group of sir.Chil-Sung who are guardian gods of each sky \
+;칠성님들게 비나이다. 이 사람의 운명을 점지할 수 있도록 별의 \
+to read this person's destiny.  \
+;행로를 가린 장막을 거두워 주십시오. \ \
+Please lift the veil on route of stars. \ \
+;<다  음/@horo_1_3_1_1_1>
+<Next/@horo_1_3_1_1_1>
+
+[@horo_1_3_1_1_1]
+#IF
+checkluckypoint 5
+#SAY
+;살아 생전에 이런 운세를 보게될 줄이야... 더이상 할 말이 없군 \
+I have never seen this destiny... There is nothing to tell \
+;지금까지 행해 왔던 선행을 보답 받을 시기가 되었어. \
+It is time for you to receive reward for your good behavior until now. \
+;이런 운세를 전문 용어로 '데끼리',연변 용어로는 '왔다' 라고 \
+When I find this destiny, I shout 'Wonderful' \
+;하지. 자네의 운세가 부럽구만..... 좀 나눠주지 않겠나? \ \
+I envy you ..... Would you share your destiny with me? \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint 4
+#SAY
+;정말 대단하구만. 자네가 쌓은 공덕이 하늘을 찌를 정도야. 여러 \
+Your are great. The stack of your good behavior seems to reach sky \
+;면에서 행운이 끊이질 않겠어. 하지만 자만하지는 말게 한순간의 \
+You never seem to run out of fortune. but Don't be conceited \
+;실수로 지금까지 쌓아온 공덕이 모두 날아갈 수도 있으니... \
+Just one mistake could get rid of the stack of your good behavior...\
+;덕을 쌓는다는 것이 그래서 어려운 거지. \ \
+It is so difficult to make good reputation. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+
+#IF
+checkluckypoint 3
+#SAY
+;매우 좋은 운세야. 요즘 들어서 손대는 일마다 잘풀린다는 느낌이 \
+It is a good destiny. How is your business thesedays? 
+;들지는 않나? \ \
+I guess the situation of all your business is good \ \
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint 2
+#SAY
+;아주 좋아. 음... 자네의 운명이 천권을 따라 흐르고 있어. \
+Very good. Uhm... Your destiny walks along the rule of heaven. \
+;지금처럼 천리에 어긋나는 행동을 삼가하면 살게. \
+Therefore keep watching your behavior always and never go against the rule of heaven. \
+;그러면 큰 복을 받게될 거야. \ \
+Then you will get a big fortune
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint 1
+#SAY
+;좋은 운세로군.. 자네 수호성의 운행로가 변하기 시작하고 있군. \ 
+Good destiny.. your guardian star turns the route of rotation. \
+;아직은 징조가 나타나지는 않지만 지금처럼만 한다면 곧 좋은 \
+Although there is not good omen if you maintain your behavior \
+;일이 일어날 걸세. \ \
+Good result will come up soon. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint 0
+#SAY
+;평범한 운세로군.. 자네의 미래는 그리 나쁘지 않지만 \
+It's common destiny.. Your furture seems not to be bad \
+;특별히 좋은 점도 보이지 않는군. 좋게 말하면 평범하고 \
+While there will be nothing good. kindly speaking it is regular \
+;나쁘게 말하면 별 볼일 없는 인생이라고 할 수 있지. \
+but criticaly speaking there is nothing special at your destiny. \
+;하지만 실망하지는 말게 평범한 삶도 그리 나쁜 것은 아니니까.. \ \
+But don't be disappointed. regular life is not bad.. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -1
+#SAY
+;음, 주의가 필요해.. 운세가 좋지 않아. 하지만 심각한 상태는 \
+You need to be careful.. your destiny is not good. but it's not serious \
+;아니니 크게 신경 쓰지는 말게. \ \
+Never mind much . \ \
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -2
+#SAY
+;조심하게. 재수 없는 녀석이라는 말이 무슨 뜻인지 아나? 되는 일이 \
+Be careful. Do you know what a unlucky person means ? \
+;없는 사람이라는 뜻이지. 자네 그렇게 되고 싶나? 지금부터 조심하게나. \
+It means the person who fails everything. Do you want to be such person. \
+;나쁜 짓좀 그만하게. 후회하게 되었을 때는 이미 돌이킬 수 없는 법이라네. \
+Stop bad behavior. when you regert it, it never returns. \
+;명심하게나.. \ \
+Keep in mind.. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -3
+#SAY
+;정말 조심하게.. 액운이 끼었어.. 보통의 노력으로는 풀 수가 없지. 오로지 \
+Be careful.. Your destiny has evil fate.. It is impossible for regular effort to get rid of the evil fate. \
+;일상 생활에 충실하고 악행을 삼가면 액운은 저절로 사라지는 법이니 이를 \
+If you keep being diligent and watching your behavior, the evil fate will disappear naturally \
+;유념하게나. \ \
+keep in mind. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -4
+#SAY
+;이렇게 살지 말게.. 자네 이대로 가다가는 돌이킬 수 없는 상태에 빠질수도 \
+Don't live such like this.. if you keep going such like this, you could fall into  \
+;있어. 지금부터라도 운신을 잘하여 선행을 하고 덕을 쌓도록 하게. \ \
+bad situation never returning. you should watch your behavior and cultivate virtue. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -5
+#SAY
+;불쌍한 운세로군.. 액운에도 여러 가지가 있지. 자네는 어떤 액운이 끼었냐구? \ 
+Miserable destiny you are.. there are kinds of evil fate. Do you want to know what your evil fate is ? \
+;허허 한 두 가지가 아닌데. 어떤 거부터 말해야 하나... \
+It is not just one. Which one is good for starting story?...\
+;그냥 듣지 않는게 좋을 거야. \ \
+I would like to skip it for you. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -6
+#SAY
+;처연한 운세로군.. 재련이나 그 빡의 일을 할 때 계속 실패만 한다고 행여나 \
+Poor destiny you are.. If you failed smelting or series of other jobs \
+;운영자를 욕하지 말게나. 모든게 자네의 운세가 좋지 않아서 그런 것이니. \
+Don't blame GM. Everything depends on your destiny. \
+;세상일은 뿌린대로 거두는 법이거든... \ \
+Harvest owes to seeding. it is the principle of nature... \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -7
+#SAY
+;처참한 운세로군.. 허허 이거참.. 자네에게 마가 끼었어. 이래서야 되는 \
+Ugly destiny you are.. your destiny has a demon. I bet you never success anything \
+;일이 없겠군. 어쩌다가 이 지경에 이르렀나. 적당히 착한 일도 하고 \
+How did you reach this situation? You should have accumulated \
+;살았어야지. \ \
+good deeds. \ \
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -8
+#SAY
+;최악의 운세로군.. 내 점을 치면서 재수 없다는 사람을 숱하게 봐왔지만 \
+Worst destiny you are.. I have seen a lot of unlucky people \
+;자네처럼 재수 없는 사람은 첨 보네. 재수가 없어도 이렇게 없을 수가 \
+But you are the worst person among people I have seen. What a terrible destiny you have \
+;있나... 뒤로 쓰러져도 코가 깨진다는 말 들어봤나? 자넨 어디로 쓰러져도 \
+Have you heard that falling on one's back, one's knose was injured ? \
+;코가 때질걸세. \ \
+It will be your case. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -9
+#SAY
+;극악한 운세로군.. 세상에... 마가 끼어도 단단히 끼었구만. 이건 너무 \
+Cruel destiny you are.. Oh, god... Your destiny has a heavy demon. this is terrible too much \
+;심한데... 이제 곧 재앙이 닥칠걸세. 정신을 똑바로 차리고 다니게. 어떻게 \
+You will face disaster soon. Be careful always. Do you want to know how you escape from it? \
+;벗어날 방법이 없겠냐고? 바랄 걸 바라게. 이 지경이 되고도 희망을 갖고 \
+Don't wish!  considering that in spite of this situation, you wish such like that \
+;있다니 용기가 가상하네 그려. \ \
+You are really courageous. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -10
+#SAY
+;..... 더는 할 말이 없구만. 그냥 팔자려니~~ 하며 초월하는 마음가짐으로 \
+...... Nothing to tell.  Just regard all your situations as your destiny \
+;살게... 어떤 의미에서는 자네도 인간의 경지를 초월 했다네. 나름대로 \
+in a certain view you beyond the retriction of human \
+;놀라운 일이 아닌가. \ \
+It coulb be really great. \ \
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+[@horo_1_2]
+#IF
+#SAY
+;정말 이걸 보겠나? 뭐 이것도 괜찮기는 하지만... 좀더 자세히 알고 싶지 \
+Will you really see this ? well it could be not bad... Would you like to know more detail? \
+;않나? 싫다고? 뭐 할 수 없지... 내가 돈 벌자고 이런 말은 하는 건 아니니 \
+You would not ! I got it... the reason that I do this job is not making Gold \
+;오해는 말게... \ \
+Don't misunderstand me... \ \
+;3000전을 <낸다/@horo_1_2_1> \
+<Pay/@horo_1_2_1> 3000 gold \
+;3000전을 <내지 않는다/@exit>
+<Refuse/@exit>
+
+
+[@horo_1_2_1]
+#IF
+checkgold 3000
+#SAY
+;자 그럼 이제부터 점을 칠 것이니 조용히 있게. \ \
+Now let me tell your destiny, Be quiet. \ \ 
+;<다  음/@horo_1_2_1_1>
+<Next/@horo_1_2_1_1>
+#ACT
+;take 돈 3000
+take Gold 3000
+#ELSESAY
+;돈이 없군.. 돈이 있을때 찾아 오시게.. \ \
+You run out of Gold... come again later with Gold.. \ \
+;<닫  기/@exit>
+<Close/@exit>
+
+[@horo_1_2_1_1]
+;하능레 및나는 천추,천선,천기,천권,옥형,개양,요광의 일곱 별신님들, \
+Twinkling seven Holy stars called Cheon-Chu, Cheon-Sun, Cheon-Ki, Cheon-Kweon, Ok-Hyung, Kai-Yang, Yo-Kwang \ 
+;저의 몸에 이 중생의 몸에 깃든 운명을 볼수 있는 힘을 주십시오. \ \
+Might put an ability into my body to read the destiny of this person. \ \ 
+;<다  음/@horo_1_2_1_1_1>
+<Next/@horo_1_2_1_1_1>
+
+
+[@horo_1_2_1_1_1]
+#IF
+checkluckypoint 5
+#SAY
+;호오~~ 운세가 좋구만. 모든 일에 자신감을 가지고 행하게나. \ \
+Oh~~ your destiny is good. Do everything with a confidence. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint 3
+#SAY
+;음.. 약간이지만 자네의 운세가 좋아지고 있어. 이대로만 하게나 \ \
+Uhm.. Although it is beginning , your destiny begins to be better \ \
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint 1
+#SAY
+;뭐 특별히 좋은 점도 나쁜 점도 없구만 행운도 불행도 없는 상태일세 \ \
+Well there is nothing good or bad in your destiny, shortly your destiny is regular  \ \
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -1
+#SAY
+;운세가 좋지 않나. 하지만 그리 심하진 않으니 이제부터라도 잘해보게 \ \
+Your destiny is not good. for it's not terrible, do rigth from now \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -3
+#SAY
+;재수가 없다는 것은 괴로운 일이지. 고생 좀 하겠어. 늦었다고 생각할 \
+Being unlucky is painful whoever.  you seem to get some hardship. there is a sentence says \
+;때가 가장 빠를 때라는 말도 있지 않나. 포기하지는 말게. \ \
+that at the moment you think it's late, actually it's the best time to start. therefore never give up. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -5
+#SAY
+;액운이 꼈어. 슬슬 되는 일이 없기 시작할 때지. 재련이 잘 안된다고 \
+There is evil fate in your destiny. It is time for you to begin failing. If smelting is not done well \
+;영자를 욕하지 말게. 인과응보란 말 들어는 봤나? \ \
+Don't blame GM. Have you heard the rule of cause and effect? it means every effect owes to it's own cause \ \
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -7
+#SAY
+;마가 꼈군. 재앙이 닥칠 시기가 왔어. 어디에 가더라도 부디 조심하게. \
+Your destiny has a demon. it is time for disaster to come up. Please take care wherever. \
+;어떻게 벗어날 방법이 없겠냐고? 뼈를 깎는 고통과 긴 시간이 필요하지 \ \
+Do you want to know how to escape from it? It takes pain and long time cutting your bone. \
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -10
+#SAY
+;재수도 더럽게 없구만. 슬슬 접을 때가 되었다는 거지. 행여나 복권이나 \
+You are badly unlucky. It is time for you to close your own game character. \
+;제련에서 성공하기를 바란다면 차라리 새로 키우게. 그게 속편할꺼야. \ \
+If you wish to win a lottery ticket or success smelting, you should begin a new character. It's better for you. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+
+[@horo_1_1]
+#IF
+#SAY
+;음... 찢어지게 가난한가보군. 평소에 마을 안에서 수다나 떨지 말고 \
+Uhm... You seems to be poor terribly. Make Gold instead of \
+;돈 점 벌게. 벌어서 남 주나? 참, 점은 선불일세 \ \
+going around village to talk  well, you should pay me first before listening to destiny \ \ 
+;1000전을 <낸다/@horo_1_1_1> \
+<Pay/@horo_1_1_1>1000 gold \
+;1000전을 <내지 않는다/@horo_1_1_2>
+<Refuse/@horo_1_1_2>
+
+[@horo_1_1_2]
+#IF
+#SAY
+;뭐? 이 돈도 못 내겠다고? 그렇다면 점을 봐줄수 없지, 이만 나가보게. \
+What? can't you pay Gold? then I can't tell your destiny, get out of here right now. \
+;자~~~ 다음 손님 들어 오슈 \ \
+Well~~ Next customer ! come here \ \  
+
+;<그대로 봐달라고 조른다/@horo_1_1_2_1> \
+<ask without paying/@horo_1_1_2_1> \
+;<그만둔다/@exit> 
+<Cancel/@exit>
+
+[@horo_1_1_2_1]
+#IF
+#SAY
+;이런 염치 없는 사람 보게나? 그럼 나는 흙 파먹고 살란 말인가. \
+Are you kidding me ? then do you think that I eat soil instead of meal ? \
+;썩 나가게. 야, 밖에 소금 뿌려. \ \
+Get out of here right now. Who is there ? scatter salt outside. \ \ 
+
+[@horo_1_1_1]
+#IF
+checkgold 1000
+#SAY
+;자! 그럼 점을 보겠네.. \ \
+Now ! let me tell your destiny.. \ \ 
+;<다  음/@horo_1_1_1_1>
+<Next/@horo_1_1_1_1>
+#ACT
+;take 돈 100  
+take Gold 1000
+#ELSESAY
+;돈이 없는 상태에서 낸다고 하면 점을 보아 줄주 아나? \ \
+Why do you ask me telling your destiny without enough Gold ? \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@horo_1_1_1_1]
+;헛!! 하늘을 바야 별을 따고, 땅을 바야 돈을 줍지. 우는 아이에게는 \
+Huh!! star's from sky, Gold could be on the ground. crying children. \
+;선물을 주지 않아요. 세상만사 공수레 공수거 숭구리 당당 숭당당!!! 얍!\ \
+receives no gift .  \ \
+;<다  음/@horo_1_1_1_1_1>
+<Next/@horo_1_1_1_1_1>
+
+[@horo_1_1_1_1_1]
+#IF
+checkluckypoint 1
+#SAY
+;자네 행운은 그져 그래.. \ \
+Your fortune is so so.. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -5
+#SAY
+;약간의 악운이 드려져 있어 조심하게.. \ \
+A little bad luck covers you, take care.. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+
+#IF
+checkluckypoint -10
+#SAY
+;몸을 보호하면 살아가야 할거야.. 힘이 들겠군.. \ \
+You should take care of yourself always.. you will get hardship.. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+break
+

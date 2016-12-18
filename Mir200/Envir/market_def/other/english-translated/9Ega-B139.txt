@@ -1,0 +1,207 @@
+[@main]
+#IF
+equal p9 0
+#ACT
+goto @main-1
+BreakTimeRecall 
+break
+
+#IF
+equal p9 1
+#ACT
+goto @race
+BreakTimeRecall 
+break
+
+#IF
+equal p9 2
+#ACT
+goto @cube
+BreakTimeRecall 
+break
+
+#IF
+equal p9 9
+#ACT
+goto @quit
+BreakTimeRecall 
+break
+
+[@main-1]
+#IF
+#ACT
+mov p9 0
+#SAY
+;어서오세요! <$USERNAME>님.\ 
+Welcome <$USERNAME> ! \
+;이번방은 마방진 39번째방, 어둠의봉인방입니다. \
+This is the 39th room , DarksealRoom by name , of Ma-Bang-Jin. \
+;지금 이동될 곳에는 암흑의대왕인 주마왕이 봉인되어 있습니다. \
+In the place you will go the road of darkness , ZumaTaurus , is sealed up. \
+;<$USERNAME>님이 들어가시면 어둠의 봉인이 깨어질지도... \
+When <$USERNAME> get there, the seal could be broken... \
+;살아돌아오시고 싶으시다면 무조건 도망치십시요.. \
+If you want to be alive run away .. \
+;이 어둠의 봉인방에서 5분 동안 살아 돌아 오시면 \
+If you come back alive form this DarksealRoom within 5 minutes \
+;주사위를 굴릴수 있는 기회를 드리겠습니다. \  \
+I'll give you opportunity to throw dice. \ \ 
+;<다  음/@pena1>
+<Next/@pena1>
+
+[@pena1]
+#IF
+#ACT
+mov p9 1
+TimeRecall 5
+mapmove T139 18 25
+
+[@Quit]
+#IF
+#ACT
+map B011
+
+[@race]
+;당신은 이 판의 함정을 벌써 통과 하셨군요.. \ 
+You passed already the trab of this round.. \
+;자 다음 주사위를 굴릴수 있는 기회를 드리겠습니다. \  
+Here is opportunity to throw next dice . \ 
+;그럼 행운을 빕니다. \ \ 
+Good luck. \ \
+;<다  음/@pre_Cube>
+<Next/@pre_Cube>
+
+[@pre_cube]
+#IF
+;checkitem 투패 1  
+checkitem GambleChip 1
+#ACT
+;take 투패 1  
+take GambleChip 1
+mov p9 2
+movr d0 6
+inc d0 1
+playdice 1 @cube
+#SAY
+;주사위를 굴리고 있습니다. \ \  
+Dice is thrown . \ \ 
+;<다  음/@cube>  
+<Next/@cube>
+#ELSESAY
+;<$USERNAME>님, 투패가 한개도 없으시네요. \  
+<$USERNAME>, You don't have GambleChip at all. \
+;이 게임을 하기 위해서는 투패가 필요 하거든요 \  
+You need GambleChip to play this game \
+;이 투패가 없으면 더이상 진행을 할수가 없네요.. \  
+Process could not go on without GambleChip .. \
+;투패가 준비가 되거든 다시 오세요.. \ \ 
+Come again later with GambleChip.. \ \ 
+;<닫  기/@Quit> 
+<Close/@Quit>
+#ELSEACT
+mov p9 9
+
+
+[@cube]
+#SAY
+;주사위의 값은 <$STR(D0)>  입니다. \ 
+Dice shows <$STR(D0)>. \
+;당신을 <$STR(D0)> 만큼 앞으로 이동을 시켜 드리겠습니다. \ \  
+You will be moved forward as long as <$STR(D0)> . \ \
+;<이  동/@next_cube>  
+<Move/@next_cube>
+
+[@next_cube]
+#IF
+equal d0 1 
+#ACT
+goto @posi1
+break
+
+#IF
+equal d0 2 
+#ACT
+goto @posi2
+break
+
+#IF
+equal d0 3 
+#ACT
+goto @posi3
+break
+
+#IF
+equal d0 4 
+#ACT
+goto @posi4
+break
+
+#IF
+equal d0 5
+#ACT
+goto @posi5
+break
+
+#IF
+equal d0 6 
+#ACT
+goto @posi6
+break
+
+[@Posi1]
+#IF
+#ACT
+batchDelay 1
+addbatch B140
+batchmove
+
+[@Posi2]
+#IF
+#ACT
+batchDelay 1
+addbatch B140
+addbatch B101
+batchmove
+
+[@Posi3]
+#IF
+#ACT
+batchDelay 1
+addbatch B140
+addbatch B101
+addbatch B102
+batchmove
+
+[@Posi4]
+#IF
+#ACT
+batchDelay 1
+addbatch B140
+addbatch B101
+addbatch B102
+addbatch B103
+batchmove
+
+[@Posi5]
+#IF
+#ACT
+batchDelay 1
+addbatch B140
+addbatch B101
+addbatch B102
+addbatch B103
+addbatch B104
+batchmove
+
+[@Posi6]
+#IF
+#ACT
+batchDelay 1
+addbatch B140
+addbatch B101
+addbatch B102
+addbatch B103
+addbatch B104
+addbatch B105
+batchmove
+

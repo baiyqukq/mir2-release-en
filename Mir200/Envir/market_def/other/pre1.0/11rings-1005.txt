@@ -1,0 +1,83 @@
+;武器
+%100
+;手镯
++19
++20
++21
++22
++23
++24
++26
+
+;对话框, '*' : 对话框 标签
+[@main]
+Welcome <$USERNAME> to the WoomyonWall Jewellers Shop,\
+I treat rings, bracelets and necklaces.\
+What would you like to do?\ \
+<Buy/@buy> Jewel\
+<Sell/@sell> Jewel\
+<Repair/@repair> Jewel\
+<Cancel/@exit>
+
+[@buy]
+Which jewel would you like to buy?\ \ \
+<Back/@main>
+
+[@sell]
+Show me the jewel you wish to sell.\ \ \
+<Back/@main>
+
+[@repair]
+Give me the jewel you want to repair.\ \ \
+<Back/@main>
+
+[~@repair]
+Your jewel seems repaired fine.\ \
+<Back/@main>
+
+[goods]
+;Name         	Amount  Minute
+GlassRing		200	1
+CopperRing		200	1
+HornRing		200	1
+HexagonalRing		200	1
+BlueRing		200	1
+PearlRing		200	1
+BlackRing		200	1
+SerpentEyeRing		200	1
+GoldRing		200	1
+MoralRing		200	1
+CharmRing		200	1
+SkeletonRing		200	1
+IronBracelet		200	1
+ThinBracelet		200	1
+SilverBracelet		200	1
+LargeBracelet 		200	1
+SteelBracelet  		200	1
+MagicBracelet 		200	1
+MonkBraclet		200	1
+EbonyBracelet		200	1
+GoldBracelet		200	1
+StrainBracelet		200	1
+LeatherGlove		200	1
+HardGlove		200	1
+DeathGauntlet		200	1
+GoldNecklace		200	1
+PrecisionNeck		200	1
+YellowNecklace		200	1
+EbonyNecklace		200	1
+BlackNecklace		200	1
+PlatinumNeck		200	1
+TigerNecklace		200	1
+LanternNeck		200	1
+AmberNecklace		200	1
+NagaNecklace		200	1
+PhoenixBead		200	1
+BlueJadeneck		200	1
+BambooPipe		200	1
+ConvexLens		200	1
+
+
+
+
+

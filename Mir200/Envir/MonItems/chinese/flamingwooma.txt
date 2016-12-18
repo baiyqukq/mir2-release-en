@@ -1,0 +1,42 @@
+1/10   gold  100
+1/80  SunPotion
+1/80  大金创药
+1/80  大魔法药
+
+1/1800    MonkBracelet
+1/1800    EbonyBracelet
+1/1800    长剑
+1/1800    BlackRing
+1/1800    SerpentEyeRing
+1/1800    PearlRing
+1/1800    王子剑
+1/1800    战美剑
+1/1800    钩矛
+1/1800    IronRing
+1/1800    TigerNecklace
+1/1800    白金戒指
+1/1800    SkeletonRing
+1/1800    ThinBracelet
+
+1/800    钩剑
+1/800    短弯刀
+1/800    三叉戟
+1/800    钢剑
+1/800    BlueRing
+1/800    NagaNecklace
+1/800    AmberNeck
+1/800    PhoenixBead
+1/800    HardGlove
+1/800    MagicBracelet
+1/800    LanternNeck
+
+1/500    IronSword
+1/500    ShortSword
+1/500    BronzeHelmet
+1/500    轻型装甲(男)
+1/500    轻型装甲(女)
+1/500    BronzeAxe
+1/500    EbonyNecklace
+1/500    YellowNecklace
+1/500    BlackNecklace
+1/500    MagicHelmet

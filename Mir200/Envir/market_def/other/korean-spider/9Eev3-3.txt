@@ -1,0 +1,993 @@
+[@main]
+#IF
+checkitem 이벤트참여권 1
+#SAY
+<어르신, 새해 복 많이 받으십시오./@next>
+#ELSESAY
+설날을 맞아 미르의 젊은이들에게 선물을 줄까 하는데... \
+사람이 너무 많으니 전부 다 줄 순 없고, 밖에서 괴물들을 \
+사냥하면 나오는 '이벤트참여권'를 가져오면 선물을 주도록 \
+하겠네.. \ \
+<닫  기/@exit>
+
+[@next]
+#IF
+checkitem 이벤트참여권 1
+#ACT
+mov p0 1
+take 이벤트참여권 1
+reset [780] 20
+give 떡국 1
+goto @next1
+#ELSESAY
+설날을 맞아 미르의 젊은이들에게 선물을 줄까 하는데... \
+사람이 너무 많으니 전부 다 줄 순 없고, 밖에서 괴물들을 \
+사냥하면 나오는 '이벤트참여권'를 가져오면 선물을 주도록 \
+하겠네.. \ \
+<닫  기/@exit>
+
+[@next1]
+#IF
+#SAY
+오 고맙네 젊은이. 이건 우리 쌀로 만든 떡으로 끓인 떡국이니 \
+맛있게 드시게. 그리고 자네는 '이벤트참여권'를 가져왔으니 \
+퀴즈에 도전할수 있다네. 나는 영특하고 착한 젊은이를 좋아하는 \
+많큼 자네가 대답을 잘 한다면 더욱 많은 것을 주도록 하지. 그럼 \
+첫번 째 문제를 내겠네. \ \
+<다  음/@problem>
+
+[@problem]
+#IF
+small p0 5
+#ACT
+movr d0 16
+goto @problem1
+break
+
+#IF
+small p0 9
+#ACT
+movr d0 16
+goto @problem2
+break
+
+#IF
+small p0 11
+#ACT
+movr d0 5
+goto @problem3
+break
+
+[@problem1]
+#IF
+equal d0 0
+#ACT
+goto @mun10
+break
+
+#IF
+equal d0 1
+#ACT
+goto @mun11
+break
+
+#IF
+equal d0 2
+#ACT
+goto @mun12
+break
+
+#IF
+equal d0 3
+#ACT
+goto @mun13
+break
+
+#IF
+equal d0 4
+#ACT
+goto @mun14
+break
+
+#IF
+equal d0 5
+#ACT
+goto @mun15
+break
+
+#IF
+equal d0 6
+#ACT
+goto @mun16
+break
+
+#IF
+equal d0 7
+#ACT
+goto @mun17
+break
+
+#IF
+equal d0 8
+#ACT
+goto @mun18
+break
+
+#IF
+equal d0 9
+#ACT
+goto @mun19
+break
+
+#IF
+equal d0 10
+#ACT
+goto @mun110
+break
+
+#IF
+equal d0 11
+#ACT
+goto @mun111
+break
+
+#IF
+equal d0 12
+#ACT
+goto @mun112
+break
+
+#IF
+equal d0 13
+#ACT
+goto @mun113
+break
+
+#IF
+equal d0 14
+#ACT
+goto @mun114
+break
+
+[@problem2]
+#IF
+equal d0 0
+#ACT
+goto @mun20
+break
+
+#IF
+equal d0 1
+#ACT
+goto @mun21
+break
+
+#IF
+equal d0 2
+#ACT
+goto @mun22
+break
+
+#IF
+equal d0 3
+#ACT
+goto @mun23
+break
+
+#IF
+equal d0 4
+#ACT
+goto @mun24
+break
+
+#IF
+equal d0 5
+#ACT
+goto @mun25
+break
+
+#IF
+equal d0 6
+#ACT
+goto @mun26
+break
+
+#IF
+equal d0 7
+#ACT
+goto @mun27
+break
+
+#IF
+equal d0 8
+#ACT
+goto @mun28
+break
+
+#IF
+equal d0 9
+#ACT
+goto @mun29
+break
+
+#IF
+equal d0 10
+#ACT
+goto @mun210
+break
+
+#IF
+equal d0 11
+#ACT
+goto @mun211
+break
+
+#IF
+equal d0 12
+#ACT
+goto @mun212
+break
+
+#IF
+equal d0 13
+#ACT
+goto @mun213
+break
+
+#IF
+equal d0 14
+#ACT
+goto @mun214
+break
+
+[@problem3]
+#IF
+equal d0 0
+#ACT
+goto @mun30
+break
+
+#IF
+equal d0 1
+#ACT
+goto @mun31
+break
+
+#IF
+equal d0 2
+#ACT
+goto @mun32
+break
+
+#IF
+equal d0 3
+#ACT
+goto @mun33
+break
+
+#IF
+equal d0 4
+#ACT
+goto @mun34
+break
+
+[@mun10]
+#IF
+check [780] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+올해 음력 1월 1일, 즉 설날은 언제인가? \ \
+<1. 2월 10일/@odab1> \
+<2. 2월 11일/@odab2> \
+<3. 2월 12일/@correct> \
+<4. 2월 13일/@odab3> 
+#ELSEACT
+SET [780] 1
+
+[@mun11]
+#IF
+check [781] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+설날에 입는 옷을 무엇이라고 하는가? \ \
+<1. 새 옷/@odab1> \
+<2. 수의/@odab2> \
+<3. 레이져빔/@odab3> \
+<4. 설빔/@correct> 
+#ELSEACT
+SET [781] 1
+
+[@mun12]
+#IF
+check [782] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+설날 아침에 조상님께 드리는 제사를 무엇이라고 하는가? \ \
+<1. 질서/@odab1> \
+<2. 차례/@correct> \
+<3. 양보/@odab2> \
+<4. 장례/@odab3>
+#ELSEACT
+SET [782] 1
+
+[@mun13]
+#IF
+check [783] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+설날이 되면 한 해 동안 건강하고 복 받으라고 서루 나누는 말은 \
+무엇인가? \ \
+<1. 헌담/@odab1> \
+<2. 모함/@odab2> \
+<3. 덕담/@correct> \
+<4. 돌담/@odab3> 
+#ELSEACT
+SET [783] 1
+
+[@mun14]
+#IF
+check [784] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+원래 쌀을 이는데 쓰는 대나무로 만든 기구로, 복이 들어 오길 \
+설날 아침에 걸어놓는 것은 무엇인가? \ \
+<1. 복조리/@correct> \
+<2. 몸조리/@odab1> \
+<3. 산후조리/@odab2> \
+<4. 요리조리/@odab3> \
+#ELSEACT
+SET [784] 1
+
+[@mun15]
+#IF
+check [785] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+다음 중에 설날에 즐기는 민속놀이가 아닌 것은 무엇인가? \ \
+<1. 널뛰기/@odab1> \
+<2. 윷놀이/@odab2> \
+<3. 연날리기/@odab3> \
+<4. 고스톱/@correct>
+#ELSEACT
+SET [785] 1
+
+[@mun16]
+#IF
+check [786] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+설날에 먹는 떡국에 넣는 떡은 무슨 떡인가? \ \
+<1. 가래떡/@correct> \
+<2. 송편/@odab1> \
+<3. 인절미/@odab2> \
+<4. 절편/@odab3>
+#ELSEACT
+SET [786] 1
+
+[@mun17]       
+#IF           
+check [787] 1  
+#ACT          
+goto @problem
+#ELSESAY      
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+윷놀이를 할 때 던진 윷가락 중 두 개가 눕고 두 개가 엎어지면, \
+무엇이라고 하는가? \ \
+<1. 도/@odab1> \
+<2. 윷/@odab2> \
+<3. 걸/@odab3> \
+<4. 개/@correct> 
+#ELSEACT      
+SET [787] 1
+
+[@mun18]       
+#IF           
+check [788] 1
+#ACT          
+goto @problem
+#ELSESAY      
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+전통적인 팽이치기를 할 때 올바른 놀이 방법이 아닌 것은 무엇인가? \ \
+<1. 팽이 오래 돌리기/@odab1> \ 
+<2. 팽이 많이 먹기/@correct> \
+<3. 팽이 멀리 보내기/@odab2> \
+<4. 팽이 쓰러뜨리기/@odab3>
+#ELSEACT      
+SET [788] 1 
+
+[@mun19]
+#IF
+check [789] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+전통방식으로 널뛰기를 할 때 필요한 준비물이 아닌 것은 무엇인가? \ \
+<1. 널빤지/@odab1> \
+<2. 멍석묶음/@odab2> \
+<3. 황소/@correct> \
+<4. 짚/@odab3>
+#ELSEACT
+SET [789] 1
+
+[@mun110]
+#IF
+check [790] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+대한민국 국가 대표 축구팀 감독의 이름은 무엇인가? \ \
+<1. 히딩크/@correct> \
+<2. 헤딩굿/@odab1> \
+<3. 차범근/@odab2> \
+<4. 김흥국/@odab3> 
+#ELSEACT
+SET [790] 1
+
+[@mun111]
+#IF
+check [791] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+2002년 월드컵 공인구는 무엇인가? \ \
+<1. 카포에라/@odab1> \
+<2. 카사노바/@odab2> \
+<3. 피버노바/@correct> \
+<4. 피바다/@odab3> 
+#ELSEACT
+SET [791] 1
+
+[@mun112]
+#IF
+check [792] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+대한 민국 국가 대표 축구팀 서포터스 클럽의 명칭은 무엇인가? \ \
+<1. 울트라 japan/@odab1> \
+<2. 힘내라 한국/@odab2> \
+<3. 붉은 악마/@correct> \
+<4. 위메이드/@odab3> \
+#ELSEACT
+SET [792] 1
+
+[@mun113]
+#IF
+check [793] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+2002년 월드컵 공식 마스코트가 아닌 것은 무엇인가? \ \
+<1. 아토/@odab1> \
+<2. 니크/@odab2> \
+<3. 케즈/@odab3> \
+<4. 수한/@correct> 
+#ELSEACT
+SET [793] 1
+
+[@mun114]
+#IF
+check [794] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+2002년 월드컵에서 우리나라가 16강에 가기 위해 싸워야 할 \
+상대국각가 아닌곳은? \ \
+<1. 포루투칼/@odab1> \
+<2. 미국/@odab2> \
+<3. 일본/@correct> \
+<4. 폴란드/@odab3>
+#ELSEACT
+SET [794] 1
+
+[@mun20]
+#IF
+check [780] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+다음중 미르의 전설 2의 서버가 아닌 것은 무엇인가? \ \
+<1. 백호/@odab1> \
+<2. 주작/@odab2> \
+<3. 공작/@odab3> \
+<4. 장룡/@correct>
+#ELSEACT
+SET [780] 1
+
+[@mun21]
+#IF
+check [781] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+새로 산 횃불의 내구도는 얼마인가? \ \
+<1. 8|8/@odab1> \
+<2. 12|12/@odab2> \
+<3. 15|15/@odab3> \
+<4. 20|20/@correct>
+#ELSEACT
+SET [781] 1
+
+[@mun22]
+#IF
+check [782] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+은실 치마의 착용 제한 레벨과 성별이 바르게 연결 된 것은 어느 \
+것인가? \ \
+<1. 레벨11 - 남자/@odab1> \
+<2. 레벨11 - 여자/@correct> \
+<3. 레벨22 - 남자/@odab2> \
+<4. 레벨22 - 여자/@odab3>
+#ELSEACT
+SET [782] 1
+
+[@mun23]
+#IF
+check [783] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+다음 중 기본 능력치로서 도력을 올려주는 반지는 어느 것인가? \ \
+<1. 유리반지/@correct> \
+<2. 구리반지/@odab1> \
+<3. 뿔반지/@odab2> \
+<4. 육각반지/@odab3>
+#ELSEACT
+SET [783] 1
+
+[@mun24]
+#IF
+check [784] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+다음 중 기본 능력치로서 방어를 올려주는 팔찌가 아닌 것은 어느 \
+것인가? \ \
+<1. 은통팔찌/@correct> \
+<2. 금통팔찌/@odab1> \
+<3. 강철팔찌/@odab2> \
+<4. 귀문의팔찌/@odab3>
+#ELSEACT
+SET [784] 1
+
+[@mun25]
+#IF
+check [785] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+무기 '군도'를 장비하기 위한 필요한 레벨은 몇인가?\ \
+<1. 26/@odab1> \
+<2. 30/@odab2> \
+<3. 34/@odab3> \
+<4. 35/@correct>
+#ELSEACT
+SET [785] 1
+
+[@mun26]
+#IF
+check [786] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+다음 중 세트 아이템 '천지합일' 시르즈의 구성 아이템이 아닌 것은 \
+무엇인가? \ \
+<1. 천지/@odab1> \
+<2. 지일/@odab2> \
+<3. 합일/@correct> \
+<4. 위합/@odab3>
+#ELSEACT
+SET [786] 1
+
+[@mun27]
+#IF
+check [787] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+자연 동굴에서 나오는 해골은 어떤 몹이 죽어서 부활한 것인가? \ \
+<1. 우마/@odab1> \
+<2. 괭이/@odab2> \
+<3. 오마/@correct> \
+<4. 누마/@odab3>
+#ELSEACT
+SET [787] 1
+
+[@mun28]
+#IF
+check [788] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+체력회복약(중)은 체력을 얼마나 회복시켜 주는가?\ \
+<1. 30/@odab1> \
+<2. 40/@odab2> \
+<3. 50/@correct> \
+<4. 55/@odab3>
+#ELSEACT
+SET [788] 1
+
+[@mun29]
+#IF
+check [789] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+가방창을 여닫는데 쓰는 단축키는 무엇인가? \ \
+<1. F8/@odab1> \
+<2. F9/@correct> \
+<3. F10/@odab2> \
+<4. F11/@odab3>
+#ELSEACT
+SET [789] 1
+
+[@mun210]
+#IF
+check [790] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+다음 중 술사의 무공이 아닌 것은 무엇인가?\ \
+<1. 화염장/@odab1> \
+<2. 염사장/@odab2> \
+<3. 염화결/@correct> \
+<4. 사자윤회/@odab3>
+#ELSEACT
+SET [790] 1
+
+[@mun211]
+#IF
+check [791] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+내구도 한계를 떨어뜨리지 않고 무기를 고치기 위해서는 어떻게 \
+하여야 하는가?  \ \
+<1. 축복의 기름을 바른다./@odab1> \
+<2. 무신의 기름을 바른다./@correct> \
+<3. 수리 기름을 바른다./@odab2> \
+<4. 무기점에서 수리를 한다./@odab3>
+#ELSEACT
+SET [791] 1
+
+[@mun212]
+#IF
+check [792] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+문파를 만들기 위해서 필요한 조건은 무엇인가? \ \
+<1. 금괴 하나와 주마왕의 조각/@odab1> \
+<2. 50만전과 우면귀왕의 뿔/@odab2> \
+<3. 100만전과 주마왕의조각/@odab3> \
+<4. 100만전과 우면귀왕의뿔/@correct>
+#ELSEACT
+SET [792] 1
+
+[@mun213]
+#IF
+check [793] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+다음 중 공성전으로 획득 할수 있는 성은 어느 곳인가? \ \
+<1. 비천성/@odab1> \
+<2. 사북성/@correct> \
+<3. 몽촌토성/@odab2> \
+<4. 남한산성/@odab3>
+#ELSEACT
+SET [793] 1
+
+[@mun214]
+#IF
+check [794] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+한국에서 진출하여 현재 중국에서 동시 접속자 수 10만 명을 기록하여 \
+1위를 달리고 있는 최고의 온라인 게임은 무엇인가? \ \
+<1. 미르의전설 2/@correct> \
+<2. 천년/@odab1> \
+<3. 리니지/@odab2> \
+<4. 라그나로크/@odab3>
+#ELSEACT
+SET [794] 1
+
+[@mun30]
+#IF
+check [780] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+지하철에 타서 자리를 앉아 있는데, 연세가 많으신 할아버지가 앞에 \
+계시면 어떻게 해야 하는가? \ \
+<1. 눈 깔라고 말한다./@odab1> \
+<2. 자리를 양보한다./@correct> \
+<3. 자는 척한다./@odab2> \
+<4. 옆 사람의 옆구리를 찌른다./@odab3>
+#ELSEACT
+SET [780] 1
+
+[@mun31]
+#IF
+check [781] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+웃어른께 세베를 드린후에 어른께서 세뱃돈을 주시면 뭐라고 말해야 \
+하는가? \ \
+<1. 고마워, 잘 쓸게./@odab1> \
+<2. 필요 없다. 살림에 보태 써./@odab2> \
+<3. 감사히 받겠습니다. 새해 복 많이 받으세요./@correct> \
+<4. 아잉~ 어빠, 쩜만 더~/@odab3>
+#ELSEACT
+SET [781] 1
+
+[@mun32]
+#IF
+check [782] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+휠 체어를 타고 힘겹게 비탈길을 올라가고 있는 장애인을 보면 \
+어떻게 해야 하는가? \ \
+<1. 뒤에서 밀어준다./@correct> \
+<2. 뒤에서 잡아당긴다./@odab1> \
+<3. 바퀴살에 나무토막을 끼운다./@odab2> \
+<4. 바닥에 기름칠을 한다./@odab3>
+#ELSEACT
+SET [782] 1
+
+[@mun33]
+#IF
+check [783] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+마을에서 클릭을 잘못 해 궁수경비를 쳤다가 죽은 사람이 아이템을 \
+흘렸을 때 어떻게 해야 하는가?\ \
+<1. 누가 보기 전에 싹 다 챙겨서 튄다./@odab1> \
+<2. 아이템을 밟고 서서 약 올리며 Pk를 유도한다./@odab2> \
+<3. 다른 사람들과 나눠먹고 증거를 인멸한다./@odab3> \
+<4. 가방에 보관했다가 주인에게 돌려준다./@correct>
+#ELSEACT
+SET [783] 1
+
+[@mun34]
+#IF
+check [784] 1
+#ACT
+goto @problem
+#ELSESAY
+다음은 <$STR(P0)>번째 문제 입니다. 질문을 잘 보시고 신중하게 답을 \
+선택을 해 주시기 바랍니다. \
+열심히 사냥을 하고 있는데 지나가던 사람이 '화이팅! 즐미하세요~' \
+라고 말했을때 대답으로 적당한 것은 무엇인가? \ \
+<1. 네 님도 즐미하세요./@correct> \
+<2. 신경 꺼 XX야./@odab1> \
+<3. 크크크, 난 먹자다!/@odab2> \
+<4. 돈 내놔! --+/@odab3>
+#ELSEACT
+SET [784] 1
+
+[@correct]
+#IF
+equal p0 4 
+#SAY
+정답일세, 자네는 참으로 영특한 젊은이로군, 내가 떡국을 \
+하나 더 주겠네. 그럼 다음 문제일세 \ \
+<다  음/@problem>
+#ACT
+reset [780] 20
+give 떡국 1
+inc p0 1
+break
+
+#IF
+equal p0 8 
+#SAY
+정답일세, 자네는 참으로 똑똑한 젊은이로군. 떡국 한 그릇 \
+더 드시게나. 그럼 다음 문제일세. 앞으로 나올 두 문제는 \
+아주 중요한 질문이니 신중하게 대답해야 하네. \ \
+<다  음/@problem>
+#ACT
+reset [780] 20
+give 떡국 1
+inc p0 1
+break
+
+#IF
+equal p0 10
+#SAY
+참으로 기특한 젊은이로구먼! 자네 같은 젊은이를 만난 기념 \
+으로 언제든지 집으로 갈수 있는 초공전서 묶음을 선물로 주도록 \
+하겠네. 그리고 이건 내가 주는 세뱃돈이니 요긴하게 쓰게나. \
+새해 복 많이 받고 올 한해 만사형통 하길 빌겠네 \ \
+<닫  기/@exit>
+#ACT
+give 돈 10000
+reset [780] 20
+give 초공전서묶음 1
+inc p0 1
+break
+
+#ELSESAY
+옳거니, 제대로 알고 있구먼. 그럼 다음 문제일세. \ \
+<다  음/@problem>
+#ELSEACT
+inc p0 1
+
+[@odab1]
+#IF
+small p0 8
+#SAY
+아쉽게 되었네 그려. 이건 내가 주는 세뱃돈이니 요긴하게 \
+쓰게나. 새해 복 많이 받고 올 한해 만사형통하길 빌겠네 \ \
+<닫  기/@odab_next>
+#ELSESAY
+자네가 정말로 그런 생각을 가지고 있다면, 참으로 실망일세 \
+떡국 준게 아깝구만 됐으니 이만 가보시게 \ \
+<닫  기/@exit>
+
+[@odab2]
+#IF
+small p0 8
+#SAY
+아쉽게 되었네 그려. 이건 내가 주는 세뱃돈이니 요긴하게 \
+쓰게나. 새해 복 많이 받고 올 한해 만사형통하길 빌겠네 \ \
+<닫  기/@odab_next>
+#ELSESAY
+자네가 정말로 그런 생각을 가지고 있다면, 참으로 실망일세 \
+떡국 준게 아깝구만 됐으니 이만 가보시게 \ \
+<닫  기/@exit>
+
+[@odab3]
+#IF
+small p0 8
+#SAY
+아쉽게 되었네 그려. 이건 내가 주는 세뱃돈이니 요긴하게 \
+쓰게나. 새해 복 많이 받고 올 한해 만사형통하길 빌겠네 \ \
+<닫  기/@odab_next>
+#ELSESAY
+자네가 정말로 그런 생각을 가지고 있다면, 참으로 실망일세 \
+떡국 준게 아깝구만 됐으니 이만 가보시게 \ \
+<닫  기/@exit>
+
+[@odab_next]
+#IF
+equal p0 1
+#ACT
+close
+break
+
+#IF
+equal p0 2
+#ACT
+give 돈 1000
+close
+break
+
+#IF
+equal p0 3
+#ACT
+give 돈 2000
+close
+break
+
+#IF
+equal p0 4
+#ACT
+give 돈 3000
+close
+break
+
+#IF
+equal p0 5
+#ACT
+give 돈 4000
+close
+break
+
+#IF
+equal p0 6
+#ACT
+give 돈 5000
+close
+break
+
+#IF
+equal p0 7
+#ACT
+give 돈 6000
+close
+break
+
+#IF
+equal p0 8
+#ACT
+give 돈 7000
+close
+break
+
+#IF
+equal p0 9
+#ACT
+give 돈 8000
+close
+break
+

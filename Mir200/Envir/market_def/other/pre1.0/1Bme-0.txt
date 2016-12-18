@@ -1,0 +1,22 @@
+;/R => 表示开头
+;    科目  肉块  , 干肉产品
+%100
++40
++1
+;对话, '*' : 对话tag
+
+[@main]
+Welcome, what can I do for you ?\ \
+ <Sell/@sell>Meat\
+ <Cancel/@exit>
+<>
+
+[@sell]
+We'll buy high qualitiy at high price.\
+But we'll buy at low price meat stained with soil or burned by fire.\ \
+ <Back/@main>
+
+
+
+[goods]
+;  科目  数量  时间(hour)

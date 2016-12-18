@@ -1,0 +1,174 @@
+[@main]
+#IF
+#ACT
+goto @QUEST
+
+
+[@QUEST]
+#IF
+#ACT
+goto @QUEST_1
+
+[@QUEST_1]
+#IF
+#SAY
+;자네 어떻게 여기 까지 왔나? 대단하군, 그렇다면 자네는 \
+How did you come here ? you're great, then you \
+;내가 하는 말을 충분히 이해 할수 있겠구만.. 잘 듣게.. \
+can understand my words enouhg.... listen carefully.. \
+;잘 듣지 않으면 안에서 길을 잃어 버릴수 있네, 안의 진은 \
+because you could lose the way, this TacticalMaze is consist of \
+;옛 지식인 복희가 만든 8괘진으로 구성이 되어 있네.. 이진에 \
+8 gates holding each test ,by name '8 Koai-Jin' made by a acient scholar, the reverend Poki, ... \
+;대해서 알고 싶은가? 하지만 꽁자로 알려 줄수는 없지... \ \
+Do you want to know about it ? but it is not free... \ \ 
+
+;돈을 3000전을 <준다/@QUEST_1_1> \
+<Pay/@QUEST_1_1> 3000 gold \
+;돈을 주지 <않는다/@QUEST_1_2>\
+<Refuse/@QUEST_1_2>\
+
+[@QUEST_1_2]
+#IF
+#SAY
+;돈을 주지 않는다면 어쩔수 없지..  \ 
+You denied my asksing, I got it.. \
+;돌아 가시게.. \ \
+Go back.. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@QUEST_1_1]
+#IF
+checkgold 3000
+#ACT
+;take 돈 3000
+take Gold 3000
+#SAY
+;잘들어 보시게 먼저 안에는 크게 3개의 진으로 구성이 되어 있네 \
+Listen carefully ! first there are big 3 TacticalMazes inside \
+;이 3개진의 구분은 나도 알수가 없네, 하지만 아는대로 설명을 하자면\
+I either can not distinguish between those, but as far as I know \
+;고조선 현룡사백의 자 영용기실록의 수국만정진의 원리에 의해 \
+One TacticalMaze follows the principle of a holy book form an acient kingdom name by 'Ko-Jo-Sun' \
+;진->손->감->곤->이->태->건->간->진 이렇게 돌아 간다고 하더구만 \
+it turns by the rotation of Jin->Son->Kam->Gon->Lee->Tai->Gun->Gan->Jin \
+;다음 정보를 알려 줄까? 그렇다면 돈(5000전)을 내게 그려.. \ \
+Do you want more ? then you should pay me 5,000 gold .. \ \ 
+;돈을 <준다/@QUEST_1_1_1> \
+<Pay/@QUEST_1_1_1>Gold \
+;돈을 주지 <않는다/@QUEST_1_2>
+<Refuse/@QUEST_1_2>
+#ELSESAY
+;돈을 없다니 어쩔수 없지 않은가? \
+You run out of money , I got it \
+;그렇다면 설명은 못해 주네.. \ \
+I don't want to explain it.. \ \
+;<닫  기/@exit>
+<Close/@exit>
+
+[@QUEST_1_1_1]
+#IF
+checkgold 5000
+#ACT
+;take 돈 5000
+take Gold 5000
+#SAY
+;다음진을 알고 싶나? 그럼 알려 주어야지 돈도 주었는데. \
+Do you want to know following TacticalMaze? of course. I should tell you it for you pay me. \
+;태극 팔괘진을 기본으로 시계방향으로 돌아가지 \
+Another TacticalMaze turns clockwise on the basis of Taikuk 8 Koai-Jin \
+;이->곤->태->건->감->간->진->손->이 이렇게 돌아 가네. \
+in rotation of Lee->Gon->Tai->Gun->Kam->Gan->Jin->Son->Lee \
+;마지막 진법의 돌아가는 형식을 알고 싶은가?? 이제 자네도 \
+Do you want to know last TacticalMaze??   Now I guess you \
+;나의 성격을 잘 알겠지 돈 10000전을 주면 가르쳐 줌세. \ \
+know me enough, Give me 10000 gold and I'll let you know . \ \ 
+;돈을 <준다/@QUEST_1_1_1_1> \
+<Pay/@QUEST_1_1_1_1>Gold \
+;돈을 주지 <않는다/@QUEST_1_2>
+<Refuse/@QUEST_1_2>
+#ELSESAY
+;돈을 없다니 어쩔수 없지 않은가? \
+You run out of money , I got it \
+;그렇다면 설명은 못해 주네.. \ \
+I don't want to explain it.. \ \
+;<닫  기/@exit>
+<Close/@exit>
+
+[@QUEST_1_1_1_1]
+#IF
+checkgold 10000
+#ACT
+;take 돈 100  
+take Gold 10000
+#SAY
+;마지막 진법 돌아가는 형식을 알려주지..\ 
+Let me tell you last TacticalMaze...\
+;이건 복희의 원리에 의해 고안된 진으로서 \
+This is made with Poki's principle
+;건->태->이->진->손->감->간->곤->건 이네.. \
+It follows the rotation of Gun->Tai->Lee->Jin->Son->Kam->Gan->Gon->Gun.. \
+;지금 말한 정보가 가장 중요 할세.. 잘 기억하게 \ 
+this is the most important information... keep in mind \
+;다음은 이 진법의 방향을 가르쳐 주겠네 돈은 들겠지만 \
+Next is the direction of this TacticalMaze, of course you should pay Gold for it \
+;한번 배워 보겠나?? 그럼 5000전을 주게나. \ \
+Do you want to listen?? then pay me 5000 gold. \ \ 
+;진의 방향에 대하여 <듣는다/@QUEST_1_1_1_1_1> \
+<Listen/@QUEST_1_1_1_1_1>to the direction of TacticalMaze \
+;진의 방향에 대하여 듣지 <않는다/@QUEST_1_2>
+<Refuse/@QUEST_1_2>
+#ELSESAY
+;돈을 없다니 어쩔수 없지 않은가? \
+You run out of money , I got it \
+;그렇다면 설명은 못해 주네.. \
+I don't want to explain it.. \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+
+[@QUEST_1_1_1_1_1]
+#IF
+checkgold 5000
+#ACT
+;take 돈 5000
+take Gold 5000
+#SAY
+;진의 방향을 알고 싶다 이거군.. 그래 알려줌세 \
+Do you want to know the direction of TacticalMaze? ... then I let you know \
+;잘 기억 하시게나.. \ 
+Listen carefully.. \
+;이방향은 12시이며, 곤방향은 1시이며, \
+The direction of Lee is toward 12 o'clock , the direction of Gon is toward 1 o'clock, \
+;진방향은 9시이며, 손방향은 11시 일세.. \
+The direction of Jin is toward 9 o'clock , the direction of Son is toward 11 o'clock, \
+;나머지 방향들은 나도 잘 기억이 안나는 구만.. \ 
+I don't remeber the rest directions in this moment .. \
+;자네가 한번 찾아 보게 그려.. \ 
+Why don't you look for those by yourself.. \
+;기억을 하시고 어긋나지 않게 조심히 들어가시게.. \ \
+Keep in mind and take care .. \ \ 
+;<다  음/@QUEST2>
+<Next/@QUEST2>
+#ELSESAY
+;돈을 없다니 어쩔수 없지 않은가? \
+You run out of money , I got it \
+;그렇다면 설명은 못해 주네.. \
+I don't want to explain it.. \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@QUEST2]
+#IF
+#SAY
+;그래 자네 일단은 그 진에 한번 발을 들여나 보겠나? \
+Well, Would you try to get in the TacticalMaze ? \
+;이 진에서는 아공도약서는 쓸수가 없다네 \
+At this TacticalMaze Random teleport scroll doesn't work \
+;행운이 있기를 바라네... 수고하게 그럼 \ \
+God bless you!... good luck \ \
+;<닫  기/@exit>
+<Close/@exit>
+#ACT
+mapmove Q014 54 54

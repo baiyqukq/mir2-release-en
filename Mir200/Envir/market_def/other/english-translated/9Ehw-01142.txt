@@ -1,0 +1,59 @@
+[@main]
+#IF
+check [757] 1
+#ACT
+goto @Q707
+break
+
+#IF
+checkmonmap 01142 1
+#SAY
+;아직 몬스터를 잡지 못했구만 시간이 없다네 \
+You didn't kill monsters yet , you don't have enough time \
+;빨리 잡으시게.. 행운을 비네 \ \
+Hurry up.. Good luck \ \ 
+<닫  기/@exit>
+#ELSEACT
+goto @next
+
+[@next]
+#IF
+checkbaggage
+#ACT
+;give 외수검법 1
+give Fencing 1
+SET [757] 1
+#SAY
+;흠 다 잡았구만 자네는 나의 제자가 될만한 충분한 소질이 \
+Well you killed all monsters, you are so good \
+;있네 그려... 축하하네 자네 내가 축하 선물로 레벨 7때 \
+that you could be my apprentice... congratulation ! \
+;익힐수 있는 기본적인 무공 외수검법을 주겠네 \ \
+Let me give you Fencing that is basic martial art at level 7 for a gift \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ELSESAY 
+;자네의 가방창이 꽉 찾구만 빨리 비우시게.. \ \
+Your bag is full. empty your bag right now.. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q707]
+;자네 벌써 책을 받지 않았나?? 책을 받았으면 외수검법 \
+You received books already, didn't you ??   as you got books \
+;이라는 책을 더블클릭을 해보게(마우스 왼쪽키 두번클릭) \
+Click a book called by Fencing twice (click twice the left button of mouse) \
+;그럼 책이 없어지면서 무공을 배운걸세 이 무공은 자네의 \
+Then as the book disappears you master the skill \
+;능력중에 정확이라는 능력을 키워주게 되지 이 무공이 수련 \
+This skill increases accuracy among your ability \
+;이 되면 되어 질수록 자네의 정확은 올라 가네 \
+The heavier you train this skill, the higher your accuracy grows \ 
+;이제 비천현에 있는 서점에 한번 가보시게나 그 서점 주인이 \
+Now go and visit Bookstore at Bichon Province \
+;자네가 더욱 발전 할수 방법을 있는 가르쳐 줄걸세 \
+The owner of Bookstore will advise you how to develop yourself \ \  
+;비천 서점의 좌표는 323,247 이곳이네 한번 가보게 \
+The coordinates of Bookstore is 323,247 , Try to go there \
+;<닫  기/@exit>
+<Close/@exit>

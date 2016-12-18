@@ -1,0 +1,50 @@
+;무기
+%100
++30
++25
++3
+
+;대화, '*' : 대화 태그
+[@main]
+;어서오시오.  무슨일로 오셨습니까?\ \ 
+Welcome. How can I help you?\ \
+ ;물건을 <산다/@buy>\ 
+<Buy/@buy> item\
+ ;물건을 <판다/@sell>\ 
+<Sell/@sell> item\
+ ;<그만둔다/@exit>
+<Cancel/@exit>
+<>
+
+[@buy]
+;어떤 물건을 사시겠소?\ \ \ 
+What items do you need?\ \ \
+ ;<뒤로/@main> 
+<Back/@main>
+
+[@sell]
+;여긴 초, 부적, 각종 주문서, 수리기름 등을 취급한다오.\  
+We treat candle, amulet, scroll, repair oil etc.\
+ ;<뒤로/@main> 
+<Back/@main>
+
+
+;[상품]
+[Goods]
+;젠되는 상품    물량       hour
+;초             1000         1
+Candle
+;횃불           1000         1
+Torch
+;아공전서       1000         1
+DungeonEscape
+;아공도약서     1000         1
+RandomTeleport
+;부적            100         1
+Amulet
+;수리기름         50         1
+RepairOil
+;아공전서묶음    100         1
+Bundle of DungeonEscape
+;마공도약서묶음   100        1
+Bundle of RandomTeleport

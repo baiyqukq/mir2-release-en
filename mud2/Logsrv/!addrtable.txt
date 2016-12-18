@@ -1,0 +1,4 @@
+;공백 허용 안함
+;Server        Title          Remote           Public           Gates...
+ktest        Line1-7        127.0.0.1         127.0.0.1     127.0.0.1:7100
+

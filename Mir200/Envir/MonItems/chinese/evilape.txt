@@ -1,0 +1,104 @@
+;1/4   µ· 3000
+
+;1/1    ¼±È­¼ö(Áß)
+;1/1    ¼±È­¼ö(Áß)
+;1/1    ¼±È­¼ö(Áß)
+;1/2    ¼±È­¼ö(Áß)
+;1/2    ¼±È­¼ö(Áß)
+;1/1    ¼±È­¼ö
+;1/1    ¼±È­¼ö
+;1/1    ¼±È­¼ö
+;1/1    ¼±È­¼ö
+;1/1    ¼±È­¼ö
+;1/2    ¼±È­¼ö
+;1/2    ¼±È­¼ö
+;1/2    ¼±È­¼ö
+;1/2    ¼±È­¼ö
+;1/2    ¼±È­¼ö
+;1/1    Ã¼·ÂÈ¸º¹¾à(Áß)
+;1/1    Ã¼·ÂÈ¸º¹¾à(Áß)
+;1/1    Ã¼·ÂÈ¸º¹¾à(´ë)
+;1/2    Ã¼·ÂÈ¸º¹¾à(´ë)
+;1/2    Ã¼·ÂÈ¸º¹¾à(´ë)
+;1/1    ¸¶·ÂÈ¸º¹¾à(Áß)
+;1/1    ¸¶·ÂÈ¸º¹¾à(Áß)
+;1/1    ¸¶·ÂÈ¸º¹¾à(´ë)
+;1/2    ¸¶·ÂÈ¸º¹¾à(´ë)
+;1/2    ¸¶·ÂÈ¸º¹¾à(´ë)
+
+;1/30  ±Ý·æÈ¯
+;1/50  È«¿Á¹ÝÁö
+;1/50  ¹é±Ý¹ÝÁö
+
+;1/10  ¹Ì°©ÁÖ(³²)
+;1/10  ¹Ì°©ÁÖ(¿©)
+;1/10  µµ½ÅÀÇ(³²)
+;1/10  µµ½ÅÀÇ(¿©)
+;1/10  È­¿°¸¶ÀÇ(³²)
+;1/10  È­¿°¸¶ÀÇ(¿©)
+;1/10  È²±Ý¹ÝÁö
+;1/10  Ã»¿Á¼®¸ñ°ÉÀÌ
+;1/10  È²±ÝÆMeatî
+;1/10  ¼ö¾çÀÇ¹ÝÁö
+;1/10  ÁÖ¼úÀÇ¹ÝÁö
+
+;1/300  Àû³­ÀÇ¹ÝÁö
+;1/300  Àû³­ÀÇ¸ñ°ÉÀÌ
+;1/300  Àû³­ÀÇÆMeatî
+
+;1/300  ¹ÐÈ­·û
+;1/300  ¹ÐÈ­°æ
+;1/300  ¹ÐÈ­È¯
+
+1/4   gold 3000
+
+1/1    SunPotion(M)
+1/1    SunPotion(M)
+1/1    SunPotion(M)
+1/2    SunPotion(M)
+1/2    SunPotion(M)
+1/1    SunPotion
+1/1    SunPotion
+1/1    SunPotion
+1/1    SunPotion
+1/1    SunPotion
+1/2    SunPotion
+1/2    SunPotion
+1/2    SunPotion
+1/2    SunPotion
+1/2    SunPotion
+1/1    (HP)DrugMedium
+1/1    (HP)DrugMedium
+1/1    (HP)DrugMedium
+1/2    (HP)DrugMedium
+1/2    (HP)DrugMedium
+1/1    (MP)DrugMedium
+1/1    (MP)DrugMedium
+1/1    (MP)DrugMedium
+1/2    (MP)DrugMedium
+1/2    (MP)DrugMedium
+
+1/30  DragonRing
+1/50  RubyRing
+1/50  PlatinumRing
+
+1/10  HeavyArmour(M)
+1/10   HeavyArmour(F)
+1/10   SoulArmour(F)
+1/10   SoulArmour(M)
+1/10   MagicRobe(M)
+1/10   MagicRobe(F)
+1/10   GoldRing
+1/10   BlueJadeneck
+1/10   GoldBracelet
+1/10   MoralRing
+1/10   CharmRing
+
+
+1/300  OrchidRing
+1/300  OrchidNecklace
+1/300  OrchidBracelet
+
+1/300  PheonyBrace
+1/300  PheonyNecklace
+1/300  PheonyRing

@@ -1,0 +1,21 @@
+;价格
+%100
+
+;对话框, '*' : 对话框 标签
+[@main]
+
+Hello How May I help You?\
+I will store Items in a personal storage for you \
+which can be accessed all over the world, for free!\ \
+ <Store Items/@storage>\
+ <Take Back Items/@getback>\
+ <Cancel/@exit>
+<>
+
+[@storage]
+What do you want me to Store? \ \ \
+ <Back/@main>
+
+[@getback]
+What Do you want to Take Back?\ \ \
+ <Back/@main>

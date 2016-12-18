@@ -1,0 +1,65 @@
+;; 텔레포트 주술사
+[@main]
+#IF
+checkpkpoint 2
+#SAY
+;자네같이 불량한 사람에게 이동을 시켜 줄수 없어요.. \
+I don't want to move a bad person like you.. \
+;보기 싫으니까 빨리 사라져 주세요.. \ \
+I don't want to see you any more, Get out of here righ now.. \ \
+;<닫기/@exit> 
+<Close/@exit>
+#ELSEACT
+goto @next
+
+[@next]
+#IF
+checklevel 22
+#SAY
+;다른 마을로 가고 싶으세요? 비용이 많이드는데도요? \
+Do you want to move to other village ? It costs much Gold \
+;그렇다면 아래에서 한번 찾아 보세요.. \ \
+then look through the following list  .. \ \
+;몽  촌(5000전)으로 이동을 <한다/@move1> \
+<Move/@move1>to MongChon province(5000 gold) \
+;비천현(5000전)으로 이동을 <한다/@move2> \
+<Move/@move2>to Bichon province(5000 gold) \
+;이동을 하지 <않는다/@exit>
+<Cancel/@exit>move
+#ELSESAY
+;레벨이 22이하 되시는 분은 이동을 시켜 드릴수가 없습니다. \ \
+I can't move the person who is level 22 or less. \ \
+;<닫  기/@exit>
+<Close/@exit>
+
+
+[@move1]
+#IF
+checkgold 5000
+#ACT
+;take 돈 5000
+take Gold 5000
+mapmove 3 298 379
+#ELSESAY
+;<$USERNAME>님 대단 하네요. 돈이 없으면서 이동을 시켜달라고 \
+<$USERNAME>,You are kidding me. Why do you ask me to move without enough Gold \
+;하시니. 님도 생각해 보세요. 손해 보는 장사 누가 하나요? \ \
+Think about it. Who will do a nonpaying business? \ \
+;<닫  기/@exit>
+<Close/@exit>
+
+[@move2]
+#IF
+checkgold 5000
+#ACT
+;take 돈 5000
+take Gold 5000
+mapmove 0 292 218
+#ELSESAY
+;<$USERNAME>님 대단 하네요. 돈이 없으면서 이동을 시켜달라고 \
+<$USERNAME>,You are kidding me. Why do you ask me to move without enough Gold \
+;하시니. 님도 생각해 보세요. 손해 보는 장사 누가 하나요? \ \
+Think about it. Who will do a nonpaying business? \ \
+;<닫  기/@exit>
+<Close/@exit>
+

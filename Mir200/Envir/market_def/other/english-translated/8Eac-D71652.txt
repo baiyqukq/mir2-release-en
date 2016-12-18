@@ -1,0 +1,41 @@
+%200
+;목걸이,반지,반지
++19
++20
++21
++22
++23
++24
++26
+
+;대화, '*' : 대화 태그
+[@main]
+;자네도 어떠한 새로운 것을 찾기 위해 이곳을 왔는가?\
+Are you here to find out something new ?\
+;이곳의 위험한은 자네도 잘 알고 있을걸세...\
+I guess you may know well here is dangerous\
+;내가 자네에게 도움이 되줄수 있는 능력이라고는 장신구를\
+The only thing I can do for you is repairing your clothes and helmet \\
+고치는 능력뿐이 없네....\ \
+repairing your clothes and helmet \\
+ ;장신구를 고친다. <고친다/@repair>\
+<repair/@repair> accessory \
+ ;<그만둔다/@exit>
+<cancel/@exit>
+<>
+
+[@repair]
+;장신구를 수리하시겠나?\ \ \
+Do you want to repair your accessory?\ \ 
+ ;<뒤로/@main>
+<back/@main>
+
+[~@repair]
+;그런대로 잘 수리되었네.\ \
+It seems to be well done.\ \
+ ;<뒤로/@main>
+<back/@main>
+
+;[상품]
+[Goods]
+;젠되는 상품    물량       hour

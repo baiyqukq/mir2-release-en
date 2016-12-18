@@ -1,0 +1,41 @@
+LogDataServer explained
+
+Well this is what i make from it :)
+
+The first three nrs are always 1,0,0 i figure its the server number.
+then the 4th nr is one of the following:
+
+0  = get item from storage
+1  = store item in storage
+2  = get made item (poison)
+3  = break item when dura 0
+4  = pickup item from floor
+5  = make item (@make)
+6  = delete item (@deleteitem)
+7  = drop item on floor
+8  = trade item
+9  = buy item from shop / get back item from npc
+10 = give item to npc / sell item to npc
+11 = use item
+12 = level up
+13 = delete gold from person
+14 = add gold to person
+15 = monster/player drop item on death
+16 = break item on death
+17 = change level other/own
+18 = add exp other / add exp
+19 = player die.
+20 = weapon succesfully refined
+21 = break weapon / break refined weapon
+22 = take out sabuk gold
+23 = add sabuk gold / sabuk gold added by item buying from sabuk
+24 = get back sword from refining?
+25 = give weapon for refining
+26 = give item for refining (belongs with 25)
+
+then number 5 is the map. 6&7 are X,Y
+Then comes the Name and Item, then item nr.
+
+But this can be different aswell
+atleast the first 3 are always the same and the 4th is what happened :)
+

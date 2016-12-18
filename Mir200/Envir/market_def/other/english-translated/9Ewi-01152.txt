@@ -1,0 +1,59 @@
+[@main]
+#IF
+check [757] 1
+#ACT
+goto @Q707
+break
+
+#IF
+checkmonmap 01152 1
+#SAY
+;아직 몬스터를 잡지 못했구만 시간이 없다네 \
+You didn't killed monsters yet, you don't have enough time. \
+;빨리 잡으시게.. 행운을 비네 \ \
+Hurry up... Good luck \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ELSEACT
+goto @next
+
+[@next]
+#IF
+checkbaggage
+#ACT
+;give 화염장 1
+give Fireball 1
+SET [757] 1
+#SAY
+;흠 다 잡았구만 자네는 나의 제자가 될만한 충분한 소질이 \
+Well you killed all monsters, you are so good \
+;있네 그려... 축하하네 자네 내가 축하 선물로 레벨 7때 \
+that you could be my apprentice... congratulation ! \
+;익힐수 있는 기본적인 무공 화염장을 주겠네 \ \
+Let me give you Fireball that is basic martial art at level 7 for a gift \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+#ELSESAY 
+;자네의 가방창이 꽉 찾구만 빨리 비우시게.. \ \
+Your bag is full. empty your bag right now.. \ \ 
+;<닫  기/@exit>
+<Close/@exit>
+
+[@Q707]
+;자네 벌써 책을 받지 않았나?? 책을 받았으면 화염장 \
+You received books already, didn't you ??   as you got books \
+;이라는 책을 더블클릭을 해보게(마우스 왼쪽키 두번클릭) \
+Click a book called by Fireball twice (click twice the left button of mouse) \
+;그럼 책이 없어지면서 무공을 매운걸세 이 무공은 F11 \
+Then as the book disappears you master the skill \
+;를 누르면 무공을 확인할수 있네 무공을 세팅 하는 방법은 \
+Hitting F11 button, you can check your martial art skill \
+;무공 그림을 누른뒤 키를 지정해 주고 그 키를 누르면 나간다네 \
+How to set up your martial art skill is that after hitting martial art picture , select key button \ 
+;이제 비천현에 있는 서점에 한번 가보시게나 그 서점 주인이 \
+Now go and visit Bookstore at Bichon province \
+;자네가 더욱 발전 할수 방법을 있는 가르쳐 줄걸세 \ \
+The owner of Bookstore will advise you how to develop yourself \ \
+;<닫  기/@exit>
+<Close/@exit>
+

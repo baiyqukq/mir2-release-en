@@ -1,0 +1,39 @@
+[@main]
+#IF
+#SAY
+;捞辟贸 乐绰 鸽啊瘤 惑痢栏肺绰 力啊 焊郴绢 靛副荐 乐嚼聪促. \ \
+;<氓  规/@Gbo>  ,  <仟赁包/@Gpu>  ,  <棱拳痢/@Gza>\
+;<矫距痢/@Gpo>  ,  <器格痢/@Gre>  ,  <公扁痢/@Gwe>\
+我可以把你送到附近的几个商店. \ \
+<书店/@Gbo>  ,  <肉铺/@Gpu>  ,  <首饰店/@Gza>\
+<药店/@Gpo>  ,  <布料店/@Gre>  ,  <武器店/@Gwe>\
+[@Gbo]
+#IF
+#ACT
+map 0104
+
+[@Gpu]
+#IF
+#ACT
+map 0102
+
+[@Gza]
+#IF
+#ACT
+map 0105
+
+[@Gpo]
+#IF
+#ACT
+map 0108
+
+[@Gre]
+#IF
+#ACT
+map 0106
+
+[@Gwe]
+#IF
+#ACT
+map 0103
+

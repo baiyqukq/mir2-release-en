@@ -1,0 +1,57 @@
+1/1    gold 350
+
+1/80   HeavyArmour(M)
+1/80   HeavyArmour(F)
+1/80   SoulArmour(F)
+1/80   SoulArmour(M)
+1/80   MagicRobe(M)
+1/80   MagicRobe(F)
+1/80   GoldRing
+1/80   BlueJadeneck
+1/80   GoldBracelet
+1/80   MoralRing
+1/80   CharmRing
+
+1/100  战神盔甲(男)
+1/100  战神盔甲(女)
+1/100  幽灵战衣(女)
+1/100  幽灵战衣(男)
+1/100  恶魔长袍(男)
+1/100  恶魔长袍(女)
+
+1/50   MonkBracelet
+1/50   EbonyBracelet
+1/50   KrissSword
+1/50   BlackRing
+1/50   SerpentEyeRing
+1/50   PearlRing
+1/50   PrinceSword
+1/50   MartialSword
+1/50   HookedSpear
+1/50   IronRing
+1/50   TigerNecklace
+1/50   PlatinumNeck
+1/50   SkeletonRing
+1/50   ThinBracelet
+
+1/20    SunPotion
+1/20    SunPotion
+1/20    SunPotion
+1/20    SunPotion
+1/25  SpecialDrug
+1/25  SpecialDrug
+1/25  SpecialDrug
+1/20    (HP)DrugMedium
+1/20    (HP)DrugMedium
+1/20    (HP)DrugMedium
+1/20    (HP)DrugMedium
+1/20    (MP)DrugMedium
+1/20    (MP)DrugMedium
+1/20    (MP)DrugMedium
+1/20    (MP)DrugMedium
+
+1/200  GaleRing
+1/200  SharpBracelet
+1/200  EvadeBracelet
+1/200  ElusionNeck
+

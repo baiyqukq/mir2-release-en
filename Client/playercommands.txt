@@ -1,0 +1,10 @@
+<Player Commands>
+@AllowMsg - reject whisper
+@BanShout - reject shouting
+@BanTrade - reject trade
+@LetGuild - allowguild
+@EndGuild - leave guild
+@AuthAlly - allow ally
+@BanGuildChat - allow guild chat
+@Priv - Interception
+@Searching - Probe Necklace
