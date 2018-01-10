@@ -1,5 +1,5 @@
 ;Merchant NPC Setup File
-;Script	Map	X	Y	Name	0	Appr	0
+;Script	Map	X	Y	Name	Flag	Appr	Move
 
 ;;;;;;;;;;;;
 ;Bichon	Wall
