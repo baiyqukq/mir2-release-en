@@ -1,7 +1,9 @@
-;	Merchant	NPC	Setup	File			
+;Merchant NPC Setup File
+;Script	Map	X	Y	Name	0	Appr	0
 
-
-;	Bichon	Wall	NPC				
+;;;;;;;;;;;;
+;Bichon	Wall
+;;;;;;;;;;;;
 1Bme	0102	9	7	Kim	0	11	0
 1Bme	0	313	271	Danielle	0	4	0
 
@@ -22,20 +24,18 @@
 6Bwh	0125	8	6	Mary	0	9	0
 6Bwh	0	301	257	Brittany	0	6	0
 
-7Bst	0	378	298	Tommas	0	3	0
+7Bst			0	378	298	Tommas	0	3	0
 
 8Bri	0105	18	6	Diana	0	4	0
 8Bbr	0105	12	12	Olivia	0	5	0
 8Bne	0105	6	18	Kristin	0	6	0
 
-
-
 9teacher	0111	7	11	Teacher	0	3	0
 9snpc1	0	326	261	TownCrier	0	5	0
 
-
-;	Ginko	Tree	Village				
-
+;;;;;;;;;;;;;;;;;;;;;;;;
+;Ginko	Tree	Village				
+;;;;;;;;;;;;;;;;;;;;;;;;
 4Gdu	0119	10	11	Spencer	0	1	0
 4Gdm	0119	14	14	Jack	0	9	0
 7Gst	0	643	611	Gabriel	0	3	0
@@ -45,9 +45,9 @@
 6Gwh	0	621	642	Monica	0	6	0
 9helper	0	628	601	Assistant	0	5	0
 
-
-;	Border	Village					
-
+;;;;;;;;;;;;;;;
+;Border	Village					
+;;;;;;;;;;;;;;;
 4Tdu	0	291	610	Noah	0	1	0
 2Twe	0	297	612	Smith	0	0	0
 1Tme	0	293	603	Jim	0	11	0
@@ -60,9 +60,9 @@
 8Tne	0141	10	10	Clara	0	6	0
 9helper	0	284	606	Assistant	0	5	0
 
-
-;	High	Level	Characters				
-							
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;High	Level	Characters				
+;;;;;;;;;;;;;;;;;;;;;;;;;;							
 9Ehw	0114	14	9	HighWarrior	0	3	0
 9Ehw	01141	14	9	HighWarrior	0	3	0
 9Ehw	01142	11	10	HighWarrior	0	3	0
@@ -71,25 +71,25 @@
 9Ewi	0115	5	11	ArchMage	0	3	0
 9Ewi	01152	11	10	ArchMage	0	3	0
 
-
-;	Woomyon	Woods	NPC				
-
+;;;;;;;;;;;;;;
+;Woomyon Woods
+;;;;;;;;;;;;;;
 2Wwe	1	314	72	David	0	0	0
 4Wdu	1	309	81	Annie	0	4	0
 9Wqu	1	235	305	Kunbun	0	9	0
 9woomaoldman	1	96	290	OldMan	0	3	0
 							
-							
-;	Oma	Caves	NPC				
-
+;;;;;;;;;;
+;Oma Caves
+;;;;;;;;;;
 6Ewh	D002	174	216	Storage	0	3	0
 9Equ	D002	187	214	StrangeMan	0	9	0
 7Est	DM001	4	6	WickedTrader	0	9	0
 7Wicked_merchant1	DM011	4	6	WickedTrader	0	9	0
 
-
-;	Serpent	Village	NPC				
-
+;;;;;;;;;;;;;;;;
+;Serpent Village				
+;;;;;;;;;;;;;;;;
 2Swe	0120	7	8	Bradley	0	0	0
 2BlackSmith1	2	518	492	Bradley	0	0	0
 4Sdu	0117	4	10	Patrik	0	1	0
@@ -99,14 +99,14 @@
 6Swh	2	517	466	Nicole	0	5	0
 ;   6swe	2						
 
-
-;	PK	Vil	Trader				
-
+;;;;;;;;;;;;;;;;;;;;;;
+;PK	Vil	Trader				
+;;;;;;;;;;;;;;;;;;;;;;
 7Est	3	855	661	Frank	0	3	0
 
-
-;Mongchon	Traders						
-
+;;;;;;;;;;;;;;;;;
+;Mongchon Traders						
+;;;;;;;;;;;;;;;;;
 6Mwh	0145	9	12	Ruben	0	9	0
 6Mwh	3	305	373	Jessica	0	6	0
 3Mdr	0149	23	20	Jennifer	0	7	0
