@@ -1,15 +1,23 @@
 ;Merchant NPC Setup File
 ;Script	Map	X	Y	Name	Flag	Appr	Move
+;Abbr:
+	me : Meat
+	dr : Dress
+	bo : Book
+	we : Weapon
+	ri : Ring
+	ne : Necklace
+	br : Bracelet
 
 ;;;;;;;;;;;;
 ;Bichon	Wall
 ;;;;;;;;;;;;
-1Bme	0102	9	7	Kim	0	11	0
-1Bme	0	313	271	Danielle	0	4	0
+;MeatStore
+1Bme	0102	9	7	Kim			0	11	0
+1Bme	0		313	271	Danielle	0	4	0
 
-2Bwe	0103	19	18	Vincent	0	1	0
-;    2bwe	0			???			
-2Bbl	0	302	219	Bill	0	0	0
+2Bwe	0103	19	18	Vincent		0	1	0
+2Bbl	0		302	219	Bill		0	0	0
 
 3Bdr	0106	19	6	Ann	0	7	0
 3Drapers_shop1	0	330	270	Tailor	0	1	0
