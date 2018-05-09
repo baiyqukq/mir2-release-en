@@ -1,5 +1,5 @@
-;¹üÀ§
-;Area   x     y     name    scope     ¸¶¸®¼ö   ½Ã°£(ºÐ)   ¸ô·Á¼­Á¨µÉÈ®·ü(%)
+;??À§
+;Area   x     y     name    scope     ??????   ?Ã°?(??)   ???Á¼?Á¨??È®??(%)
 ;
 
 ;Trainers
@@ -19,14 +19,14 @@ r001   100 100 	   Trainer	  0      1	  10
 2      423  566    ArcherGuard    0      1        10     
 2      424  565    ArcherGuard    0      1        10     
 
-;±¹°æ¸¶À»
+;???æ¸¶À»
 0      340   513   ArcherGuard   0      1        10
 0      341   514   ArcherGuard   0      1        10
 
 0      367   487   ArcherGuard   0      1        10
 0      368   488   ArcherGuard   0      1        10
 
-;ºñÃµ¼º¾È
+;??Ãµ????
 0      318   244     ArcherGuard    0      1        10
 0      300   207     ArcherGuard    0      1        10
 0      310   227     ArcherGuard    0      1        10
@@ -56,37 +56,37 @@ r001   100 100 	   Trainer	  0      1	  10
 3      304   303     ArcherGuard    0      1        10
 3      307   303     ArcherGuard    0      1        10
 
-;¹ìÀÇ°è°î¸¶À»
+;???Ç°??î¸¶À»
 2      510   479     ArcherGuard    0      1        10
 2      508   492     ArcherGuard    0      1        10
 
-;ÀºÇà³ª¹«°ñ
+;Àº?à³ª????
 ;0      567   621   ArcherGuard   0      1        10
 ;0      600   576   ArcherGuard   0      1        10
 ;0      662   558   ArcherGuard   0      1        10
 
-;¿ì¸é½£ ÀÔ±¸ ºñÃµ->¿ì¸é½£
+;???é½£ ?Ô±? ??Ãµ->???é½£
 0      320   36     ArcherGuard   0      1        10
 0      327   42     ArcherGuard   0      1        10
-;¿ì¸é½£->ºñÃµ
+;???é½£->??Ãµ
 1      566   544    ArcherGuard   0      1        10
 1      555   544    ArcherGuard   0      1        10
 
-;±Ã¼ö  ¸ùÃÌ->¹ì°ñ
+;?Ã¼?  ????->????
 3      273  743    ArcherGuard    0      1        10     
 3      272  744    ArcherGuard    0      1        10     
 
 3      512  770    ArcherGuard    0      1        10     
 3      519  777    ArcherGuard    0      1        10     
 
-;¹ì°ñ -> ¸ùÃÌ
+;???? -> ????
 2      292  60     ArcherGuard    0      1        10    
 2      298  65     ArcherGuard    0      1        10    
 
 2      552  80     ArcherGuard    0      1        10    
 2      560  88     ArcherGuard    0      1        10    
 
-;;¿¬°áÅë·Î¿¡¼­ -> Àý¸í°î
+;;???????Î¿??? -> ??????
 
 E605	11	62			 ArcherGuard		 0			1				 10
 E605	15	68			 ArcherGuard		 0			1				 10
@@ -94,7 +94,7 @@ E605	15	68			 ArcherGuard		 0			1				 10
 D601	13	196			 ArcherGuard		 0			1				 10
 D601	7	201			 ArcherGuard		 0			1				 10
 
-;;¿¬°áÅë·Î¿¡¼­ -> ¹ì°ñÆó±¤
+;;???????Î¿??? -> ????????
 
 E601	139	13			 ArcherGuard		 0			1				 10
 E601	138	12			 ArcherGuard		 0			1				 10
@@ -214,7 +214,7 @@ D422	328	384			 ArcherGuard		 0			1				 10
 1      497   445    HookingCat 50     40        9
 1      250   250    CannibalPlant   250      150       9
 
-;;It Breaks,mop
+;;Mass Drops
 1      250   250    ForestYeti1 250      1      40
 1      250   250    Oma0        250      1      40
 1      250   250    OmaFighter0 250      1      40
@@ -311,7 +311,7 @@ D012   200   200   CaveBat0     200   1         20
 
 ;WoomaTemple
 ;
-;WommaTemple Entrance¸
+;WommaTemple Entrance?
 D021   50   44     CaveBat     60    40        20
 D021   50   44     CaveBat     60    10        20   100
 D021   50   44     CaveBat     60    10        20   100
@@ -445,26 +445,26 @@ D024   42   49     FlamingWooma0 30     1        60
 2      300  400    Oma0       200    1        40
 
 
-;Á»ºñ´øÀü(Æó±¤»ê)
+;Á»??????(?ó±¤»?)
 
 D401   100  100    Zombie2       100    75       10
 D401   100  100    Zombie3       100    75       10
 D401   100  100    CaveMaggot    100    45       10
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D401   100  100    Zombie20    100    1        80
 D401   100  100    Zombie30    100    1        80
 
 D402   100  100    Zombie2     100    75       8
 D402   100  100    Zombie3     100    75       8
 D402   100  100    CaveMaggot  100    45       8
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D402   100  100    Zombie20    100    1        80
 D402   100  100    Zombie30    100    1        80
 
 D403   100  100    Zombie2     100    75       8
 D403   100  100    Zombie3     100    75       8
 D403   100  100    Zombie5     100    45       8
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D403   100  100    Zombie20    100    1        100
 D403   100  100    Zombie30    100    1        100
 D403   100  100    Zombie50    100    1        100
@@ -473,7 +473,7 @@ D404   100  100    Zombie1     100    30       8
 D404   100  100    Zombie3     100    75       8
 D404   100  100    Zombie4     100    75       8
 D404   100  100    Ghoul       100    1        120
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D404   100  100    Zombie10    100    1        100
 D404   100  100    Zombie30    100    1        100
 D404   100  100    Zombie40    100    1        100
@@ -482,7 +482,7 @@ D405   100  100    Zombie1     100    15       8
 D405   100  100    Zombie4     100    75       8
 D405   100  100    Zombie5     100    90       8
 D405   100  100    Ghoul       100    1        120
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D405   100  100    Zombie10    100    1        100
 D405   100  100    Zombie40    100    1        100
 D405   100  100    Zombie50    100    1        100
@@ -492,7 +492,7 @@ D406   100  100    Zombie1     100    30       8
 D406   100  100    Zombie5     100    45       8
 D406   100  100    Zombie2     100    30       8
 D406   100  100    Ghoul       100    1        120
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D406   100  100    Zombie40    100    1        100
 D406   100  100    Zombie10    100    1        100
 D406   100  100    Zombie50    100    1        100
@@ -503,7 +503,7 @@ D413   50   50     Zombie3     50     40       9
 D412   50   50     Zombie4     50     40       9
 D416   50   50     Zombie5     50     40       9
 D415   50   50     Zombie5     50     40       9
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D411   50   50     Zombie20    50     1        60
 D413   50   50     Zombie30    50     1        60
 D412   50   50     Zombie40    50     1        60
@@ -511,13 +511,13 @@ D416   50   50     Zombie50    50     1        60
 D415   50   50     Zombie50    50     1        60
 
 
-;¹ì°ñ Æó±¤(Á»ºñ)
+;???? ????(Á»??)
 
 D421   200  200    Zombie2     180    150      8
 D421   200  200    Zombie3     180    150      8
 D421   200  200    Zombie4     180    150      8
 D421   100  100    Ghoul       100    1        120
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D421   200  200    Zombie20    180    1        100
 D421   200  200    Zombie30    180    1        100
 D421   200  200    Zombie40    180    1        100
@@ -528,14 +528,14 @@ D422   200  200    Zombie2     180    75       8
 D422   200  200    Zombie4     180    150      8
 D422   200  200    Zombie5     180    150      8
 D422   100  100    Ghoul       100    1        120
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D422   200  200    Zombie10    180    1        100
 D422   200  200    Zombie20    180    1        100
 D422   200  200    Zombie40    180    1        100
 D422   200  200    Zombie50    180    1        100
 
 
-;¸ùÃÌÇö
+;??????
 
 3      380  410    Sheep       60     150      6
 3      380  290    Sheep       60     100      6
@@ -560,13 +560,13 @@ D422   200  200    Zombie50    180    1        100
 3      333  560    Wolf        120    150      6
 3      450  560    Wolf        120    150      6
 3      333  560    TigerSnake  150    100      6
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 3      500  140    SkyStinger0     500    1        10
 3      500  140    ShellNipper0    500    1        10
 3      500  140    Keratoid0   500    1        10
 3      500  140    TigerSnake0 500    1        10
 
-;ÁÖ¸¶´øÀü
+;?Ö¸?????
 
 D501   200  200    WedgeMoth    100    20       8
 D501   100  300    WedgeMoth    100    20       8
@@ -583,7 +583,7 @@ D501   100  660    BigRat        100    20       8
 D501   660  100    BigRat        100    20       8
 D501   100  100    BigRat        100    20       8
 D501   660  660    BigRat        100    20       8
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D501   200  200    BigRat0       200    3        20
 
 D502   200  200    BigRat        100    30       8
@@ -601,7 +601,7 @@ D502   100  300    WedgeMoth    100    30       8
 D502   300  100    WedgeMoth    100    30       8
 D502   100  100    WedgeMoth    100    30       8
 D502   300  300    WedgeMoth    100    30       8
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D502   200  200    BigRat0       200    3        20
 
 D503   200  200    BugBatMaggot    100    5        8
@@ -630,7 +630,7 @@ D503   300  100    WedgeMoth    100    16       8
 D503   100  100    WedgeMoth    100    16       8
 D503   300  300    WedgeMoth    100    16       8
 D503   200  200    BigRat        200    80       10
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D503   200  200    ZumaArcher0     200    1        20
 D503   200  200    ZumaGuardian0   200    1        20
 D503   200  200    ZumaStatue0   200    1        20
@@ -649,7 +649,7 @@ D504   300  100    BugBatMaggot    100    5        8
 D504   100  100    BugBatMaggot    100    5        8
 D504   300  300    BugBatMaggot    100    5        8
 D504   200  200    BigRat        200    100      10
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D504   200  200    ZumaArcher0     200    1        20
 D504   200  200    ZumaGuardian0   200    1        20
 D504   200  200    ZumaStatue0   200    1        20
@@ -658,7 +658,7 @@ D504   200  200    ZumaStatue3   200    2        60
 D504   200  200    ZumaGuardian3   200    2        60
 D504   200  200    ZumaArcher3     200    2        60
 
-;;ÀÌº¥Æ®¼º ¸ó½ºÅÍ
+;;?Ìº?Æ®?? ??????
 D504   225  175    ZumaGuardian00  8     1        120	50
 D504   225  175    ZumaGuardian    8     7        120	50
 D504   225  175    WedgeMoth    8     8        120	50
@@ -671,16 +671,16 @@ D505   100  100    ZumaStatue    100   100      10
 D505   100  100    ZumaGuardian    100   100      10
 D505   100  100    WedgeMoth    100   100      10
 D505   100  100    BugBatMaggot    100   60       10
-;;ÀÌº¥Æ®¼º¸ó½ºÅÍ
+;;?Ìº?Æ®????????
 D505   100  100    ZumaStatue3   100   3        60
 D505   100  100    ZumaGuardian3   100   3        60
 D505   100  100    ZumaArcher3     100   3        60
-;;ÅÍÁö´Â ¸ó½ºÅÍ
+;;?????? ??????
 D505   100  100    ZumaArcher0     100    1        20
 D505   100  100    ZumaGuardian0   100    1        20
 D505   100  100    ZumaStatue0   100    1        20
 
-;;ÀÌº¥Æ®¼º ¸ó½ºÅÍ
+;;?Ìº?Æ®?? ??????
 D505   154  172    ZumaGuardian00  8     1        120	50
 D505   154  172    ZumaGuardian    8     7        120	50
 D505   154  172    WedgeMoth    8     8        120	50
@@ -748,7 +748,7 @@ D5061  87  73    ZumaGuardian    2     1         3
 D5061  87  73    WedgeMoth    2     2         5
 D5061  87  73    BugBatMaggot    2     1         5
 D5061  87  73    ZumaArcher      2     1         3
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D5061  50  50    ZumaStatue0   50    1         120
 D5061  50  50    ZumaGuardian0   50    1         120
 D5061  50  50    ZumaArcher0     50    1         120
@@ -813,7 +813,7 @@ D5062  87  73    ZumaGuardian    2     1         3
 D5062  87  73    WedgeMoth    2     2         5
 D5062  87  73    BugBatMaggot    2     1         5
 D5062  87  73    ZumaArcher      2     2         3
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D5062  50  50    ZumaStatue0   50    1         120
 D5062  50  50    ZumaGuardian0   50    1         120
 D5062  50  50    ZumaArcher0     50    1         120
@@ -878,7 +878,7 @@ D5063  87  73    ZumaGuardian    2     1         3
 D5063  87  73    WedgeMoth    2     2         5
 D5063  87  73    BugBatMaggot    2     1         5
 D5063  87  73    ZumaArcher      2     1         3
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D5063  50  50    ZumaStatue0   50    1         120
 D5063  50  50    ZumaGuardian0   50    1         120
 D5063  50  50    ZumaArcher0     50    1         120
@@ -943,7 +943,7 @@ D5064  87  73    ZumaGuardian    2     1         3
 D5064  87  73    WedgeMoth    2     2         5
 D5064  87  73    BugBatMaggot    2     1         5
 D5064  87  73    ZumaArcher      2     1         3
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D5064  50  50    ZumaStatue0   50    1         120
 D5064  50  50    ZumaGuardian0   50    1         120
 D5064  50  50    ZumaArcher0     50    1         120
@@ -1008,7 +1008,7 @@ D5065  87  73    ZumaGuardian    2     1         3
 D5065  87  73    WedgeMoth    2     2         5
 D5065  87  73    BugBatMaggot    2     1         5
 D5065  87  73    ZumaArcher      2     1         3
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D5065  50  50    ZumaStatue0   50    1         120
 D5065  50  50    ZumaGuardian0   50    1         120
 D5065  50  50    ZumaArcher0     50    1         120
@@ -1073,7 +1073,7 @@ D5066  87  73    ZumaGuardian    2     1         3
 D5066  87  73    WedgeMoth    2     2         5
 D5066  87  73    BugBatMaggot    2     1         5
 D5066  87  73    ZumaArcher      2     1         3
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D5066  50  50    ZumaStatue0   50    1         120
 D5066  50  50    ZumaGuardian0   50    1         120
 D5066  50  50    ZumaArcher0     50    1         120
@@ -1138,7 +1138,7 @@ D5067  87  73    ZumaGuardian    2     1         3
 D5067  87  73    WedgeMoth    2     2         5
 D5067  87  73    BugBatMaggot    2     1         5
 D5067  87  73    ZumaArcher      2     1         3
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D5067  50  50    ZumaStatue0   50    1         120
 D5067  50  50    ZumaGuardian0   50    1         120
 D5067  50  50    ZumaArcher0     50    1         120
@@ -1203,7 +1203,7 @@ D5068  87  73    ZumaGuardian    2     1         3
 D5068  87  73    WedgeMoth    2     2         5
 D5068  87  73    BugBatMaggot    2     1         5
 D5068  87  73    ZumaArcher      2     1         3
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D5068  50  50    ZumaStatue0   50    1         120
 D5068  50  50    ZumaGuardian0   50    1         120
 D5068  50  50    ZumaArcher0     50    1         120
@@ -1268,7 +1268,7 @@ D5069  87  73    ZumaGuardian    2     1         3
 D5069  87  73    WedgeMoth    2     2         5
 D5069  87  73    BugBatMaggot    2     1         5
 D5069  87  73    ZumaArcher      2     1         3
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D5069  50  50    ZumaStatue0   50    1         120
 D5069  50  50    ZumaGuardian0   50    1         120
 D5069  50  50    ZumaArcher0     50    1         120
@@ -1279,11 +1279,11 @@ D5072  50  50    ZumaGuardian    50    45       8
 D5072  50  50    ZumaArcher      50    45       8
 D5072  50  50    WedgeMoth    50    45       8
 D5072  50  50    BugBatMaggot    50    15       8
-;;ÀÌº¥Æ®¼º ¸ó½ºÅÍ
+;;?Ìº?Æ®?? ??????
 D5072  50  50    ZumaStatue3   50    10       60
 D5072  50  50    ZumaGuardian3   50    10       60
 D5072  50  50    ZumaArcher3     50    10       60
-;;ÅÍÁö´Â ¸ó½ºÅÍ
+;;?????? ??????
 D5072  50  50    ZumaStatue0   50    1        120
 D5072  50  50    ZumaGuardian0   50    1        120
 D5072  50  50    ZumaArcher0     50    1        120
@@ -1293,11 +1293,11 @@ D5073  50  50    ZumaGuardian    50    45       8
 D5073  50  50    ZumaArcher			 50    45       8
 D5073  50  50    WedgeMoth 	 50    45       8
 D5073  50  50    BugBatMaggot    50    15       8
-;;ÀÌº¥Æ®¼º¸ó½ºÅÍ
+;;?Ìº?Æ®????????
 D5073  50  50    ZumaStatue3   50    10       60
 D5073  50  50    ZumaGuardian3   50    10       60
 D5073  50  50    ZumaArcher3     50    10       60
-;;ÅÍÁö´Â ¸ó½ºÅÍ
+;;?????? ??????
 D5073  50  50    ZumaStatue0   50    1        120
 D5073  50  50    ZumaGuardian0   50    1        120
 D5073  50  50    ZumaArcher0     50    1        120
@@ -1312,11 +1312,11 @@ D5074  73  22    ZumaGuardian    7     5        11
 D5074  73  22    ZumaArcher      7     5        11
 D5074  73  22    WedgeMoth    7     5        11
 D5074  73  22    BugBatMaggot    7     3        11
-;;ÀÌº¥Æ®¼º¸ó½ºÅÍ
+;;?Ìº?Æ®????????
 D5074  50  50    ZumaStatue3   50    10       60
 D5074  50  50    ZumaGuardian3   50    10       60
 D5074  50  50    ZumaArcher3     50    10       60
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D5074  50  50    ZumaStatue0   50    1        120
 D5074  50  50    ZumaGuardian0   50    1        120
 D5074  50  50    ZumaArcher0     50    1        120
@@ -1324,7 +1324,7 @@ D5074  50  50    ZumaArcher0     50    1        120
 D515   22   20     BugBatMaggot    20     2        16
 D515   19   24     Zumataurus      0      1        180
 
-;Àý¸í°î ´øÀü(CentipedeÁ¸)
+;?????? ????(CentipedeÁ¸)
 
 D601   40   27     Centipede        50     28       6
 D601   18   166    Centipede        50     28       6
@@ -1346,7 +1346,7 @@ D601   161  208    BlackMaggot        50     8        6
 D601   84   104    BlackMaggot        50     8        6
 D601   187  36     BlackMaggot        50     8        6
 D601   144  73     BlackMaggot        50     8        6
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D601   100  100    Centipede0       100    1        80
 D601   100  100    WhimperingBee0       100    1        80
 D601   100  100    GiantWorm0     100    1        80
@@ -1372,7 +1372,7 @@ D602   101  101    BlackMaggot        60     11       6
 D602   78   167    BlackMaggot        60     11       6
 D602   144  151    BlackMaggot        60     11       6
 D602   178  43     BlackMaggot        60     11       6
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D602   100  100    Centipede0       100     1        80
 D602   100  100    Tongs0   100     1        80
 D602   100  100    BlackMaggot0       100     1        80
@@ -1395,7 +1395,7 @@ D603   100  100    Centipede        100    15       10 50
 D603   100  100    Tongs   100    15       10 50
 D603   100  100    Tongs   100    15       10 50
 D603   100  100    EvilTongs 100    1        180
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D603   100  100    BlackMaggot0       100     1        80
 D603   100  100    Tongs0   100     1        80
 D603   100  100    Centipede0       100     1        80
@@ -1421,7 +1421,7 @@ D604   100  100    Tongs   100    15       10 50
 D604   100  100    Centipede        100    15       10 50
 D604   100  100    Centipede        100    15       10 50
 D604   100  100    EvilTongs 100    1        180
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D604   100  100    BlackMaggot0       100     1        80
 D604   100  100    WhimperingBee0       100     1        80
 D604   100  100    Tongs0   100     1        80
@@ -1453,7 +1453,7 @@ D605   100  100    Tongs   100    15       10 50
 D605   100  100    Centipede        100    15       10 50
 D605   100  100    Centipede        100    15       10 50
 D605   100  100    EvilTongs 100    1        180
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D605   100  100    BlackMaggot0       100     1        80
 D605   100  100    GiantWorm0     100     1        80
 D605   100  100    Tongs0   100     1        80
@@ -1482,18 +1482,18 @@ D606   100  100    Centipede        100    15       10 50
 D606   100  100    Centipede        100    15       10 50
 D606   100  100    EvilTongs 100    2        180
 
-;;ÃË·æ½Å
+;;?Ë·???
 D606   83   168    EvilCentipede      0      1        180
 D606   77   170    Centipede        6      30       5  80
 
 
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D606   100  100    Centipede0       50     1        80
 D606   100  100    WhimperingBee0       50     1        80
 D606   100  100    GiantWorm0     50     1        80
 D606   100  100    Tongs0   50     1        80
 
-;; Àý¸í°î È®Àå ¸ó½ºÅÍµé
+;; ?????? È®?? ?????Íµ?
 ;D612
 D612   70   76     BlackMaggot        70     23       7
 D612   210  72     BlackMaggot        70     23       7
@@ -1525,7 +1525,7 @@ D612   150  150    Centipede        100    13       10
 D612   150  150    EvilTongs 150    1        120
 D612   150  150    EvilTongs2 150    1        30
 
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D618   150  150    Centipede0       100     1        80
 D618   150  150    WhimperingBee0       100     1        80
 D618   150  150    GiantWorm0     100     1        80
@@ -1642,7 +1642,7 @@ D617   50   50     Tongs0    70     1        80
 D617   50   50     BlackMaggot0        70     1        80
 D613   50   50     EvilTongs2     70     1     60
 
-;D618 ¸¸³â°íµ¶°ü
+;D618 ?????íµ¶??
 D618   19   39     BlackMaggot        70     23       7
 D618   97   81     BlackMaggot        70     23       7
 D618   57   166    BlackMaggot        70     23       7
@@ -1667,7 +1667,7 @@ D618   100  100    Centipede        100    13       10
 D618   100  100    EvilTongs 100    1        120
 D618   100  100    EvilTongs2 100    1        30
 
-;;ÅÍÁö´Â¸ó½ºÅÍ
+;;?????Â¸?????
 D618   100  100    Centipede0       70     1        80
 D618   100  100    WhimperingBee0       70     1        80
 D618   100  100    GiantWorm0     70     1        80
@@ -1675,7 +1675,7 @@ D618   100  100    Tongs0   70     1        80
 D618   100  100    BlackMaggot0       70     1        80
 
 
-;»çºÏ¼º(»çºÏ¼ºÀ¸·Î ÁøÀÔÇÏ´Â Åë·Î)
+;???Ï¼?(???Ï¼?À¸?? ?????Ï´? ????)
 D701   100  100    Zombie5      100    20       10
 
 
@@ -1737,12 +1737,12 @@ D711   112  250    BlackMaggot        30     8       10
 D711   114  314    BlackMaggot        30     8       10
 D711   304  340    BlackMaggot        30     8       10
 D711   200  200    WedgeMoth    200    25      10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D711   200  200    RedEvilBoar0       200    1        30
 D711   200  200    BlackEvilBoar0       200    1        30
 D711   200  200    BlackMaggot0       200    1        30
 
-;;¼®°¢2Ãþ
+;;????2??
 D712   251  41     RedEvilBoar 30     7       10
 D712   321  72     RedEvilBoar 30     7       10
 D712   363  146    RedEvilBoar 30     7       10
@@ -1802,12 +1802,12 @@ D712   112  250    BlackMaggot        30     5       10
 D712   114  314    BlackMaggot        30     5       10
 D712   304  340    BlackMaggot        30     5       10
 D712   200  200    WedgeMoth    200    35       10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D712   200  200    RedEvilBoar0       200    1        30
 D712   200  200    BlackEvilBoar0       200    1        30
 D712   200  200    BlackMaggot0       200    1        30
 
-;;¼®°¢3Ãþ
+;;????3??
 D713   251  41     RedEvilBoar        30     7        10
 D713   321  72     RedEvilBoar        30     7        10
 D713   363  146    RedEvilBoar        30     7        10
@@ -1873,18 +1873,18 @@ D713   100  300    BlackMaggot        100    5        5  50
 D713   300  300    BlackMaggot        100    5        5  50
 D713   200  200    BugBatMaggot    200    40        10
 D713   200  200    SnakeScorpion      200    40        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D713   200  200    RedEvilBoar0       200    1        30
 D713   200  200    BlackEvilBoar0       200    1        30
 D713   200  200    BlackMaggot0       200    1        30
 D713   200  200    SnakeScorpion0     200    1        30
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D713   200  200    RedEvilBoar3       200    10       15
 D713   200  200    BlackEvilBoar3       200    10       15
 D713   200  200    SnakeScorpion3     200    10       15
 
 
-;;¼®°¢4Ãþ
+;;????4??
 D714   251  41     RedEvilBoar        30     7        10
 D714   321  72     RedEvilBoar        30     7        10
 D714   363  146    RedEvilBoar        30     7        10
@@ -1951,18 +1951,18 @@ D714   200  200    SnakeScorpion      200    50       10
 D714   200  200    WedgeMoth    200    55       10
 D714   200  200    WhiteEvilBoar        200    1         120
 D714   200  200    BugBatMaggot    200    50       10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D714   200  200    RedEvilBoar0       200    1         15
 D714   200  200    BlackEvilBoar0       200    1         15
 D714   200  200    BlackMaggot0       200    1         15
 D714   200  200    SnakeScorpion0     200    1         15
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D714   200  200    RedEvilBoar3       200    15       30
 D714   200  200    BlackEvilBoar3       200    15       30
 D714   200  200    SnakeScorpion3     200    15       30
 
 
-;;¼®°¢5Ãþ
+;;????5??
 D715   200  200    RedEvilBoar        200    100       10
 D715   200  200    WedgeMoth    200    100       10
 D715   200  200    SnakeScorpion      200    100       10
@@ -1970,27 +1970,27 @@ D715   200  200    BlackEvilBoar        200    100       10
 D715   200  200    BlackMaggot        200    100       10
 D715   200  200    WhiteEvilBoar        200    1         120
 D715   200  200    BugBatMaggot    200    60        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D715   200  200    RedEvilBoar0       200    1         30
 D715   200  200    BlackEvilBoar0       200    1         30
 D715   200  200    BlackMaggot0       200    1         30
 D715   200  200    SnakeScorpion0     200    1         30
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D715   200  200    RedEvilBoar3       200    20        15
 D715   200  200    BlackEvilBoar3       200    20        15
 D715   200  200    SnakeScorpion3     200    20        15
 
 
-;;¼®°¢6Ãþ¹Ì·Î
+;;????6???Ì·?
 D71601  25   25     RedEvilBoar        25     7        10
 D71601  25   25     BlackEvilBoar        25     7        10
 D71601  25   25     WedgeMoth    25     10       10
 D71601  25   25     SnakeScorpion      25     7        10
 D71601  25   25     BlackMaggot        25     10       10
 D71601  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71601  25   25    RedEvilBoar0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71601  25   25    RedEvilBoar3        25     1        30
 D71601  25   25    BlackEvilBoar3        25     1        30
 D71601  25   25    SnakeScorpion3      25     1        30
@@ -2002,9 +2002,9 @@ D71602  25   25     WedgeMoth    25     10       10
 D71602  25   25     SnakeScorpion      25     7        10
 D71602  25   25     BlackMaggot        25     10       10
 D71602  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71602  25   25    BlackEvilBoar0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71602  25   25    RedEvilBoar3        25     1        30
 D71602  25   25    BlackEvilBoar3        25     1        30
 D71602  25   25    SnakeScorpion3      25     1        30
@@ -2016,9 +2016,9 @@ D71603  25   25     WedgeMoth    25     10       10
 D71603  25   25     SnakeScorpion      25     7        10
 D71603  25   25     BlackMaggot        25     10       10
 D71603  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71603  25   25    BlackMaggot0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71603  25   25    RedEvilBoar3        25     1        30
 D71603  25   25    BlackEvilBoar3        25     1        30
 D71603  25   25    SnakeScorpion3      25     1        30
@@ -2030,9 +2030,9 @@ D71604  25   25     WedgeMoth    25     10       10
 D71604  25   25     SnakeScorpion      25     7        10
 D71604  25   25     BlackMaggot        25     10       10
 D71604  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71604  25   25    SnakeScorpion0      25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71604  25  25    RedEvilBoar3        25      1        30
 D71604  25  25    BlackEvilBoar3        25      1        30
 D71604  25  25    SnakeScorpion3      25      1        30
@@ -2044,9 +2044,9 @@ D71605  25   25     WedgeMoth    25     10       10
 D71605  25   25     SnakeScorpion      25     7        10
 D71605  25   25     BlackMaggot        25     10       10
 D71605  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71605  25   25    RedEvilBoar0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71605  25  25    RedEvilBoar3        25      1        30
 D71605  25  25    BlackEvilBoar3        25      1        30
 D71605  25  25    SnakeScorpion3      25      1        30
@@ -2057,9 +2057,9 @@ D71606  25   25     WedgeMoth    25     10       10
 D71606  25   25     SnakeScorpion      25     7        10
 D71606  25   25     BlackMaggot        25     10       10
 D71606  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71606  25   25    BlackEvilBoar0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71606  25  25    RedEvilBoar3        25      1        30
 D71606  25  25    BlackEvilBoar3        25      1        30
 D71606  25  25    SnakeScorpion3      25      1        30
@@ -2070,9 +2070,9 @@ D71607  25   25     WedgeMoth    25     10       10
 D71607  25   25     SnakeScorpion      25     7        10
 D71607  25   25     BlackMaggot        25     10       10
 D71607  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71607  25   25    BlackMaggot0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71607  25  25    RedEvilBoar3        25      1        30
 D71607  25  25    BlackEvilBoar3        25      1        30
 D71607  25  25    SnakeScorpion3      25      1        30
@@ -2083,9 +2083,9 @@ D71608  25   25     WedgeMoth    25     10       10
 D71608  25   25     SnakeScorpion      25     7        10
 D71608  25   25     BlackMaggot        25     10       10
 D71608  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71608  25   25    SnakeScorpion0      25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71608  25  25    RedEvilBoar3        25      1        30
 D71608  25  25    BlackEvilBoar3        25      1        30
 D71608  25  25    SnakeScorpion3      25      1        30
@@ -2096,9 +2096,9 @@ D71609  25   25     WedgeMoth    25     10       10
 D71609  25   25     SnakeScorpion      25     7        10
 D71609  25   25     BlackMaggot        25     10       10
 D71609  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71609  25   25    RedEvilBoar0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71609  25  25    RedEvilBoar3        25      1        30
 D71609  25  25    BlackEvilBoar3        25      1        30
 D71609  25  25    SnakeScorpion3      25      1        30
@@ -2109,9 +2109,9 @@ D71610 25   25     WedgeMoth    25     10       10
 D71610 25   25     SnakeScorpion      25     7        10
 D71610 25   25     BlackMaggot        25     10       10
 D71610 25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71610  25   25    BlackEvilBoar0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71610  25  25    RedEvilBoar3        25      1        30
 D71610  25  25    BlackEvilBoar3        25      1        30
 D71610  25  25    SnakeScorpion3      25      1        30
@@ -2122,9 +2122,9 @@ D71611 25   25     WedgeMoth    25     10       10
 D71611 25   25     SnakeScorpion      25     7        10
 D71611 25   25     BlackMaggot        25     10       10
 D71611 25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71611  25   25    BlackMaggot0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71611  25  25    RedEvilBoar3        25      1        30
 D71611  25  25    BlackEvilBoar3        25      1        30
 D71611  25  25    SnakeScorpion3      25      1        30
@@ -2135,9 +2135,9 @@ D71612  25   25     WedgeMoth    25     10       10
 D71612  25   25     SnakeScorpion      25     7        10
 D71612  25   25     BlackMaggot        25     10       10
 D71612  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71612  25   25    SnakeScorpion0      25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71612  25  25    RedEvilBoar3        25      1        30
 D71612  25  25    BlackEvilBoar3        25      1        30
 D71612  25  25    SnakeScorpion3      25      1        30
@@ -2148,9 +2148,9 @@ D71613  25   25     WedgeMoth    25     10       10
 D71613  25   25     SnakeScorpion      25     7        10
 D71613  25   25     BlackMaggot        25     10       10
 D71613  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71613  25   25    RedEvilBoar0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71613  25  25    RedEvilBoar3        25      1        30
 D71613  25  25    BlackEvilBoar3        25      1        30
 D71613  25  25    SnakeScorpion3      25      1        30
@@ -2161,9 +2161,9 @@ D71614  25   25     WedgeMoth    25     10       10
 D71614  25   25     SnakeScorpion      25     7        10
 D71614  25   25     BlackMaggot        25     10       10
 D71614  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71614  25   25    BlackEvilBoar0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71614  25  25    RedEvilBoar3        25      1        30
 D71614  25  25    BlackEvilBoar3        25      1        30
 D71614  25  25    SnakeScorpion3      25      1        30
@@ -2174,9 +2174,9 @@ D71615  25   25     WedgeMoth    25     10       10
 D71615  25   25     SnakeScorpion      25     7        10
 D71615  25   25     BlackMaggot        25     10       10
 D71615  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71615  25   25    BlackMaggot0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71615  25  25    RedEvilBoar3        25      1        30
 D71615  25  25    BlackEvilBoar3        25      1        30
 D71615  25  25    SnakeScorpion3      25      1        30
@@ -2187,9 +2187,9 @@ D71616  25   25     WedgeMoth    25     10       10
 D71616  25   25     SnakeScorpion      25     7        10
 D71616  25   25     BlackMaggot        25     10       10
 D71616  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71616  25   25    SnakeScorpion0      25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71616  25  25    RedEvilBoar3        25      1        30
 D71616  25  25    BlackEvilBoar3        25      1        30
 D71616  25  25    SnakeScorpion3      25      1        30
@@ -2200,9 +2200,9 @@ D71617  25   25     WedgeMoth    25     10       10
 D71617  25   25     SnakeScorpion      25     7        10
 D71617  25   25     BlackMaggot        25     10       10
 D71617  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71617  25   25    RedEvilBoar0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71617  25  25    RedEvilBoar3        25      1        30
 D71617  25  25    BlackEvilBoar3        25      1        30
 D71617  25  25    SnakeScorpion3      25      1        30
@@ -2213,9 +2213,9 @@ D71618  25   25     WedgeMoth    25     10       10
 D71618  25   25     SnakeScorpion      25     7        10
 D71618  25   25     BlackMaggot        25     10       10
 D71618  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71618  25   25    BlackEvilBoar0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71618  25  25    RedEvilBoar3        25      1        30
 D71618  25  25    BlackEvilBoar3        25      1        30
 D71618  25  25    SnakeScorpion3      25      1        30
@@ -2226,9 +2226,9 @@ D71619  25   25     WedgeMoth    25     10       10
 D71619  25   25     SnakeScorpion      25     7        10
 D71619  25   25     BlackMaggot        25     10       10
 D71619  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71619  25   25    BlackMaggot0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71619  25  25    RedEvilBoar3        25      1        30
 D71619  25  25    BlackEvilBoar3        25      1        30
 D71619  25  25    SnakeScorpion3      25      1        30
@@ -2239,9 +2239,9 @@ D71620  25   25     WedgeMoth    25     10       10
 D71620  25   25     SnakeScorpion      25     7        10
 D71620  25   25     BlackMaggot        25     10       10
 D71620  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71620  25   25    SnakeScorpion0      25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71620  25  25    RedEvilBoar3        25      1        30
 D71620  25  25    BlackEvilBoar3        25      1        30
 D71620  25  25    SnakeScorpion3      25      1        30
@@ -2252,9 +2252,9 @@ D71621  25   25     WedgeMoth    25     10       10
 D71621  25   25     SnakeScorpion      25     7        10
 D71621  25   25     BlackMaggot        25     10       10
 D71621  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71621  25   25    RedEvilBoar0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71621  25  25    RedEvilBoar3        25      1        30
 D71621  25  25    BlackEvilBoar3        25      1        30
 D71621  25  25    SnakeScorpion3      25      1        30
@@ -2265,9 +2265,9 @@ D71622  25   25     WedgeMoth    25     10       10
 D71622  25   25     SnakeScorpion      25     7        10
 D71622  25   25     BlackMaggot        25     10       10
 D71622  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71622  25   25    BlackEvilBoar0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71622  25  25    RedEvilBoar3        25      1        30
 D71622  25  25    BlackEvilBoar3        25      1        30
 D71622  25  25    SnakeScorpion3      25      1        30
@@ -2278,9 +2278,9 @@ D71623  25   25     WedgeMoth    25     10       10
 D71623  25   25     SnakeScorpion      25     7        10
 D71623  25   25     BlackMaggot        25     10       10
 D71623  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71623  25   25    BlackMaggot0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71623  25  25    RedEvilBoar3        25      1        30
 D71623  25  25    BlackEvilBoar3        25      1        30
 D71623  25  25    SnakeScorpion3      25      1        30
@@ -2291,9 +2291,9 @@ D71624  25   25     WedgeMoth    25     10       10
 D71624  25   25     SnakeScorpion      25     7        10
 D71624  25   25     BlackMaggot        25     10       10
 D71624  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71624  25   25    SnakeScorpion0      25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71624  25  25    RedEvilBoar3        25      1        30
 D71624  25  25    BlackEvilBoar3        25      1        30
 D71624  25  25    SnakeScorpion3      25      1        30
@@ -2304,25 +2304,25 @@ D71625  25   25     WedgeMoth    25     10       10
 D71625  25   25     SnakeScorpion      25     7        10
 D71625  25   25     BlackMaggot        25     10       10
 D71625  25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D71625  25   25    RedEvilBoar0        25     1        120
-;;ÀÌº¥Æ®¸÷
+;;?Ìº?Æ®??
 D71625  25  25    RedEvilBoar3        25      1        30
 D71625  25  25    BlackEvilBoar3        25      1        30
 D71625  25  25    SnakeScorpion3      25      1        30
 
 
-;;¼®°¢6Ãþ
+;;????6??
 D716    25   25     RedEvilBoar        25     5        10
 D716    25   25     BlackEvilBoar        25     5        10
 D716    25   25     WedgeMoth    25     8        10
 D716    25   25     SnakeScorpion      25     5        10
 D716    25   25     BlackMaggot        25     8        10
 D716    25   25     BugBatMaggot    25     5        10
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 D716    25   25    BlackEvilBoar0        25     1        120
 
-;;¼®°¢7Ãþ
+;;????7??
 D717    100  100    BlackMaggot        100    100       10
 D717    100  100    WedgeMoth    100    150       10
 D717    100  100    WhiteEvilBoar0       100    28        120
@@ -2331,20 +2331,20 @@ D717    100  100    WhiteEvilBoar        100    2         240
 D717    100  100    EvilSnake      100    1         120
 D717    100  100    BugBatMaggot    100    30        10
 
-;;¼®°¢°ú ºñ¹ÐÅë·ÎÀÇ ¿¬°á±æ
+;;?????? ?????????? ??????
 
-;;¿¬°áÅë·Î1
+;;????????1
 E701		50	 50		 Zombie1				50		 45			  23
 E701		50	 50		 Zombie2				50		 40			  23
 E701		50	 50		 Zombie3				50		 40			  23
 E701		50	 50		 Zombie4				50		 40			  23
 E701		50	 50		 Zombie5				50		 40			  23
-;;ÅÍÁö´Â ¸ó½ºÅÍ
+;;?????? ??????
 E701		50	 50		 Zombie10			 	50		 1				120
 E701		50	 50		 Zombie30				50		 1				120
 E701		50	 50		 Zombie50				50		 1				120
 
-;¿¬°áÅë·Î2
+;????????2
 E702		50	 50		 Zombie1				50		 25				23
 E702		50	 50		 Zombie2				50		 15				23
 E702		50	 50		 Zombie3				50		 15				23
@@ -2356,49 +2356,49 @@ E702		50	 50		 BlackEvilBoar 				50		 15				23
 E702		50	 50		 BlackMaggot 				50		 15				23
 E702		50	 50		 BugBatMaggot			50		 8 				23
 E702		50	 50		 SnakeScorpion				50		 10				23
-;;ÅÍÁö´Â ¸ó½ºÅÍ
+;;?????? ??????
 E702		50	 50		 Zombie10				50		 1				120
 E702		50	 50		 Zombie40				50		 1				120
 E702		50	 50		 Zombie50				50		 1				120
 E702		50	 50		 BlackEvilBoar0 				50		 1				120
 E702		50	 50		 SnakeScorpion0			50		 1				120
 
-;¿¬°áÅë·Î3
+;????????3
 E703		50	 50		 WedgeMoth 		50		 25				23
 E703		50	 50		 RedEvilBoar     		50		 25				23
 E703		50	 50		 BlackEvilBoar     		50		 25				23
 E703		50	 50		 BlackMaggot     		50		 25				23
 E703		50	 50		 BugBatMaggot  		50		 8				23
 E703		50	 50		 SnakeScorpion    		50		 25				23
-;;ÅÍÁö´Â¸ó½º
+;;?????Â¸???
 E703		50	 50		 RedEvilBoar0     		50		 1				120
 E703		50	 50		 SnakeScorpion0   		50		 1				120
 
-;;¿À¸¶´øÀü°ú ÀÚ¿¬µ¿±¼ ¿¬°áÅë·Î
+;;?À¸??????? ?Ú¿????? ????????
 
-;;¿¬°áÅë·Î1
+;;????????1
 E001    50    50   CaveMaggot   50   15        23
 E001    50    50   BoneFighter   50   25        23
 E001    50    50   AxeSkeleton   50   15        23
 E001    50    50   BoneWarrior  50   25        23
 E001    50    50   Skeleton     50   20        23
 E001    50    50   CaveBat       50   15        23      50
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 E001    50    50   BoneFighter0  50   1         120
 E001    50    50   Skeleton0    50   1         120
 
-;;¿¬°áÅë·Î2
+;;????????2
 E002    50    50   CaveMaggot   50   15        23
 E002    50    50   BoneFighter   50   25        23
 E002    50    50   AxeSkeleton   50   15        23
 E002    50    50   BoneWarrior     50   25        23
 E002    50    50   Skeleton         50   20        23
 E002    50    50   CaveBat       50   15        23      50
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 E002    50    50   BoneFighter0  50   1         120
 E002    50    50   Skeleton0    50   1         120
 
-;;¿À¸¶´øÀü°ú Á»ºñ±¼ÀÇ ¿¬°á
+;;?À¸??????? Á»?????? ????
 
 E401    50    50   CaveMaggot   50   15        23
 E401    50    50   BoneFighter   50   25        23
@@ -2406,7 +2406,7 @@ E401    50    50   AxeSkeleton   50   15        23
 E401    50    50   BoneWarrior     50   25        23
 E401    50    50   Skeleton         50   20        23
 E401    50    50   CaveBat       50   15        23      50
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 E401    50    50   BoneFighter0  50   1         120
 E401    50    50   BoneWarrior0    50   1         120
 
@@ -2421,7 +2421,7 @@ E402    50    50   Zombie2        50   8         23
 E402    50    50   Zombie3        50   8         23
 E402    50    50   Zombie4        50   8         23
 E402    50    50   Zombie5        50   8         23
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 E402    50    50   BoneWarrior0    50   1         120
 E402    50    50   Zombie10       50   1         120
 
@@ -2436,7 +2436,7 @@ E403    50    50   Zombie2        50   10        23
 E403    50    50   Zombie3        50   10        23
 E403    50    50   Zombie4        50   10        23
 E403    50    50   Zombie5        50   10        23
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 E403    50    50   BoneWarrior0    50   1         120
 E403    50    50   Zombie10       50   1         120
 
@@ -2445,19 +2445,19 @@ E404    50    50   Zombie2        50   15        23
 E404    50    50   Zombie3        50   15        23
 E404    50    50   Zombie4        50   15        23
 E404    50    50   Zombie5        50   15        23
-;;ÅÍÁö´Â¸÷
+;;?????Â¸?
 E404    50    50   Zombie20       50   1         120
 E404    50    50   Zombie10       50   1         120
 
 
-;; ¿¬°áÅë·Î
+;; ????????
 
 E601		75	 75		 Zombie1				75		 50 			23
 E601		75	 75		 Zombie2				75		 40			  23
 E601		75	 75		 Zombie3				75		 40			  23
 E601		75	 75		 Zombie4				75		 40	 		  23
 E601		75	 75		 Zombie5				75		 40	 		  23
-;;ÅÍÁö´Â ¸ó½ºÅÍ
+;;?????? ??????
 E601		75	 75		 Zombie10			 	75		 1				120
 E601		75	 75		 Zombie20			 	75		 1				120
 E601		75	 75		 Zombie30				75		 1				120
@@ -2473,7 +2473,7 @@ E602		75	 75		 Centipede  				75		 35 		  23
 E602		75	 75		 BlackMaggot 				75		 35 		  23
 E602		75	 75		 WhimperingBee 				75		 35 		  23
 E602		75	 75		 Tongs			75		 35 		  23
-;;ÅÍÁö´Â ¸ó½ºÅÍ
+;;?????? ??????
 E602		75	 75		 Zombie10			 	75		 1				120
 E602		75	 75		 Zombie20			 	75		 1				120
 E602		75	 75		 Centipede0  			75		 1			  120
@@ -2489,7 +2489,7 @@ E603		100	 100		 Centipede  				100		 30 			  23
 E603		100	 100		 BlackMaggot 				100		 40 			  23
 E603		100	 100		 WhimperingBee 				100		 40 			  23
 E603		100	 100		 Tongs					100		 40 			  23
-;;ÅÍÁö´Â ¸ó½ºÅÍ
+;;?????? ??????
 E603		100	 100		 Zombie10			 	100		 1				120
 E603		100	 100		 Zombie20			 	100		 1				120
 E603		100	 100		 Centipede0  				100		 1			  120
@@ -2506,7 +2506,7 @@ E604		75	 75		 Centipede  				75		 40 		  23
 E604		75	 75		 BlackMaggot 				75		 40 		  23
 E604		75	 75		 WhimperingBee 				75		 40 		  23
 E604		75	 75		 Tongs					75		 40 		  23
-;;ÅÍÁö´Â ¸ó½ºÅÍ
+;;?????? ??????
 E604		75	 75		 Zombie10			 	75		 1				120
 E604		75	 75		 Zombie20			 	75		 1				120
 E604		75	 75		 Centipede0  				75		 1			  120
@@ -2517,13 +2517,13 @@ E605		50	 50		 Centipede  				50		 40 		  23
 E605		50	 50		 BlackMaggot 				50		 40 		  23
 E605		50	 50		 WhimperingBee 				50		 40 		  23
 E605		50	 50		 Tongs					50		 40 		  23
-;;ÅÍÁö´Â ¸ó½ºÅÍ
+;;?????? ??????
 E605		50	 50		 Centipede0  				50		 1			  120
 E605		50	 50		 WhimperingBee0 				50		 1			  120
 E605		50	 50		 BlackMaggot0 				50		 1			  120
 E605		50	 50		 Tongs0					50		 1			  120
 	
-;;¹ÌÁöÀÇ´øÀü
+;;?????Ç´???
 
 M001	  200	 200	 Deer1		200     3        50
 M001    200    200 Deer	            200     1        180
@@ -2548,12 +2548,12 @@ M001	  200	 200	 EvilSnake 		200     1        180
 M001	  200	 200	 Woomataurus1	200     400      50
 M001	  200	 200	 Woomataurus 	200     1        180
 
-;;±¸¿ï¹æ
+;;??????
 Q004    15   15    Ghoul2        5      28       120
 Q004    15   15    Ghoul         5       2       120 
 
 
-;;ºÎ¸£¸¶ºí Äù½ºÆ® ¸ó½ºÅÍµé
+;;?Î¸????? ????Æ® ?????Íµ?
 T103    19   19    Sheep           20     30        5
 T109    50   50    AxeSkeleton9     50     100       5
 T1061   20   20    Skeleton        20     10        5
@@ -2595,7 +2595,7 @@ T138    10   10    BigRat            10     10        5
 T139    19   24    Zumataurus9         1      1          5
 T140    15   15    ZumaGuardian        15     10         5
 
-;;ºñ¹Ð»óÁ¡ Äù½ºÆ®
+;;???Ð»?Á¡ ????Æ®
 Q011    75   75    WoomaGuardian2   75     50       20
 
 Q012    18   18    WoomaGuardian2   6      3        20

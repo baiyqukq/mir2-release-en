@@ -1,13 +1,14 @@
 ;Merchant NPC Setup File
 ;Script	Map	X	Y	Name	Flag	Appr	Move
+;Script: NumberMapNpc - 8Bne ( 8Bichon Necklace) 
 ;Abbr:
-	me : Meat
-	dr : Dress
-	bo : Book
-	we : Weapon
-	ri : Ring
-	ne : Necklace
-	br : Bracelet
+;	me : Meat
+;	dr : Dress
+;	bo : Book
+;	we : Weapon
+;	ri : Ring
+;	ne : Necklace
+;	br : Bracelet
 
 ;;;;;;;;;;;;
 ;Bichon	Wall

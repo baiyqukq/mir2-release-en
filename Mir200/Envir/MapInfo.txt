@@ -267,6 +267,12 @@ D012  77,197  -> D011  127,202
 D012  189,144 -> DM011 5,10
 DM011 6,10    -> D012  189,145
 
+;
+;
+; 1 WoomyonWoods
+;
+;
+
 [1 WoomyonWoods 0]
 0	324,34 -> 1		559,553
 0	325,34 -> 1		560,553
@@ -409,7 +415,7 @@ D024  16,18   -> D023  51,365
 [D414 Overpass 0] DARK MINE
 [D403 1FofDeadMine 0] DARK MINE
 [D412 Overpass 0] DARK MINE
-[D404 B2ofStopesBasement 0] DARK MINE
+[D404 B2ofStopesBasement 0] DARK MINE
 [D416 Overpass 0] DARK MINE
 [D405 StoringPlaceForOre 0] DARK MINE
 [D415 Overpass 0] DARK MINE
