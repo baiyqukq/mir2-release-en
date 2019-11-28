@@ -1,1 +1,2 @@
-# Korea Legend of Mir2
+Legend of Mir2 (Release)(English Version)
+=========================================
